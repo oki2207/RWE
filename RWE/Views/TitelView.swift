@@ -30,7 +30,7 @@ struct TitelView: View {
                                 Image("schale")
                                     .resizable()
                                     .frame(width: 100, height: 100)
-                                Text("1955")
+                                Text("1955 - 2023")
                                     .font(.headline)
                             }
                         }
