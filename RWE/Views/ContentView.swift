@@ -40,10 +40,12 @@ struct ContentView: View {
             
             NavigationView {
                 HomeView()
+                
             }
             .tabItem {
                 Image("rwetabbar")
                     .frame(width: 30, height: 30)
+                
             }
             .tag(2)
             

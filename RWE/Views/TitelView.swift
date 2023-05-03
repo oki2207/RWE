@@ -4,84 +4,87 @@
 //
 //  Created by Olli on 02.05.23.
 //
-
 import SwiftUI
 
 struct TitelView: View {
+    @State private var isShowingModal = false
+    @State private var selectedImage: String = ""
+    
     var body: some View {
         ZStack {
             Image("screen5")
                 .resizable()
                 .scaledToFill()
-                .opacity(0.3)
                 .edgesIgnoringSafeArea(.all)
-
-            VStack {
+            
+            VStack(spacing: 20) {
                 HStack(spacing: 20) {
-                    VStack(spacing: 20) {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 5)
-                                .fill(Color.white.opacity(0.8))
-                                .shadow(radius: 5)
-                                .frame(width: 180, height: 180)
-                            VStack {
-                                Text("Deutscher Meister")
-                                    .font(.headline)
-                                Image("schale")
-                                    .resizable()
-                                    .frame(width: 100, height: 100)
-                                Text("1955")
-                                    .font(.headline)
-                            }
-                        }
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.leading, 20)
+                    VStack(spacing: 10) {
+                        Text("Deutscher Meister")
+                            .font(.headline)
+                        Image("schale")
+                            .resizable()
+                            .frame(width: 80, height: 80)
+                        Text("1955")
+                            .font(.headline)
                     }
-
-                    VStack(spacing: 20) {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 5)
-                                .fill(Color.white.opacity(0.8))
-                                .shadow(radius: 5)
-                                .frame(width: 180, height: 180)
-                            VStack {
-                                Text ("DFB-Pokalsieger")
-                                    .font(.headline)
-                                Image("dfb")
-                                    .resizable()
-                                    .frame(width: 50, height: 100)
-                                Text("1953")
-                                    .font(.headline)
-                            }
-                        }
-                        .frame(maxWidth: .infinity, alignment: .trailing)
-                        .padding(.trailing, 20)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.8)).shadow(radius: 5))
+                    .onTapGesture {
+                        selectedImage = "1955"
+                        isShowingModal.toggle()
+                    }
+                    
+                    VStack(spacing: 10) {
+                        Text("DFB-Pokalsieger")
+                            .font(.headline)
+                        Image("dfb")
+                            .resizable()
+                            .frame(width: 40, height: 80)
+                        Text("1953")
+                            .font(.headline)
+                    }
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.8)).shadow(radius: 5))
+                    .onTapGesture {
+                        selectedImage = "rwe_1953"
+                        isShowingModal.toggle()
                     }
                 }
-                .padding(.top, 20)
-                .padding(.bottom, 40)
-
+                .padding(.top, 50)
+                
                 VStack(spacing: 20) {
                     Image("1955")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 320, height: 160)
+                        .frame(width: 200, height: 100)
                         .padding()
-                        .background(RoundedRectangle(cornerRadius: 5).fill(Color.white.opacity(0.8)).shadow(radius: 5))
-                        .frame(width: 350, height: 180)
-
+                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.8)).shadow(radius: 5))
+                        .onTapGesture {
+                            selectedImage = "1955"
+                            isShowingModal.toggle()
+                        }
+                    
                     Image("rwe_1953")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 320, height: 160)
+                        .frame(width: 200, height: 100)
                         .padding()
-                        .background(RoundedRectangle(cornerRadius: 5).fill(Color.white.opacity(0.8)).shadow(radius: 5))
-                        .frame(width: 350, height: 180)
+                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.8)).shadow(radius: 5))
+                        .onTapGesture {
+                            selectedImage = "rwe_1953"
+                            isShowingModal.toggle()
+                        }
                 }
-                .padding(.bottom, 40)
-
+                .padding(.top, 30)
+                
+                Spacer()
             }
+            .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
+        .sheet(isPresented: $isShowingModal) {
+            ImageDetailView(imageName: selectedImage, isPresented: $isShowingModal)
         }
     }
 }
