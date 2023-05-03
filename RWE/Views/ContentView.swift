@@ -42,9 +42,8 @@ struct ContentView: View {
                 HomeView()
             }
             .tabItem {
-                Image(systemName: "house")
+                Image("rwetabbar")
                     .frame(width: 30, height: 30)
-                Text("Hafenstrasse")
             }
             .tag(2)
             
@@ -68,7 +67,10 @@ struct ContentView: View {
         }
         
         
-            
+        .onAppear() {
+              UITabBar.appearance().backgroundColor = .red
+              UITabBar.appearance().unselectedItemTintColor = .white
+            }
     
     }
     
