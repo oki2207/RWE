@@ -16,15 +16,26 @@ struct ImageDetailView: View {
             Image(imageName)
                 .resizable()
                 .scaledToFit()
-                .padding()
-            Button(action: { isPresented = false }) {
-                Image(systemName: "xmark.circle.fill")
-                    .font(.largeTitle)
+                .frame(maxWidth: .infinity)
+                
+            Text("Die goldene Ära")
+                .font(.headline)
+                .foregroundColor(.white)
+            
+            Text("Fritz Szepan, Fritz Herkenrath, Heinz Wewers, Willi Köchling, Fritz Schaffner, Joachim Jänisch, Werner Göbel, Mittelfeld:Kurt Roetger,Paul Jahnel,Willi Grewer, Clemens Wientjes, Franz Islacker, Willi Vordenbäumen, Helmut Rahn, Fred Röhrig, Fritz Abromeit, Günther Steffens, Bernhard Termath, August Gottschalk, Helmut Malinowski,Werner Cornelissen")
+                .font(.footnote)
+                .foregroundColor(.white)
+                .padding(.bottom, 20)
+            
+            Button("Schließen") {
+                isPresented = false
             }
+            .padding()
         }
-        .background(Color.white)
-        .cornerRadius(10)
-        .padding()
+        
+        .background((RoundedRectangle(cornerRadius: 10).fill(Color.red.opacity(1.0)).shadow(radius: 5)))
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .edgesIgnoringSafeArea(.all)
     }
 }
+
