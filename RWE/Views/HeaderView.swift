@@ -12,8 +12,8 @@ struct HeaderView: View {
             Text("Rot-Weiss Essen")
                 .font(.custom("HelveticaNeue-CondensedBlack", size: 40))
                 .foregroundColor(.red)
-                .shadow(color: Color.red.opacity(1.0), radius: 50, x: 10, y: 10)
-                .shadow(color: Color.black.opacity(1.0), radius: 5, x: 0, y: 2)
+                .shadow(color: Color.red.opacity(1.0), radius: 5, x: 0, y: 2)
+                
             VStack {
                 Rectangle()
                     .fill(Color.red)
@@ -32,6 +32,7 @@ struct HeaderView: View {
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.red, lineWidth: 2)
                 .shadow(color: Color.red.opacity(1.0), radius: 20, x: 0, y: 2)
+                .zIndex(1)
         )
         //.background(
           //          Image("Logo_Rot-Weiss_Essen")

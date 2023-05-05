@@ -14,6 +14,7 @@ struct KaderView: View {
             .scaledToFill()
             .opacity(1.0)
             .edgesIgnoringSafeArea(.all)
+            .zIndex(0)
     }
 }
 

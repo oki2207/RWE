@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-//TODO: Annordnung der Logos
-
 struct TabelleView: View {
     @EnvironmentObject var tabelleViewModel: TabelleViewModel
 
@@ -21,6 +19,7 @@ struct TabelleView: View {
                 .scaledToFill()
                 .opacity(1.0)
                 .edgesIgnoringSafeArea(.all)
+                .zIndex(0)
             
             //Obere Leiste der Tabelle
             
@@ -74,6 +73,7 @@ struct TabelleView: View {
                                             Color.white.opacity(0.8)
                                         }
                                     }
+                                    .cornerRadius(10)
                             
                             //Tabelle
                                 
