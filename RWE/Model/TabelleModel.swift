@@ -15,11 +15,10 @@ struct TabelleModel {
     var gegentore: Int
     var spiele: Int
     var platz: Int
-    var differenz: Int {
-        return tore - gegentore
-    }
+    var differenz: Int
+    var logo: String
     
-    init(teamName: String, punkte: Int, tore: Int, gegentore: Int, spiele: Int, platz: Int) {
+    init(teamName: String, punkte: Int, tore: Int, gegentore: Int, spiele: Int, platz: Int, differenz: Int, logo: String) {
         self.id = UUID()
         self.teamName = teamName
         self.punkte = punkte
@@ -27,6 +26,8 @@ struct TabelleModel {
         self.gegentore = gegentore
         self.spiele = spiele
         self.platz = platz
+        self.differenz = differenz
+        self.logo = logo
     }
 }
 
