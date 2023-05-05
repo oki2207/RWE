@@ -22,7 +22,7 @@ class TabelleViewModel: ObservableObject {
         let team8 = TabelleModel(teamName: "Viktoria Köln", punkte: 51, tore: 4, gegentore: 3, spiele: 34, platz: 8, differenz: 5, logo: "viklogo")
         let team9 = TabelleModel(teamName: "1860 München", punkte: 49, tore: 3, gegentore: 2, spiele: 34, platz: 9, differenz: 6, logo: "1860logo")
         let team10 = TabelleModel(teamName: "SC Verl", punkte: 48, tore: 2, gegentore: 9, spiele: 34, platz: 10, differenz: 5, logo: "verllogo")
-        let team11 = TabelleModel(teamName: "Erzgebierge Aue", punkte: 43, tore: 5, gegentore: 3, spiele: 34, platz: 11, differenz: -7, logo: "auelogo")
+        let team11 = TabelleModel(teamName: "Erzgebierge Aue", punkte: 43, tore: 5, gegentore: 3, spiele: 34, platz: 11, differenz: -7, logo: "auelogoneu")
         let team12 = TabelleModel(teamName: "MSV Duisburg", punkte: 42, tore: 6, gegentore: 5, spiele: 34, platz: 12, differenz: -3, logo: "msvlogo")
         let team13 = TabelleModel(teamName: "FC Ingolstadt", punkte: 41, tore: 4, gegentore: 3, spiele: 34, platz: 13, differenz: -5, logo: "fcilogo")
         let team14 = TabelleModel(teamName: "Dortmund II", punkte: 40, tore: 3, gegentore: 2, spiele: 34, platz: 14, differenz: -2, logo: "bvblogo")

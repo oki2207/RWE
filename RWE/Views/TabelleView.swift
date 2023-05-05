@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//TODO: Annordnung der Logos
+
 struct TabelleView: View {
     @EnvironmentObject var tabelleViewModel: TabelleViewModel
 
@@ -61,10 +63,10 @@ struct TabelleView: View {
                                     Group {
                                         if tabellenEintrag.platz >= 1 && tabellenEintrag.platz <= 3 {
                                             Color.white.opacity(0.8)
-                                                .border(Color.green.opacity(0.7), width: 2)
+                                                .border(Color.green.opacity(0.7), width: 4)
                                         } else if tabellenEintrag.platz >= 17 && tabellenEintrag.platz <= 20 {
                                             Color.white.opacity(0.8)
-                                                .border(Color.red.opacity(0.7), width: 2)
+                                                .border(Color.red.opacity(0.7), width: 4)
                                         } else {
                                             Color.white.opacity(0.8)
                                         }
@@ -74,11 +76,12 @@ struct TabelleView: View {
                                 
                             HStack {
                                 Text("\(tabellenEintrag.platz)")
-                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .bold()
+                                    .frame(maxWidth: .infinity, alignment: .center)
                                     .font(.system(size: 14))
                                 Spacer()
                                 Image("\(tabellenEintrag.logo)")
-                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .frame(maxWidth: .infinity, alignment: .center)
                                     .font(.system(size: 14))
                                 Spacer()
                                 Text("\(tabellenEintrag.teamName)")
