@@ -11,7 +11,6 @@ import SwiftUI
 struct ContentView: View {
     @State private var selectedTab = 0
     
-    
     var body: some View {
         VStack {
             HeaderView()
@@ -22,6 +21,7 @@ struct ContentView: View {
         TabView(selection: $selectedTab) {
             NavigationView {
                 TabelleView()
+                    
             }
             .tabItem {
                 Image(systemName: "list.dash")
@@ -80,6 +80,8 @@ struct ContentView: View {
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             ContentView()
+                .environmentObject(TabelleViewModel())
         }
+            
     }
 }

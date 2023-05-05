@@ -9,7 +9,7 @@ import SwiftUI
 
 struct KaderView: View {
     var body: some View {
-        Image("externalimages-2") // Hier musst du den Namen deines Bildes angeben
+        Image("externalimages-2") 
             .resizable()
             .scaledToFill()
             .opacity(0.3)

@@ -85,7 +85,9 @@ struct TitelView: View {
         }
         .sheet(isPresented: $isShowingModal) {
             ImageDetailView(imageName: selectedImage, isPresented: $isShowingModal)
+                .presentationDetents([.large,.medium,.fraction(0.75)])
         }
+        
     }
 }
 

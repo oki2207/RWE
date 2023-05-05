@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		477AF7F12A03B95E005891C9 /* DiagonalBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477AF7F02A03B95E005891C9 /* DiagonalBar.swift */; };
+		477AF7FA2A04D744005891C9 /* TabelleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477AF7F92A04D744005891C9 /* TabelleViewModel.swift */; };
+		477AF7FC2A04D759005891C9 /* TabelleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477AF7FB2A04D759005891C9 /* TabelleModel.swift */; };
 		47826D292A0292BF009242FC /* RWEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47826D282A0292BF009242FC /* RWEApp.swift */; };
 		47826D2D2A0292C0009242FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47826D2C2A0292C0009242FC /* Assets.xcassets */; };
 		47826D302A0292C0009242FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47826D2F2A0292C0009242FC /* Preview Assets.xcassets */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		477AF7F02A03B95E005891C9 /* DiagonalBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagonalBar.swift; sourceTree = "<group>"; };
+		477AF7F92A04D744005891C9 /* TabelleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelleViewModel.swift; sourceTree = "<group>"; };
+		477AF7FB2A04D759005891C9 /* TabelleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelleModel.swift; sourceTree = "<group>"; };
 		47826D252A0292BF009242FC /* RWE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RWE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47826D282A0292BF009242FC /* RWEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RWEApp.swift; sourceTree = "<group>"; };
 		47826D2C2A0292C0009242FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 			children = (
 				47826D372A0293D3009242FC /* Kader.swift */,
 				47826D382A0293D3009242FC /* Tabelle.swift */,
+				477AF7FB2A04D759005891C9 /* TabelleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			children = (
 				47826D5B2A02DF08009242FC /* ImageDetailView.swift */,
 				477AF7F02A03B95E005891C9 /* DiagonalBar.swift */,
+				477AF7F92A04D744005891C9 /* TabelleViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -220,11 +226,13 @@
 				477AF7F12A03B95E005891C9 /* DiagonalBar.swift in Sources */,
 				47826D4B2A0293D3009242FC /* RoundedTabBarStyle.swift in Sources */,
 				47826D5C2A02DF08009242FC /* ImageDetailView.swift in Sources */,
+				477AF7FC2A04D759005891C9 /* TabelleModel.swift in Sources */,
 				47826D492A0293D3009242FC /* HeaderView.swift in Sources */,
 				47826D482A0293D3009242FC /* SpielplanView.swift in Sources */,
 				47826D472A0293D3009242FC /* HomeView.swift in Sources */,
 				47826D442A0293D3009242FC /* Tabelle.swift in Sources */,
 				47826D292A0292BF009242FC /* RWEApp.swift in Sources */,
+				477AF7FA2A04D744005891C9 /* TabelleViewModel.swift in Sources */,
 				47826D4D2A0293D3009242FC /* TabelleView.swift in Sources */,
 				47826D462A0293D3009242FC /* TitelView.swift in Sources */,
 				47826D432A0293D3009242FC /* Kader.swift in Sources */,
