@@ -76,8 +76,8 @@ struct ContentView: View {
         //NAVIGATIONSBAR FARBE
         
         .onAppear() {
-              UITabBar.appearance().backgroundColor = .red
-              UITabBar.appearance().unselectedItemTintColor = .white
+              UITabBar.appearance().backgroundColor = .white
+              UITabBar.appearance().unselectedItemTintColor = .red
             }
         
     
