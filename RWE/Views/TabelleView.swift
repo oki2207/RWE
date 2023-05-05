@@ -20,15 +20,17 @@ struct TabelleView: View {
             
             VStack(spacing: 10) {
                 HStack {
-                    Text("Platz")
+                    Text("Pl.")
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .font(.system(size: 14))
+                    Text("    ")
                     Text("Team")
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .font(.system(size: 14))
-                    Text("Spiele")
+                    Text("           ")
+                    Text("Sp.")
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .center)
                         .font(.system(size: 14))
@@ -36,7 +38,7 @@ struct TabelleView: View {
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .center)
                         .font(.system(size: 14))
-                    Text("Punkte")
+                    Text("Pkt.")
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .center)
                         .font(.system(size: 14))
@@ -52,12 +54,12 @@ struct TabelleView: View {
                           //  RoundedRectangle(cornerRadius: 5)
                           //    .fill(
                                     Group {
-                                        if tabellenEintrag.platz == 1 || tabellenEintrag.platz == 2 {
-                                            Color.green.opacity(0.5)
+                                        if tabellenEintrag.platz >= 1 && tabellenEintrag.platz <= 3 {
+                                            Color.green.opacity(0.8)
                                         } else if tabellenEintrag.platz >= 17 && tabellenEintrag.platz <= 20 {
-                                            Color.red.opacity(0.5)
+                                            Color.red.opacity(0.8)
                                         } else {
-                                            Color.white.opacity(0.5)
+                                            Color.white.opacity(0.7)
                                         }
                                     }
                                 
@@ -69,7 +71,9 @@ struct TabelleView: View {
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .font(.system(size: 14))
                                 Text("\(tabellenEintrag.teamName)")
-                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .frame(width: 120, alignment: .leading)
+                                    .font(.system(size: 14
+                                                 ))
                                 Text("\(tabellenEintrag.spiele)")
                                     .frame(maxWidth: .infinity, alignment: .center)
                                     .font(.system(size: 14))
