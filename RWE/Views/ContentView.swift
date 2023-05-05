@@ -15,7 +15,7 @@ struct ContentView: View {
     //HEADER VIEW
     
     var body: some View {
-        VStack {
+        ZStack {
             HeaderView()
             
         }
