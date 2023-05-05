@@ -12,7 +12,7 @@ struct SpielplanView: View {
         Image("screen4") // Hier musst du den Namen deines Bildes angeben
             .resizable()
             .scaledToFill()
-            .opacity(0.3)
+            .opacity(1.0)
             .edgesIgnoringSafeArea(.all)
     }
 }

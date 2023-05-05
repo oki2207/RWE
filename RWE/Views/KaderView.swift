@@ -12,7 +12,7 @@ struct KaderView: View {
         Image("externalimages-2") 
             .resizable()
             .scaledToFill()
-            .opacity(0.3)
+            .opacity(1.0)
             .edgesIgnoringSafeArea(.all)
     }
 }

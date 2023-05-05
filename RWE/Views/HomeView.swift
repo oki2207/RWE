@@ -16,7 +16,7 @@ struct HomeView: View {
             Image("screen2")
                 .resizable()
                 .scaledToFill()
-                .opacity(0.3)
+                .opacity(1.0)
                 .edgesIgnoringSafeArea(.all)
         }
     }

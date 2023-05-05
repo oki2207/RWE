@@ -23,7 +23,7 @@ class TabelleViewModel: ObservableObject {
         let team9 = TabelleModel(teamName: "Team 4", punkte: 6, tore: 3, gegentore: 2, spiele: 4, platz: 4)
         let team10 = TabelleModel(teamName: "Team 5", punkte: 1, tore: 2, gegentore: 9, spiele: 4, platz: 5)
         
-        self.tabelle = [team1, team2, team3, team4, team5]
+        self.tabelle = [team1, team2, team3, team4, team5, team6]
     }
 }
 

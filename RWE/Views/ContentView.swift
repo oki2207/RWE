@@ -10,6 +10,9 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selectedTab = 0
+    @StateObject var viewModel = TabelleViewModel()
+    
+    //HEADER VIEW
     
     var body: some View {
         VStack {
@@ -17,10 +20,12 @@ struct ContentView: View {
             
         }
         
+    // NAVIGATIONSBAR
         
         TabView(selection: $selectedTab) {
             NavigationView {
                 TabelleView()
+                    .environmentObject(TabelleViewModel())
                     
             }
             .tabItem {
@@ -68,11 +73,13 @@ struct ContentView: View {
             .tag(4)
         }
         
+        //NAVIGATIONSBAR FARBE
         
         .onAppear() {
               UITabBar.appearance().backgroundColor = .red
               UITabBar.appearance().unselectedItemTintColor = .white
             }
+        
     
     }
     
@@ -80,7 +87,7 @@ struct ContentView: View {
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             ContentView()
-                .environmentObject(TabelleViewModel())
+                
         }
             
     }

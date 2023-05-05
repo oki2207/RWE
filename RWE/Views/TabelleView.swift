@@ -13,12 +13,16 @@ struct TabelleView: View {
     
     var body: some View {
         
-        Image("externalimages-2")
-            .resizable()
-            .scaledToFill()
-            .opacity(1.0)
-            .edgesIgnoringSafeArea(.all)
-    
+        // HINTERGRUND
+        
+        ZStack{
+            Image("screen3")
+                .resizable()
+                .scaledToFill()
+                .opacity(1.0)
+                .edgesIgnoringSafeArea(.all)
+            
+            //TABELLE KOPF
             
             VStack(spacing: 10) {
                 HStack {
@@ -43,7 +47,12 @@ struct TabelleView: View {
                         .frame(maxWidth: .infinity, alignment: .center)
                         .font(.system(size: 14))
                 }
+                
+                //TABELLE ANPASSUNG AN SCREEN
+                
                 .frame(width: UIScreen.main.bounds.width * 0.9)
+                
+                //TABELLE INHALT
                 
                 ScrollView {
                     ForEach(tabelleViewModel.tabelle, id: \.id) { tabellenEintrag in
@@ -64,12 +73,15 @@ struct TabelleView: View {
                                 .frame(maxWidth: .infinity, alignment: .center)
                                 .font(.system(size: 14))
                         }
+                        // ANPASSUNG AN SCREEN
+                        
                         .frame(width: UIScreen.main.bounds.width * 0.9)
                     }
                 }
             }
         }
     }
+}
     
     struct TabelleView_Previews: PreviewProvider {
         static var previews: some View {
