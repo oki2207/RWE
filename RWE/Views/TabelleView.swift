@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TabelleView: View {
     @EnvironmentObject var tabelleViewModel: TabelleViewModel
+
+    //Hintergrundbild
     
     var body: some View {
         ZStack{
@@ -18,18 +20,20 @@ struct TabelleView: View {
                 .opacity(1.0)
                 .edgesIgnoringSafeArea(.all)
             
-            VStack(spacing: 10) {
+            //Obere Leiste der Tabelle
+            
+            VStack(spacing: 3) {
                 HStack {
-                    Text("Pl.")
+                    Text("Tabelle 2022/2023")
                         .bold()
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .frame(width: 100, alignment: .leading)
                         .font(.system(size: 14))
-                    Text("    ")
-                    Text("Team")
+                    Text("  ")
+                    Text("3. Liga")
                         .bold()
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .frame(width: 100, alignment: .leading)
                         .font(.system(size: 14))
-                    Text("           ")
+                    Text("")
                     Text("Sp.")
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .center)
@@ -44,36 +48,44 @@ struct TabelleView: View {
                         .font(.system(size: 14))
                 }
                 .padding(.vertical, 5)
-                .background(Color.white.opacity(0.8))
-                .cornerRadius(5)
+                .background(Color.red.opacity(1.0))
+                .cornerRadius(0)
                 .frame(width: UIScreen.main.bounds.width * 0.9)
+                .foregroundColor(.white)
+                
+                //Farbkombination der Tabelle
                 
                 ScrollView {
                     ForEach(tabelleViewModel.tabelle, id: \.id) { tabellenEintrag in
                         ZStack {
-                          //  RoundedRectangle(cornerRadius: 5)
-                          //    .fill(
                                     Group {
                                         if tabellenEintrag.platz >= 1 && tabellenEintrag.platz <= 3 {
-                                            Color.green.opacity(0.8)
+                                            Color.white.opacity(0.8)
+                                                .border(Color.green.opacity(0.7), width: 2)
                                         } else if tabellenEintrag.platz >= 17 && tabellenEintrag.platz <= 20 {
-                                            Color.red.opacity(0.8)
+                                            Color.white.opacity(0.8)
+                                                .border(Color.red.opacity(0.7), width: 2)
                                         } else {
-                                            Color.white.opacity(0.7)
+                                            Color.white.opacity(0.8)
                                         }
                                     }
+                            
+                            //Tabelle
                                 
                             HStack {
                                 Text("\(tabellenEintrag.platz)")
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .font(.system(size: 14))
+                                Spacer()
                                 Image("\(tabellenEintrag.logo)")
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .font(.system(size: 14))
+                                Spacer()
                                 Text("\(tabellenEintrag.teamName)")
-                                    .frame(width: 120, alignment: .leading)
+                                    .frame(width: 150, alignment: .leading)
                                     .font(.system(size: 14
                                                  ))
+                                Spacer()
                                 Text("\(tabellenEintrag.spiele)")
                                     .frame(maxWidth: .infinity, alignment: .center)
                                     .font(.system(size: 14))
@@ -81,10 +93,11 @@ struct TabelleView: View {
                                     .frame(maxWidth: .infinity, alignment: .center)
                                     .font(.system(size: 14))
                                 Text("\(tabellenEintrag.punkte)")
+                                    .bold()
                                     .frame(maxWidth: .infinity, alignment: .center)
                                     .font(.system(size: 14))
                             }
-                            .padding(.vertical, 5)
+                            .padding(.vertical, 10)
                             .cornerRadius(5)
                             .background(Color.clear)
                         }

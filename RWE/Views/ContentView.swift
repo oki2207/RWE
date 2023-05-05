@@ -32,7 +32,7 @@ struct ContentView: View {
                 Image(systemName: "list.dash")
                 Text("Tabelle")
             }
-            .tag(0)
+            .tag(2)
             
             NavigationView {
                 SpielplanView()
@@ -52,7 +52,7 @@ struct ContentView: View {
                     .frame(width: 30, height: 30)
                 
             }
-            .tag(2)
+            .tag(0)
             
             NavigationView {
                 KaderView()
