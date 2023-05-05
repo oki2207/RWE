@@ -16,6 +16,7 @@ struct KaderView: View {
             .edgesIgnoringSafeArea(.all)
     }
 }
+
         
 
 struct KaderView_Previews: PreviewProvider {

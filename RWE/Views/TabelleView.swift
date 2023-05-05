@@ -25,6 +25,7 @@ struct TabelleView: View {
             //Obere Leiste der Tabelle
             
             VStack(spacing: 3) {
+                
                 HStack {
                     Text("Tabelle 2022/2023")
                         .bold()
@@ -59,7 +60,9 @@ struct TabelleView: View {
                 
                 ScrollView {
                     ForEach(tabelleViewModel.tabelle, id: \.id) { tabellenEintrag in
+                        
                         ZStack {
+                            
                                     Group {
                                         if tabellenEintrag.platz >= 1 && tabellenEintrag.platz <= 3 {
                                             Color.white.opacity(0.8)
@@ -103,6 +106,7 @@ struct TabelleView: View {
                             .padding(.vertical, 10)
                             .cornerRadius(5)
                             .background(Color.clear)
+                            .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
                         }
                         .frame(width: UIScreen.main.bounds.width * 0.9)
                     }
