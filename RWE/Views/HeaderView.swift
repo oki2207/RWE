@@ -35,11 +35,11 @@ struct HeaderView: View {
         )
 
         .background(Color.red)
-          
-                        
         
-    }
+          
+            
 }
 
 
 
+        }

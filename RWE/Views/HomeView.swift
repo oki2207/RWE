@@ -18,7 +18,32 @@ struct HomeView: View {
                 .scaledToFill()
                 .opacity(1.0)
                 .edgesIgnoringSafeArea(.all)
+        
+                VStack(spacing: 20) {
+                    VStack {
+                        // Erste Box für News
+                        Rectangle()
+                            .foregroundColor(.white.opacity(0.7))
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    
+                        // Zweite Box für das nächste Spiel
+                        Rectangle()
+                            .foregroundColor(.white.opacity(0.7))
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        
+                        // Dritter Box für das letzte Spiel
+                        Rectangle()
+                            .foregroundColor(.white.opacity(0.7))
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }
+                }
+                .padding()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.gray.opacity(0.2))
+            }
+        
         }
+
     }
     
     
@@ -33,4 +58,4 @@ struct HomeView: View {
         }
     }
     
-}
+
