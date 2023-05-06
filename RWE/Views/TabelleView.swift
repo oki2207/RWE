@@ -61,19 +61,18 @@ struct TabelleView: View {
                     ForEach(tabelleViewModel.tabelle, id: \.id) { tabellenEintrag in
                         
                         ZStack {
-                            
-                                    Group {
-                                        if tabellenEintrag.platz >= 1 && tabellenEintrag.platz <= 3 {
-                                            Color.white.opacity(0.8)
-                                                .border(Color.green.opacity(0.7), width: 4)
-                                        } else if tabellenEintrag.platz >= 17 && tabellenEintrag.platz <= 20 {
-                                            Color.white.opacity(0.8)
-                                                .border(Color.red.opacity(0.7), width: 4)
-                                        } else {
-                                            Color.white.opacity(0.8)
-                                        }
-                                    }
-                                    .cornerRadius(10)
+                            Group {
+                                if tabellenEintrag.platz >= 1 && tabellenEintrag.platz <= 3 {
+                                    LinearGradient(gradient: Gradient(colors: [Color.green.opacity(0.7), Color.white.opacity(0.8)]), startPoint: .leading, endPoint: .trailing)
+                                        .border(Color.green.opacity(0.7), width: 0)
+                                } else if tabellenEintrag.platz >= 17 && tabellenEintrag.platz <= 20 {
+                                    LinearGradient(gradient: Gradient(colors: [Color.red.opacity(0.7), Color.white.opacity(0.8)]), startPoint: .leading, endPoint: .trailing)
+                                        .border(Color.red.opacity(0.7), width: 0)
+                                } else {
+                                    LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.7), Color.white.opacity(0.8)]), startPoint: .leading, endPoint: .trailing)
+                                }
+                            }
+                            .cornerRadius(10)
                             
                             //Tabelle
                                 

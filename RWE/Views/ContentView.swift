@@ -68,7 +68,7 @@ struct ContentView: View {
             }
             .tabItem {
                 Image(systemName: "rosette")
-                Text("Titel")
+                Text("Erfolge")
             }
             .tag(4)
         }
