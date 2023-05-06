@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47440C132A064D31006F5875 /* Bangers-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47440C122A064D31006F5875 /* Bangers-Regular.ttf */; };
 		477AF7FA2A04D744005891C9 /* TabelleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477AF7F92A04D744005891C9 /* TabelleViewModel.swift */; };
 		477AF7FC2A04D759005891C9 /* TabelleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477AF7FB2A04D759005891C9 /* TabelleModel.swift */; };
 		47826D292A0292BF009242FC /* RWEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47826D282A0292BF009242FC /* RWEApp.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		47440C122A064D31006F5875 /* Bangers-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bangers-Regular.ttf"; sourceTree = "<group>"; };
 		477AF7F92A04D744005891C9 /* TabelleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelleViewModel.swift; sourceTree = "<group>"; };
 		477AF7FB2A04D759005891C9 /* TabelleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelleModel.swift; sourceTree = "<group>"; };
 		47826D252A0292BF009242FC /* RWE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RWE.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,11 +81,13 @@
 		47826D1C2A0292BF009242FC = {
 			isa = PBXGroup;
 			children = (
+				47440C122A064D31006F5875 /* Bangers-Regular.ttf */,
 				47826D572A02DB50009242FC /* SEASRN__.ttf */,
 				47826D272A0292BF009242FC /* RWE */,
 				47826D262A0292BF009242FC /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		47826D262A0292BF009242FC /* Products */ = {
 			isa = PBXGroup;
@@ -198,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47440C132A064D31006F5875 /* Bangers-Regular.ttf in Resources */,
 				47826D302A0292C0009242FC /* Preview Assets.xcassets in Resources */,
 				47826D2D2A0292C0009242FC /* Assets.xcassets in Resources */,
 				47826D582A02DB50009242FC /* SEASRN__.ttf in Resources */,
