@@ -26,33 +26,17 @@ struct TabelleView: View {
             VStack(spacing: 3) {
                 
                 HStack {
-                    Text("Tabelle 2022/2023")
-                        .bold()
-                        .frame(width: 100, alignment: .leading)
-                        .font(.system(size: 14))
-                    Text("  ")
-                    Text("3. Liga")
-                        .bold()
-                        .frame(width: 100, alignment: .leading)
-                        .font(.system(size: 14))
-                    Text("")
-                    Text("Sp.")
-                        .bold()
+                    Text("TABELLE ")
+                        .font(.custom("SignPainter", size: 30))
                         .frame(maxWidth: .infinity, alignment: .center)
-                        .font(.system(size: 14))
-                    Text("+/-")
-                        .bold()
-                        .frame(maxWidth: .infinity, alignment: .center)
-                        .font(.system(size: 14))
-                    Text("Pkt.")
-                        .bold()
-                        .frame(maxWidth: .infinity, alignment: .center)
-                        .font(.system(size: 14))
+                        .foregroundColor(.white)
+                        .background(Color.red)
+                    
                 }
                 .padding(.vertical, 5)
                 .background(Color.red.opacity(1.0))
                 .cornerRadius(0)
-                .frame(width: UIScreen.main.bounds.width * 0.9)
+                .frame(width: .infinity)
                 .foregroundColor(.white)
                 
                 //Farbkombination der Tabelle
