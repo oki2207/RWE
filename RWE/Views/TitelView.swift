@@ -54,10 +54,22 @@ struct TitelView: View {
                                     .frame(maxWidth: 100, maxHeight: 100)
                                     .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
                                 Text("1955 ")
-                                    .font(.custom("SignPainter", size: 20))
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.red)
-                                    .background(Color.white)
+                                .font(.custom("SignPainter", size: 20))
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .foregroundColor(.red)
+                                .background(
+                                    Color.white
+                                        .frame(width: 120) // Hier die Breite einstellen
+                                        .cornerRadius(0)
+                                        .padding(.horizontal)
+                                )
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 0)
+                                        .stroke(LinearGradient(gradient: Gradient(colors: [.red, .white]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
+                                        .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                )
+                                        .padding(.horizontal, 133)
+                                    
                                     
                                 Spacer()
                             }
@@ -74,7 +86,18 @@ struct TitelView: View {
                                         .font(.custom("SignPainter", size: 20))
                                         .frame(maxWidth: .infinity, alignment: .center)
                                         .foregroundColor(.red)
-                                        .background(Color.white)
+                                        .background(
+                                            Color.white
+                                                .frame(width: 270) // Hier die Breite einstellen
+                                                .cornerRadius(0)
+                                                .padding(.horizontal)
+                                        )
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 0)
+                                                .stroke(LinearGradient(gradient: Gradient(colors: [.white, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
+                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                        )
+                                                .padding(.horizontal, 60)
                                         
                                 }
                                 Image("dfb")
@@ -85,7 +108,18 @@ struct TitelView: View {
                                     .font(.custom("SignPainter", size: 20))
                                     .frame(maxWidth: .infinity, alignment: .center)
                                     .foregroundColor(.red)
-                                    .background(Color.white)
+                                    .background(
+                                        Color.white
+                                            .frame(width: 120) // Hier die Breite einstellen
+                                            .cornerRadius(0)
+                                            .padding(.horizontal)
+                                    )
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 0)
+                                            .stroke(LinearGradient(gradient: Gradient(colors: [.red, .white]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
+                                            .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                    )
+                                            .padding(.horizontal, 133)
                                 Spacer()
                             }
                             .frame(maxWidth: 380)
@@ -101,7 +135,18 @@ struct TitelView: View {
                                     .font(.custom("SignPainter", size: 20))
                                     .frame(maxWidth: .infinity, alignment: .center)
                                     .foregroundColor(.red)
-                                    .background(Color.white)
+                                    .background(
+                                        Color.white
+                                            .frame(width: 270) // Hier die Breite einstellen
+                                            .cornerRadius(0)
+                                            .padding(.horizontal)
+                                    )
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 0)
+                                            .stroke(LinearGradient(gradient: Gradient(colors: [.white, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
+                                            .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                    )
+                                            .padding(.horizontal, 60)
                                 
                             }
                             Image("Niederpokal")
@@ -115,6 +160,7 @@ struct TitelView: View {
                                     .frame(maxWidth: .infinity, alignment: .center)
                                     .foregroundColor(.red)
                                     .background(Color.white)
+                                
                                 
                                 Text("2002 ")
                                     .font(.custom("SignPainter", size: 20))
@@ -188,7 +234,18 @@ struct TitelView: View {
                                         .font(.custom("SignPainter", size: 20))
                                         .frame(maxWidth: .infinity, alignment: .center)
                                         .foregroundColor(.red)
-                                        .background(Color.white)
+                                        .background(
+                                            Color.white
+                                                .frame(width: 270) // Hier die Breite einstellen
+                                                .cornerRadius(0)
+                                                .padding(.horizontal)
+                                        )
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 0)
+                                                .stroke(LinearGradient(gradient: Gradient(colors: [.white, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
+                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                        )
+                                                .padding(.horizontal, 60)
                                 }
                                 Image("westpokal")
                                     .resizable()
@@ -198,7 +255,18 @@ struct TitelView: View {
                                     .font(.custom("SignPainter", size: 20))
                                     .frame(maxWidth: .infinity, alignment: .center)
                                     .foregroundColor(.red)
-                                    .background(Color.white)
+                                    .background(
+                                        Color.white
+                                            .frame(width: 120) // Hier die Breite einstellen
+                                            .cornerRadius(0)
+                                            .padding(.horizontal)
+                                    )
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 0)
+                                            .stroke(LinearGradient(gradient: Gradient(colors: [.red, .white]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
+                                            .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                    )
+                                            .padding(.horizontal, 133)
                                 Spacer()
                             }
                             .frame(maxWidth: 380)
