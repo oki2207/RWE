@@ -33,11 +33,11 @@ struct TabelleView: View {
                         .background(Color.red)
                     
                 }
-                .padding(.vertical, 5)
-                .background(Color.red.opacity(1.0))
-                .cornerRadius(0)
-                .frame(width: .infinity)
-                .foregroundColor(.white)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 0)
+                        .stroke(LinearGradient(gradient: Gradient(colors: [.white, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 5)
+                        .shadow(color: Color.red.opacity(0.3), radius: 0, x: 0, y: 2)
+                )
                 
                 //Farbkombination der Tabelle
                 
