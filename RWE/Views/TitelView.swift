@@ -30,10 +30,22 @@ struct TitelView: View {
                                     .font(.custom("SignPainter", size: 20))
                                     .frame(maxWidth: .infinity, alignment: .center)
                                     .foregroundColor(.red)
-                                    .background(Color.white)
+                                    .background(
+                                        Color.white
+                                            .frame(width: 270) // Hier die Breite einstellen
+                                            .cornerRadius(0)
+                                            .padding(.horizontal)
+                                    )
                                     .overlay(
-                                                RoundedRectangle(cornerRadius: 0)
-                                                    .stroke(Color.red, lineWidth: 0.5))
+                                        RoundedRectangle(cornerRadius: 0)
+                                            .stroke(LinearGradient(gradient: Gradient(colors: [.white, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
+                                            .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                    )
+                                            .padding(.horizontal, 60)
+                                    
+                            
+                                
+                                // TODO: Strokes bearbeiten
                                     
                                             
                             }
