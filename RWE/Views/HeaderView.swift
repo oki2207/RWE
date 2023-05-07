@@ -9,7 +9,7 @@ import SwiftUI
 struct HeaderView: View {
     var body: some View {
         HStack {
-            Text("ROT-WEISS ESSEN")
+            Text("ROT-WEISS ESSEN ")
                 .font(.custom("SignPainter", size: 48))
                 .foregroundColor(.white)
                 .shadow(color: Color.white.opacity(0.4), radius: 10, x: 0, y: 2)
