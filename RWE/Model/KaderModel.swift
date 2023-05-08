@@ -16,9 +16,9 @@ struct KaderModel {
     var since: String
     var photo: String
     var previousClub: String
-    var number: Int
+    var number: String
     
-    init(name: String, position: String, birthDate: String, birthPlace: String, since: String, photo: String, previousClub: String, number: Int) {
+    init(name: String, position: String, birthDate: String, birthPlace: String, since: String, photo: String, previousClub: String, number: String) {
         self.id = UUID()
         self.name = name
         self.position = position
