@@ -11,7 +11,7 @@ class KaderViewModel: ObservableObject {
     @Published var kader: [KaderModel]
     
     init() {
-        let player1 = KaderModel(name: "Jakob Golz", position: "Torhüter", birthDate: "01.01.2023", birthPlace: "Hamburg", since: "seit 2017", photo: "golzjakob", previousClub: "Hamburger SV", number: 1)
+        let player1 = KaderModel(name: "JAKOB GOLZ", position: "Torhüter", birthDate: "01.01.2023", birthPlace: "HAMBURG", since: "seit 2017", photo: "golzjakob", previousClub: "HAMBURGER SV", number: 1)
             
             
             self.kader = [player1]
