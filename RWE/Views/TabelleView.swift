@@ -19,7 +19,7 @@ struct TabelleView: View {
                 .scaledToFill()
                 .opacity(1.0)
                 .edgesIgnoringSafeArea(.all)
-                .zIndex(0)
+
             
             //Obere Leiste der Tabelle
             

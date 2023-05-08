@@ -10,6 +10,9 @@ struct TitelView: View {
     @State private var isShowingModal = false
     @State private var selectedImage: String = ""
     
+    
+    //HINTERGRUND
+    
     var body: some View {
         ZStack {
             Image("screen5")
@@ -17,64 +20,83 @@ struct TitelView: View {
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
             
+            //Obere Leiste der Tabelle
             
-            ZStack {
-                Color.gray.opacity(0.2)
-                    .ignoresSafeArea()
-                ScrollView {
-                    VStack(spacing: 20) {
-                        VStack {
-                            Spacer()
-                            ZStack {
-                                Text("DEUTSCHER MEISTER ")
-                                    .font(.custom("SignPainter", size: 20))
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.red)
-                                    .background(
-                                        Color.white
-                                            .frame(width: 270) // Hier die Breite einstellen
-                                            .cornerRadius(0)
-                                            .padding(.horizontal)
-                                    )
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 0)
-                                            .stroke(LinearGradient(gradient: Gradient(colors: [.white, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
-                                            .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
-                                    )
-                                            .padding(.horizontal, 60)
+            VStack(spacing: 3) {
+                
+                HStack {
+                    Text("ERFOLGE ")
+                        .font(.custom("SignPainter", size: 30))
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .foregroundColor(.white)
+                        .background(Color.red)
+                    
+                }
+                .overlay(
+                    RoundedRectangle(cornerRadius: 0)
+                        .stroke(LinearGradient(gradient: Gradient(colors: [.white, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 5)
+                        .shadow(color: Color.red.opacity(0.3), radius: 0, x: 0, y: 2)
+                )
+                .padding(.horizontal, 5)
+                
+                
+                ZStack {
+                    Color.gray.opacity(0.2)
+                        .ignoresSafeArea()
+                    ScrollView {
+                        VStack(spacing: 20) {
+                            VStack {
+                                Spacer()
+                                ZStack {
+                                    Text("DEUTSCHER MEISTER ")
+                                        .font(.custom("SignPainter", size: 20))
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                        .foregroundColor(.red)
+                                        .background(
+                                            Color.white
+                                                .frame(width: 270)
+                                                .cornerRadius(0)
+                                                .padding(.horizontal)
+                                        )
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 0)
+                                                .stroke(LinearGradient(gradient: Gradient(colors: [.white, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
+                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                        )
+                                        .padding(.horizontal, 60)
                                     
-                            
-                                
-                                // TODO: Strokes bearbeiten
                                     
-                                            
-                            }
+                                    
+                                    // TODO: Strokes bearbeiten
+                                    
+                                    
+                                }
                                 Image("schale")
                                     .resizable()
                                     .frame(maxWidth: 100, maxHeight: 100)
                                     .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
                                 Text("1955 ")
-                                .font(.custom("SignPainter", size: 20))
-                                .frame(maxWidth: .infinity, alignment: .center)
-                                .foregroundColor(.red)
-                                .background(
-                                    Color.white
-                                        .frame(width: 120) // Hier die Breite einstellen
-                                        .cornerRadius(0)
-                                        .padding(.horizontal)
-                                )
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 0)
-                                        .stroke(LinearGradient(gradient: Gradient(colors: [.red, .white]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
-                                        .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
-                                )
-                                        .padding(.horizontal, 133)
-                                    
-                                    
+                                    .font(.custom("SignPainter", size: 20))
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                                    .foregroundColor(.red)
+                                    .background(
+                                        Color.white
+                                            .frame(width: 120) // Hier die Breite einstellen
+                                            .cornerRadius(0)
+                                            .padding(.horizontal)
+                                    )
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 0)
+                                            .stroke(LinearGradient(gradient: Gradient(colors: [.red, .white]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
+                                            .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                    )
+                                    .padding(.horizontal, 130)
+                                
+                                
                                 Spacer()
                             }
                             .frame(maxWidth: 380)
-                            .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.8)).shadow(radius: 5))
+                            .background(RoundedRectangle(cornerRadius: 0).fill(Color.white.opacity(0.8)).shadow(radius: 0))
                             .onTapGesture {
                                 selectedImage = "1955"
                                 isShowingModal.toggle()
@@ -97,8 +119,8 @@ struct TitelView: View {
                                                 .stroke(LinearGradient(gradient: Gradient(colors: [.white, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
                                                 .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
                                         )
-                                                .padding(.horizontal, 60)
-                                        
+                                        .padding(.horizontal, 60)
+                                    
                                 }
                                 Image("dfb")
                                     .resizable()
@@ -119,110 +141,222 @@ struct TitelView: View {
                                             .stroke(LinearGradient(gradient: Gradient(colors: [.red, .white]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
                                             .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
                                     )
-                                            .padding(.horizontal, 133)
+                                    .padding(.horizontal, 130)
                                 Spacer()
                             }
                             .frame(maxWidth: 380)
-                            .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.8)).shadow(radius: 5))
+                            .background(RoundedRectangle(cornerRadius: 0).fill(Color.white.opacity(0.8)).shadow(radius: 0))
                             .onTapGesture {
                                 selectedImage = "rwe_1953"
                                 isShowingModal.toggle()
                             }
-                        VStack {
-                            Spacer()
-                            ZStack{
-                                Text("NIEDERRHEINPOKAL")
-                                    .font(.custom("SignPainter", size: 20))
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.red)
-                                    .background(
-                                        Color.white
-                                            .frame(width: 270) // Hier die Breite einstellen
-                                            .cornerRadius(0)
-                                            .padding(.horizontal)
-                                    )
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 0)
-                                            .stroke(LinearGradient(gradient: Gradient(colors: [.white, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
-                                            .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
-                                    )
-                                            .padding(.horizontal, 60)
+                            VStack {
+                                Spacer()
+                                ZStack{
+                                    Text("NIEDERRHEINPOKAL")
+                                        .font(.custom("SignPainter", size: 20))
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                        .foregroundColor(.red)
+                                        .background(
+                                            Color.white
+                                                .frame(width: 270) // Hier die Breite einstellen
+                                                .cornerRadius(0)
+                                                .padding(.horizontal)
+                                        )
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 0)
+                                                .stroke(LinearGradient(gradient: Gradient(colors: [.white, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
+                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                        )
+                                        .padding(.horizontal, 60)
+                                    
+                                }
+                                Image("Niederpokal")
+                                    .resizable()
+                                    .frame(maxWidth: 80, maxHeight: 100)
+                                    .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
                                 
-                            }
-                            Image("Niederpokal")
-                                .resizable()
-                                .frame(maxWidth: 80, maxHeight: 100)
-                                .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
-                            
-                            HStack{
-                                Text("1995 ")
-                                    .font(.custom("SignPainter", size: 20))
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.red)
-                                    .background(Color.white)
+                                HStack{
+                                    Text("1995 ")
+                                        .font(.custom("SignPainter", size: 20))
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                        .foregroundColor(.red)
+                                        .background(Color.white)
+                                        .overlay(
+                                                RoundedRectangle(cornerRadius: 0)
+                                                    .stroke(
+                                                        LinearGradient(
+                                                            gradient: Gradient(colors: [.red, .white]),
+                                                            startPoint: .leading,
+                                                            endPoint: .trailing
+                                                        ),
+                                                        lineWidth: 2
+                                                    )
+                                                    .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                            )
+                                            
+                                   
+                                    
+                                    
+                                    Text("2002 ")
+                                        .font(.custom("SignPainter", size: 20))
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                        .foregroundColor(.red)
+                                        .background(Color.white)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 0)
+                                                .stroke(
+                                                    LinearGradient(
+                                                        gradient: Gradient(colors: [.red, .white]),
+                                                        startPoint: .leading,
+                                                        endPoint: .trailing
+                                                    ),
+                                                    lineWidth: 2
+                                                )
+                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                        )
+                                    
+                                    Text("2004 ")
+                                        .font(.custom("SignPainter", size: 20))
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                        .foregroundColor(.red)
+                                        .background(Color.white)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 0)
+                                                .stroke(
+                                                    LinearGradient(
+                                                        gradient: Gradient(colors: [.red, .white]),
+                                                        startPoint: .leading,
+                                                        endPoint: .trailing
+                                                    ),
+                                                    lineWidth: 2
+                                                )
+                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                        )
+                                    
+                                }
                                 
                                 
-                                Text("2002 ")
-                                    .font(.custom("SignPainter", size: 20))
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.red)
-                                    .background(Color.white)
+                                Spacer()
                                 
-                                Text("2004 ")
-                                    .font(.custom("SignPainter", size: 20))
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.red)
-                                    .background(Color.white)
-                            }
-                            
-                            Spacer()
-                            
-                            HStack{
-                                Text("2008 ")
-                                    .font(.custom("SignPainter", size: 20))
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.red)
-                                    .background(Color.white)
+                                HStack{
+                                    Text("2008 ")
+                                        .font(.custom("SignPainter", size: 20))
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                        .foregroundColor(.red)
+                                        .background(Color.white)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 0)
+                                                .stroke(
+                                                    LinearGradient(
+                                                        gradient: Gradient(colors: [.red, .white]),
+                                                        startPoint: .leading,
+                                                        endPoint: .trailing
+                                                    ),
+                                                    lineWidth: 2
+                                                )
+                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                        )
+                                    
+                                    Text("2011 ")
+                                        .font(.custom("SignPainter", size: 20))
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                        .foregroundColor(.red)
+                                        .background(Color.white)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 0)
+                                                .stroke(
+                                                    LinearGradient(
+                                                        gradient: Gradient(colors: [.red, .white]),
+                                                        startPoint: .leading,
+                                                        endPoint: .trailing
+                                                    ),
+                                                    lineWidth: 2
+                                                )
+                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                        )
+                                    
+                                    Text("2012 ")
+                                        .font(.custom("SignPainter", size: 20))
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                        .foregroundColor(.red)
+                                        .background(Color.white)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 0)
+                                                .stroke(
+                                                    LinearGradient(
+                                                        gradient: Gradient(colors: [.red, .white]),
+                                                        startPoint: .leading,
+                                                        endPoint: .trailing
+                                                    ),
+                                                    lineWidth: 2
+                                                )
+                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                        )
+                                }
+                                Spacer()
                                 
-                                Text("2011 ")
-                                    .font(.custom("SignPainter", size: 20))
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.red)
-                                    .background(Color.white)
+                                HStack{
+                                    Text("2015 ")
+                                        .font(.custom("SignPainter", size: 20))
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                        .foregroundColor(.red)
+                                        .background(Color.white)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 0)
+                                                .stroke(
+                                                    LinearGradient(
+                                                        gradient: Gradient(colors: [.red, .white]),
+                                                        startPoint: .leading,
+                                                        endPoint: .trailing
+                                                    ),
+                                                    lineWidth: 2
+                                                )
+                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                        )
+                                    
+                                    Text("2016 ")
+                                        .font(.custom("SignPainter", size: 20))
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                        .foregroundColor(.red)
+                                        .background(Color.white)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 0)
+                                                .stroke(
+                                                    LinearGradient(
+                                                        gradient: Gradient(colors: [.red, .white]),
+                                                        startPoint: .leading,
+                                                        endPoint: .trailing
+                                                    ),
+                                                    lineWidth: 2
+                                                )
+                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                        )
+                                    
+                                    Text("2020 ")
+                                        .font(.custom("SignPainter", size: 20))
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                        .foregroundColor(.red)
+                                        .background(Color.white)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 0)
+                                                .stroke(
+                                                    LinearGradient(
+                                                        gradient: Gradient(colors: [.red, .white]),
+                                                        startPoint: .leading,
+                                                        endPoint: .trailing
+                                                    ),
+                                                    lineWidth: 2
+                                                )
+                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                        )
+                                }
+                                Spacer()
                                 
-                                Text("2012 ")
-                                    .font(.custom("SignPainter", size: 20))
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.red)
-                                    .background(Color.white)
-                            }
-                            Spacer()
-                            
-                            HStack{
-                                Text("2015 ")
-                                    .font(.custom("SignPainter", size: 20))
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.red)
-                                    .background(Color.white)
                                 
-                                Text("2016 ")
-                                    .font(.custom("SignPainter", size: 20))
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.red)
-                                    .background(Color.white)
-                                
-                                Text("2020 ")
-                                    .font(.custom("SignPainter", size: 20))
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.red)
-                                    .background(Color.white)
-                            }
-                            Spacer()
-                            
-                        
                             }
                             .frame(maxWidth: 380)
-                            .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.8)).shadow(radius: 5))
+                            .background(RoundedRectangle(cornerRadius: 0).fill(Color.white.opacity(0.8)).shadow(radius: 0))
                             .onTapGesture {
                                 selectedImage = "pokal1"
                                 isShowingModal.toggle()
@@ -245,7 +379,7 @@ struct TitelView: View {
                                                 .stroke(LinearGradient(gradient: Gradient(colors: [.white, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
                                                 .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
                                         )
-                                                .padding(.horizontal, 60)
+                                        .padding(.horizontal, 60)
                                 }
                                 Image("westpokal")
                                     .resizable()
@@ -266,11 +400,11 @@ struct TitelView: View {
                                             .stroke(LinearGradient(gradient: Gradient(colors: [.red, .white]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
                                             .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
                                     )
-                                            .padding(.horizontal, 133)
+                                    .padding(.horizontal, 130)
                                 Spacer()
                             }
                             .frame(maxWidth: 380)
-                            .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.8)).shadow(radius: 5))
+                            .background(RoundedRectangle(cornerRadius: 0).fill(Color.white.opacity(0.8)).shadow(radius: 0))
                             .onTapGesture {
                                 selectedImage = "pokal2"
                                 isShowingModal.toggle()
@@ -280,14 +414,16 @@ struct TitelView: View {
                 }
             }
         }
-    
-    
-    
-    
-    struct TitelView_Previews: PreviewProvider {
-        static var previews: some View {
-            TitelView()
-        }
-        
     }
-}
+        
+        
+        
+        
+        struct TitelView_Previews: PreviewProvider {
+            static var previews: some View {
+                TitelView()
+            }
+            
+        }
+    }
+

@@ -18,43 +18,62 @@ struct HomeView: View {
                 .scaledToFill()
                 .opacity(1.0)
                 .edgesIgnoringSafeArea(.all)
-        
-            VStack(spacing: 20) {
-                // News-Box
-                VStack {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 10) {
+            
+            //Obere Leiste der Tabelle
+            
+            VStack(spacing: 3) {
+                
+                HStack {
+                    Text("HAFENSTRASSE ")
+                        .font(.custom("SignPainter", size: 30))
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .foregroundColor(.white)
+                        .background(Color.red)
+                    
+                }
+                .overlay(
+                    RoundedRectangle(cornerRadius: 0)
+                        .stroke(LinearGradient(gradient: Gradient(colors: [.white, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 5)
+                        .shadow(color: Color.red.opacity(0.3), radius: 0, x: 0, y: 2)
+                )
+                
+                VStack(spacing: 20) {
+                    // News-Box
+                    VStack {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 10) {
+                                ForEach(1...5, id: \.self) { index in
+                                    Text("News \(index)")
+                                        .font(.title)
+                                }
+                            }
+                        }
+                        .frame(height: 180)
+                        HStack {
                             ForEach(1...5, id: \.self) { index in
-                                Text("News \(index)")
-                                    .font(.title)
+                                Circle()
+                                    .frame(width: 10, height: 10)
+                                    .foregroundColor(index == 1 ? .white : .gray)
                             }
                         }
                     }
-                    .frame(height: 180)
-                    HStack {
-                        ForEach(1...5, id: \.self) { index in
-                            Circle()
-                                .frame(width: 10, height: 10)
-                                .foregroundColor(index == 1 ? .white : .gray)
-                        }
-                    }
+                    .background(Color.white.opacity(0.7))
+                    .cornerRadius(10)
+                    
+                    // Nächstes Spiel
+                    Rectangle()
+                        .foregroundColor(.white.opacity(0.7))
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    
+                    // Letztes Spiel
+                    Rectangle()
+                        .foregroundColor(.white.opacity(0.7))
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
-                .background(Color.white.opacity(0.7))
-                .cornerRadius(10)
-                
-                // Nächstes Spiel
-                Rectangle()
-                    .foregroundColor(.white.opacity(0.7))
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                
-                // Letztes Spiel
-                Rectangle()
-                    .foregroundColor(.white.opacity(0.7))
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.gray.opacity(0.2))
             }
-            .padding()
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.gray.opacity(0.2))
         }
     }
 }
