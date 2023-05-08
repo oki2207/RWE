@@ -8,15 +8,15 @@
 import SwiftUI
 import CoreData
 
-
 struct KaderView: View {
+    @EnvironmentObject var kaderViewModel: KaderViewModel
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity: Player.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Player.name, ascending: true)])
     
     private var players: FetchedResults<Player>
     
     var body: some View {
-        ZStack{
+        ZStack {
             Image("externalimages-2")
                 .resizable()
                 .scaledToFill()
@@ -24,15 +24,13 @@ struct KaderView: View {
             
             //Obere Leiste der KaderView
             
-            VStack(spacing: 3){
-                
+            VStack(spacing: 3) {
                 HStack {
                     Text("TEAM ")
                         .font(.custom("SignPainter", size: 30))
                         .frame(maxWidth: 390, alignment: .trailing)
                         .foregroundColor(.red)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .leading, endPoint: .trailing))
-                    
                 }
                 .overlay(
                     RoundedRectangle(cornerRadius: 0)
@@ -41,31 +39,46 @@ struct KaderView: View {
                 )
                 .padding(.horizontal, 5)
                 
-                
-                
-                
-                ZStack{
-                        List(players) { player in
-                            PlayerRow(player: player)
+                ScrollView {
+                    ForEach(kaderViewModel.kader, id: \.id) { spieler in
+                        HStack {
+                            Image("\(spieler.photo)")
+                                .resizable()
+                                .frame(width: 100, height: 100)
+                                .cornerRadius(5)
+                                .shadow(radius: 5)
+                            VStack(alignment: .leading, spacing: 10) {
+                                Text("\(spieler.name)")
+                                    .font(.custom("SignPainter", size: 16))
+                                    .foregroundColor(.black)
+                                Text("\(spieler.birthDate)")
+                                    .font(.custom("SignPainter", size: 16))
+                                    .foregroundColor(.black)
+                                Text("\(spieler.number)")
+                                    .font(.custom("SignPainter", size: 16))
+                                    .foregroundColor(.black)
+                                Text("\(spieler.birthPlace)")
+                                    .font(.custom("SignPainter", size: 16))
+                                    .foregroundColor(.black)
+                            }
+                            .padding(.leading, 10)
                         }
-                        
+                        .padding(.vertical, 10)
+                        .background(Color.white)
+                        .cornerRadius(5)
+                        .shadow(radius: 5)
+                        .padding(.horizontal, 10)
                     }
                 }
             }
         }
     }
-
-
-
-
-
-
-
-
+}
+        
 
 struct KaderView_Previews: PreviewProvider {
     static var previews: some View {
         KaderView()
+            .environmentObject(KaderViewModel())
     }
 }
-

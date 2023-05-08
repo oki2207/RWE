@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var selectedTab = 0
     @StateObject var viewModel = TabelleViewModel()
+    @StateObject var viewModelkader = KaderViewModel()
     
     //HEADER VIEW
     
@@ -56,6 +57,7 @@ struct ContentView: View {
             
             NavigationView {
                 KaderView()
+                    .environmentObject(KaderViewModel())
             }
             .tabItem {
                 Image(systemName: "person.3")
