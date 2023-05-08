@@ -67,9 +67,6 @@ struct TitelView: View {
                                     
                                     
                                     
-                                    // TODO: Strokes bearbeiten
-                                    
-                                    
                                 }
                                 Image("schale")
                                     .resizable()
@@ -95,8 +92,26 @@ struct TitelView: View {
                                 
                                 Spacer()
                             }
+                            
+                            //BOX
+                            .background(
+                               RoundedRectangle(cornerRadius: 0)
+                                  .fill(Color.white.opacity(0.8))
+                                  .overlay(
+                                     RoundedRectangle(cornerRadius: 0)
+                                        .stroke(
+                                           LinearGradient(
+                                              gradient: Gradient(colors: [.white, .red]),
+                                              startPoint: .topLeading,
+                                              endPoint: .bottomTrailing
+                                           ),
+                                           lineWidth: 3
+                                        )
+                                  )
+                                  .shadow(radius: 0)
+                            )
                             .frame(maxWidth: 380)
-                            .background(RoundedRectangle(cornerRadius: 0).fill(Color.white.opacity(0.8)).shadow(radius: 0))
+
                             .onTapGesture {
                                 selectedImage = "1955"
                                 isShowingModal.toggle()
@@ -144,11 +159,28 @@ struct TitelView: View {
                                     .padding(.horizontal, 130)
                                 Spacer()
                             }
+                            .background(
+                               RoundedRectangle(cornerRadius: 0)
+                                  .fill(Color.white.opacity(0.8))
+                                  .overlay(
+                                     RoundedRectangle(cornerRadius: 0)
+                                        .stroke(
+                                           LinearGradient(
+                                              gradient: Gradient(colors: [.white, .red]),
+                                              startPoint: .topLeading,
+                                              endPoint: .bottomTrailing
+                                           ),
+                                           lineWidth: 3
+                                        )
+                                  )
+                                  .shadow(radius: 0)
+                            )
                             .frame(maxWidth: 380)
-                            .background(RoundedRectangle(cornerRadius: 0).fill(Color.white.opacity(0.8)).shadow(radius: 0))
+
                             .onTapGesture {
-                                selectedImage = "rwe_1953"
+                                selectedImage = "1955"
                                 isShowingModal.toggle()
+                            
                             }
                             VStack {
                                 Spacer()
@@ -355,10 +387,27 @@ struct TitelView: View {
                                 
                                 
                             }
+                            //BOX
+                            .background(
+                               RoundedRectangle(cornerRadius: 0)
+                                  .fill(Color.white.opacity(0.8))
+                                  .overlay(
+                                     RoundedRectangle(cornerRadius: 0)
+                                        .stroke(
+                                           LinearGradient(
+                                              gradient: Gradient(colors: [.white, .red]),
+                                              startPoint: .topLeading,
+                                              endPoint: .bottomTrailing
+                                           ),
+                                           lineWidth: 3
+                                        )
+                                  )
+                                  .shadow(radius: 0)
+                            )
                             .frame(maxWidth: 380)
-                            .background(RoundedRectangle(cornerRadius: 0).fill(Color.white.opacity(0.8)).shadow(radius: 0))
+
                             .onTapGesture {
-                                selectedImage = "pokal1"
+                                selectedImage = "1955"
                                 isShowingModal.toggle()
                             }
                             VStack {
@@ -403,10 +452,28 @@ struct TitelView: View {
                                     .padding(.horizontal, 130)
                                 Spacer()
                             }
+                            
+                            // BOX
+                            .background(
+                               RoundedRectangle(cornerRadius: 0)
+                                  .fill(Color.white.opacity(0.8))
+                                  .overlay(
+                                     RoundedRectangle(cornerRadius: 0)
+                                        .stroke(
+                                           LinearGradient(
+                                              gradient: Gradient(colors: [.white, .red]),
+                                              startPoint: .topLeading,
+                                              endPoint: .bottomTrailing
+                                           ),
+                                           lineWidth: 3
+                                        )
+                                  )
+                                  .shadow(radius: 0)
+                            )
                             .frame(maxWidth: 380)
-                            .background(RoundedRectangle(cornerRadius: 0).fill(Color.white.opacity(0.8)).shadow(radius: 0))
+
                             .onTapGesture {
-                                selectedImage = "pokal2"
+                                selectedImage = "1955"
                                 isShowingModal.toggle()
                             }
                         }
