@@ -38,43 +38,58 @@ struct KaderView: View {
                         .shadow(color: Color.red.opacity(0.3), radius: 0, x: 0, y: 2)
                 )
                 .padding(.horizontal, 5)
-                
-                ScrollView {
-                    ForEach(kaderViewModel.kader, id: \.id) { spieler in
-                        HStack {
-                            Image("\(spieler.photo)")
-                                .resizable()
-                                .frame(width: 100, height: 100)
-                                .cornerRadius(5)
-                                .shadow(radius: 5)
-                            VStack(alignment: .leading, spacing: 10) {
-                                Text("\(spieler.name)")
-                                    .font(.custom("SignPainter", size: 16))
-                                    .foregroundColor(.black)
-                                Text("\(spieler.birthDate)")
-                                    .font(.custom("SignPainter", size: 16))
-                                    .foregroundColor(.black)
-                                Text("\(spieler.number)")
-                                    .font(.custom("SignPainter", size: 16))
-                                    .foregroundColor(.black)
-                                Text("\(spieler.birthPlace)")
-                                    .font(.custom("SignPainter", size: 16))
-                                    .foregroundColor(.black)
+                VStack {
+                    ScrollView {
+                        ForEach(kaderViewModel.kader, id: \.id) { spieler in
+                            ZStack {
+                                Image("\(spieler.photo)")
+                                    .resizable()
+                                    .frame(width: 100, height: 135)
+                                    .shadow(radius: 5)
+                                VStack(alignment: .leading, spacing: 10) {
+                                    Text("\(spieler.name)")
+                                        .font(.custom("SignPainter", size: 16))
+                                        .foregroundColor(.black)
+                                    Text("\(spieler.birthDate)")
+                                        .font(.custom("SignPainter", size: 16))
+                                        .foregroundColor(.black)
+                                    Text("\(spieler.number)")
+                                        .font(.custom("SignPainter", size: 16))
+                                        .foregroundColor(.black)
+                                    Text("\(spieler.birthPlace)")
+                                        .font(.custom("SignPainter", size: 16))
+                                        .foregroundColor(.black)
+                                    
+                                        .padding(.horizontal, 200)
+                                    Spacer()
+                                }
+                                    
+                                        .background(
+                                            RoundedRectangle(cornerRadius: 0)
+                                                .fill(Color.white.opacity(0.8))
+                                                .overlay(
+                                                    RoundedRectangle(cornerRadius: 0)
+                                                        .stroke(
+                                                            LinearGradient(
+                                                                gradient: Gradient(colors: [.white, .red]),
+                                                                startPoint: .topLeading,
+                                                                endPoint: .bottomTrailing
+                                                            ),
+                                                            lineWidth: 3
+                                                        )
+                                                )
+                                                .shadow(radius: 0)
+                                        )
+                                        .frame(maxWidth: 380)
+                                }
                             }
-                            .padding(.leading, 10)
                         }
-                        .padding(.vertical, 10)
-                        .background(Color.white)
-                        .cornerRadius(5)
-                        .shadow(radius: 5)
-                        .padding(.horizontal, 10)
                     }
                 }
             }
         }
     }
-}
-        
+
 
 struct KaderView_Previews: PreviewProvider {
     static var previews: some View {
