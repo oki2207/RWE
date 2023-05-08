@@ -471,6 +471,8 @@ struct TitelView: View {
                                   .shadow(radius: 0)
                             )
                             .frame(maxWidth: 380)
+                            
+                            Spacer()
 
                             .onTapGesture {
                                 selectedImage = "1955"
@@ -481,6 +483,7 @@ struct TitelView: View {
                 }
             }
         }
+    
     }
         
         
