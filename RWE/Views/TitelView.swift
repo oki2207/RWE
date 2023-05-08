@@ -66,8 +66,21 @@ struct TitelView: View {
                                         .padding(.horizontal, 60)
                                     
                                     
+                                    Text("1 ")
+                                        .font(.custom("SignPainter", size: 55))
+                                        .foregroundColor(.red)
+                                        .padding(.leading, -130)
                                     
+                                    Text("X ")
+                                        .font(.custom("SignPainter", size: 40))
+                                        .foregroundColor(.red)
+                                        .padding(.leading, -115)
                                 }
+                                
+                                
+                                
+                                
+                                
                                 Image("schale")
                                     .resizable()
                                     .frame(maxWidth: 100, maxHeight: 100)
@@ -95,23 +108,23 @@ struct TitelView: View {
                             
                             //BOX
                             .background(
-                               RoundedRectangle(cornerRadius: 0)
-                                  .fill(Color.white.opacity(0.8))
-                                  .overlay(
-                                     RoundedRectangle(cornerRadius: 0)
-                                        .stroke(
-                                           LinearGradient(
-                                              gradient: Gradient(colors: [.white, .red]),
-                                              startPoint: .topLeading,
-                                              endPoint: .bottomTrailing
-                                           ),
-                                           lineWidth: 3
-                                        )
-                                  )
-                                  .shadow(radius: 0)
+                                RoundedRectangle(cornerRadius: 0)
+                                    .fill(Color.white.opacity(0.8))
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 0)
+                                            .stroke(
+                                                LinearGradient(
+                                                    gradient: Gradient(colors: [.white, .red]),
+                                                    startPoint: .topLeading,
+                                                    endPoint: .bottomTrailing
+                                                ),
+                                                lineWidth: 3
+                                            )
+                                    )
+                                    .shadow(radius: 0)
                             )
                             .frame(maxWidth: 380)
-
+                            
                             .onTapGesture {
                                 selectedImage = "1955"
                                 isShowingModal.toggle()
@@ -135,6 +148,17 @@ struct TitelView: View {
                                                 .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
                                         )
                                         .padding(.horizontal, 60)
+                                    
+                                    Text("1 ")
+                                        .font(.custom("SignPainter", size: 55))
+                                        .foregroundColor(.red)
+                                        .padding(.leading, -130)
+                                    
+                                    Text("X ")
+                                        .font(.custom("SignPainter", size: 40))
+                                        .foregroundColor(.red)
+                                        .padding(.leading, -115)
+                                    
                                     
                                 }
                                 Image("dfb")
@@ -160,27 +184,27 @@ struct TitelView: View {
                                 Spacer()
                             }
                             .background(
-                               RoundedRectangle(cornerRadius: 0)
-                                  .fill(Color.white.opacity(0.8))
-                                  .overlay(
-                                     RoundedRectangle(cornerRadius: 0)
-                                        .stroke(
-                                           LinearGradient(
-                                              gradient: Gradient(colors: [.white, .red]),
-                                              startPoint: .topLeading,
-                                              endPoint: .bottomTrailing
-                                           ),
-                                           lineWidth: 3
-                                        )
-                                  )
-                                  .shadow(radius: 0)
+                                RoundedRectangle(cornerRadius: 0)
+                                    .fill(Color.white.opacity(0.8))
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 0)
+                                            .stroke(
+                                                LinearGradient(
+                                                    gradient: Gradient(colors: [.white, .red]),
+                                                    startPoint: .topLeading,
+                                                    endPoint: .bottomTrailing
+                                                ),
+                                                lineWidth: 3
+                                            )
+                                    )
+                                    .shadow(radius: 0)
                             )
                             .frame(maxWidth: 380)
-
+                            
                             .onTapGesture {
                                 selectedImage = "1955"
                                 isShowingModal.toggle()
-                            
+                                
                             }
                             VStack {
                                 Spacer()
@@ -202,6 +226,17 @@ struct TitelView: View {
                                         )
                                         .padding(.horizontal, 60)
                                     
+                                    Text("9 ")
+                                        .font(.custom("SignPainter", size: 55))
+                                        .foregroundColor(.red)
+                                        .padding(.leading, -130)
+                                    
+                                    Text("X ")
+                                        .font(.custom("SignPainter", size: 40))
+                                        .foregroundColor(.red)
+                                        .padding(.leading, -105)
+                                    
+                                    
                                 }
                                 Image("Niederpokal")
                                     .resizable()
@@ -215,19 +250,19 @@ struct TitelView: View {
                                         .foregroundColor(.black)
                                         .background(Color.white)
                                         .overlay(
-                                                RoundedRectangle(cornerRadius: 0)
-                                                    .stroke(
-                                                        LinearGradient(
-                                                            gradient: Gradient(colors: [.red, .white]),
-                                                            startPoint: .leading,
-                                                            endPoint: .trailing
-                                                        ),
-                                                        lineWidth: 2
-                                                    )
-                                                    .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
-                                            )
-                                            
-                                   
+                                            RoundedRectangle(cornerRadius: 0)
+                                                .stroke(
+                                                    LinearGradient(
+                                                        gradient: Gradient(colors: [.red, .white]),
+                                                        startPoint: .leading,
+                                                        endPoint: .trailing
+                                                    ),
+                                                    lineWidth: 2
+                                                )
+                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                        )
+                                    
+                                    
                                     
                                     
                                     Text("2002 ")
@@ -389,23 +424,23 @@ struct TitelView: View {
                             }
                             //BOX
                             .background(
-                               RoundedRectangle(cornerRadius: 0)
-                                  .fill(Color.white.opacity(0.8))
-                                  .overlay(
-                                     RoundedRectangle(cornerRadius: 0)
-                                        .stroke(
-                                           LinearGradient(
-                                              gradient: Gradient(colors: [.white, .red]),
-                                              startPoint: .topLeading,
-                                              endPoint: .bottomTrailing
-                                           ),
-                                           lineWidth: 3
-                                        )
-                                  )
-                                  .shadow(radius: 0)
+                                RoundedRectangle(cornerRadius: 0)
+                                    .fill(Color.white.opacity(0.8))
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 0)
+                                            .stroke(
+                                                LinearGradient(
+                                                    gradient: Gradient(colors: [.white, .red]),
+                                                    startPoint: .topLeading,
+                                                    endPoint: .bottomTrailing
+                                                ),
+                                                lineWidth: 3
+                                            )
+                                    )
+                                    .shadow(radius: 0)
                             )
                             .frame(maxWidth: 380)
-
+                            
                             .onTapGesture {
                                 selectedImage = "1955"
                                 isShowingModal.toggle()
@@ -429,6 +464,17 @@ struct TitelView: View {
                                                 .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
                                         )
                                         .padding(.horizontal, 60)
+                                    
+                                    Text("1 ")
+                                        .font(.custom("SignPainter", size: 55))
+                                        .foregroundColor(.red)
+                                        .padding(.leading, -130)
+                                    
+                                    Text("X ")
+                                        .font(.custom("SignPainter", size: 40))
+                                        .foregroundColor(.red)
+                                        .padding(.leading, -115)
+                                    
                                 }
                                 Image("westpokal")
                                     .resizable()
@@ -455,45 +501,45 @@ struct TitelView: View {
                             
                             // BOX
                             .background(
-                               RoundedRectangle(cornerRadius: 0)
-                                  .fill(Color.white.opacity(0.8))
-                                  .overlay(
-                                     RoundedRectangle(cornerRadius: 0)
-                                        .stroke(
-                                           LinearGradient(
-                                              gradient: Gradient(colors: [.white, .red]),
-                                              startPoint: .topLeading,
-                                              endPoint: .bottomTrailing
-                                           ),
-                                           lineWidth: 3
-                                        )
-                                  )
-                                  .shadow(radius: 0)
+                                RoundedRectangle(cornerRadius: 0)
+                                    .fill(Color.white.opacity(0.8))
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 0)
+                                            .stroke(
+                                                LinearGradient(
+                                                    gradient: Gradient(colors: [.white, .red]),
+                                                    startPoint: .topLeading,
+                                                    endPoint: .bottomTrailing
+                                                ),
+                                                lineWidth: 3
+                                            )
+                                    )
+                                    .shadow(radius: 0)
                             )
                             .frame(maxWidth: 380)
                             
                             Spacer()
-
-                            .onTapGesture {
-                                selectedImage = "1955"
-                                isShowingModal.toggle()
-                            }
+                            
+                                .onTapGesture {
+                                    selectedImage = "1955"
+                                    isShowingModal.toggle()
+                                }
                         }
                     }
                 }
             }
         }
+        
+    }
     
-    }
-        
-        
-        
-        
-        struct TitelView_Previews: PreviewProvider {
-            static var previews: some View {
-                TitelView()
-            }
-            
+    
+    
+    
+    struct TitelView_Previews: PreviewProvider {
+        static var previews: some View {
+            TitelView()
         }
+        
     }
+}
 
