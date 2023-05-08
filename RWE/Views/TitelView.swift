@@ -27,14 +27,14 @@ struct TitelView: View {
                 HStack {
                     Text("ERFOLGE ")
                         .font(.custom("SignPainter", size: 30))
-                        .frame(maxWidth: .infinity, alignment: .center)
-                        .foregroundColor(.white)
-                        .background(Color.red)
+                        .frame(maxWidth: 390, alignment: .trailing)
+                        .foregroundColor(.red)
+                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .leading, endPoint: .trailing))
                     
                 }
                 .overlay(
                     RoundedRectangle(cornerRadius: 0)
-                        .stroke(LinearGradient(gradient: Gradient(colors: [.white, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 5)
+                        .stroke(LinearGradient(gradient: Gradient(colors: [Color.clear, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
                         .shadow(color: Color.red.opacity(0.3), radius: 0, x: 0, y: 2)
                 )
                 .padding(.horizontal, 5)
@@ -51,7 +51,7 @@ struct TitelView: View {
                                     Text("DEUTSCHER MEISTER ")
                                         .font(.custom("SignPainter", size: 20))
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.black)
                                         .background(
                                             Color.white
                                                 .frame(width: 270)
@@ -75,7 +75,7 @@ struct TitelView: View {
                                 Text("1955 ")
                                     .font(.custom("SignPainter", size: 20))
                                     .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.red)
+                                    .foregroundColor(.black)
                                     .background(
                                         Color.white
                                             .frame(width: 120) // Hier die Breite einstellen
@@ -122,7 +122,7 @@ struct TitelView: View {
                                     Text("DFB-POKALSIEGER ")
                                         .font(.custom("SignPainter", size: 20))
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.black)
                                         .background(
                                             Color.white
                                                 .frame(width: 270) // Hier die Breite einstellen
@@ -144,7 +144,7 @@ struct TitelView: View {
                                 Text("1953 ")
                                     .font(.custom("SignPainter", size: 20))
                                     .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.red)
+                                    .foregroundColor(.black)
                                     .background(
                                         Color.white
                                             .frame(width: 120) // Hier die Breite einstellen
@@ -188,7 +188,7 @@ struct TitelView: View {
                                     Text("NIEDERRHEINPOKAL")
                                         .font(.custom("SignPainter", size: 20))
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.black)
                                         .background(
                                             Color.white
                                                 .frame(width: 270) // Hier die Breite einstellen
@@ -212,7 +212,7 @@ struct TitelView: View {
                                     Text("1995 ")
                                         .font(.custom("SignPainter", size: 20))
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.black)
                                         .background(Color.white)
                                         .overlay(
                                                 RoundedRectangle(cornerRadius: 0)
@@ -233,7 +233,7 @@ struct TitelView: View {
                                     Text("2002 ")
                                         .font(.custom("SignPainter", size: 20))
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.black)
                                         .background(Color.white)
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 0)
@@ -251,7 +251,7 @@ struct TitelView: View {
                                     Text("2004 ")
                                         .font(.custom("SignPainter", size: 20))
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.black)
                                         .background(Color.white)
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 0)
@@ -275,7 +275,7 @@ struct TitelView: View {
                                     Text("2008 ")
                                         .font(.custom("SignPainter", size: 20))
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.black)
                                         .background(Color.white)
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 0)
@@ -293,7 +293,7 @@ struct TitelView: View {
                                     Text("2011 ")
                                         .font(.custom("SignPainter", size: 20))
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.black)
                                         .background(Color.white)
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 0)
@@ -311,7 +311,7 @@ struct TitelView: View {
                                     Text("2012 ")
                                         .font(.custom("SignPainter", size: 20))
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.black)
                                         .background(Color.white)
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 0)
@@ -332,7 +332,7 @@ struct TitelView: View {
                                     Text("2015 ")
                                         .font(.custom("SignPainter", size: 20))
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.black)
                                         .background(Color.white)
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 0)
@@ -350,7 +350,7 @@ struct TitelView: View {
                                     Text("2016 ")
                                         .font(.custom("SignPainter", size: 20))
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.black)
                                         .background(Color.white)
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 0)
@@ -368,7 +368,7 @@ struct TitelView: View {
                                     Text("2020 ")
                                         .font(.custom("SignPainter", size: 20))
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.black)
                                         .background(Color.white)
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 0)
@@ -416,7 +416,7 @@ struct TitelView: View {
                                     Text("MEISTER RL-WEST ")
                                         .font(.custom("SignPainter", size: 20))
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.black)
                                         .background(
                                             Color.white
                                                 .frame(width: 270) // Hier die Breite einstellen
@@ -437,7 +437,7 @@ struct TitelView: View {
                                 Text("2022 ")
                                     .font(.custom("SignPainter", size: 20))
                                     .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.red)
+                                    .foregroundColor(.black)
                                     .background(
                                         Color.white
                                             .frame(width: 120) // Hier die Breite einstellen
