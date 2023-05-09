@@ -59,6 +59,9 @@ struct ContentView: View {
                 KaderView()
                     .environmentObject(KaderViewModel())
                     .environmentObject(AbwehrViewModel())
+                    .environmentObject(MitteViewModel())
+                    .environmentObject(SturmViewModel())
+                    .environmentObject(TrainerViewModel())
             }
             .tabItem {
                 Image(systemName: "person.3")
