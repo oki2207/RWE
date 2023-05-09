@@ -11,7 +11,7 @@ struct HeaderView: View {
         HStack {
             Text("ROT-WEISS ESSEN ")
                 .font(.custom("SignPainter", size: 48))
-                .foregroundColor(.white)
+                .foregroundColor(.red)
                 .shadow(color: Color.white.opacity(0.4), radius: 10, x: 0, y: 2)
                 
             VStack {
@@ -30,11 +30,11 @@ struct HeaderView: View {
         .padding()
         .overlay(
             RoundedRectangle(cornerRadius: 0)
-                .stroke(LinearGradient(gradient: Gradient(colors: [.red, .white]), startPoint: .center, endPoint: .trailing), lineWidth: 15)
+                .stroke(LinearGradient(gradient: Gradient(colors: [Color.clear, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 5)
                 .shadow(color: Color.red.opacity(1.0), radius: 20, x: 0, y: 2)
         )
 
-        .background(Color.red)
+        .background(Color.white)
         
           
             
