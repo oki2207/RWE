@@ -22,7 +22,7 @@ struct TitelView: View {
             
             //Obere Leiste der Tabelle
             
-            VStack(spacing: 3) {
+            VStack(spacing: 5) {
                 
                 HStack {
                     Text("ERFOLGE ")
@@ -39,7 +39,7 @@ struct TitelView: View {
                         .shadow(color: Color.red.opacity(0.3), radius: 0, x: 0, y: 2)
                         .padding(.top, 20)
                 )
-                .padding(.horizontal, 5)
+                .padding(.horizontal, 20)
                 
                 
                 ZStack {
@@ -519,8 +519,7 @@ struct TitelView: View {
                                     .shadow(radius: 0)
                             )
                             .frame(maxWidth: 380)
-                            
-                            Spacer()
+                            .padding(10)
                             
                                 .onTapGesture {
                                     selectedImage = "1955"

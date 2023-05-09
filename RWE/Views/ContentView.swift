@@ -58,6 +58,7 @@ struct ContentView: View {
             NavigationView {
                 KaderView()
                     .environmentObject(KaderViewModel())
+                    .environmentObject(AbwehrViewModel())
             }
             .tabItem {
                 Image(systemName: "person.3")
