@@ -1,5 +1,5 @@
 //
-//  MitteViewModel.swift
+//  SturmViewModel.swift
 //  RWE
 //
 //  Created by Olli on 09.05.23.
@@ -7,32 +7,32 @@
 
 import Foundation
 
-class MitteViewModel: ObservableObject {
+class SturmViewModel: ObservableObject {
     @Published var kader: [KaderModel]
     
     init() {
         
-        let player13 = KaderModel(
-            name: "CLEMENS FANDRICH ",
+        let player20 = KaderModel(
+            name: "RON BERLINSKI ",
             position: "TORHÜTER ",
-            birthDate: "GEBURTSTDATUM: 10.01.1991 ",
-            birthPlace: "GEBURTSORT: BERLIN ",
+            birthDate: "GEBURTSTDATUM: 08.08.1994 ",
+            birthPlace: "GEBURTSORT: BOCHUM ",
             since: "ROT-WEISSER SEIT 2022 ",
-            photo: "fandrich",
-            previousClub: "LETZTER VEREIN: ERZG. AUE ",
-            number: "5 ")
+            photo: "ron",
+            previousClub: "LETZTER VEREIN: SC VERL ",
+            number: "9 ")
         
-        let player14 = KaderModel(
-            name: "BJÖRN ROTHER ",
+        let player21 = KaderModel(
+            name: "KEVIN HOLZWEILER ",
             position: "TORHÜTER ",
-            birthDate: "GEBURTSTDATUM: 29.07.1996 ",
-            birthPlace: "GEBURTSORT: STOLBERG ",
-            since: "ROT-WEISSER SEIT 2022 ",
-            photo: "rother",
-            previousClub: "LETZTER VEREIN: HANSA ROSTOCK ",
-            number: "6 ")
-        
-        let player15 = KaderModel(
+            birthDate: "GEBURTSTDATUM: 16.10.1994 ",
+            birthPlace: "GEBURTSORT: JÜLICH ",
+            since: "ROT-WEISSER SEIT 2021 ",
+            photo: "holzweiler",
+            previousClub: "LETZTER VEREIN: VIKTORIA KÖLN ",
+            number: "10 ")
+       // ---------------------------------------------------------------//HIER WEITERMACHEN 
+        let player22 = KaderModel(
             name: "CEDRIC HARENBROCK ",
             position: "TORHÜTER ",
             birthDate: "GEBURTSTDATUM: 19.04.1998 ",
@@ -42,7 +42,7 @@ class MitteViewModel: ObservableObject {
             previousClub: "LETZTER VEREIN: BAYER 04 LEV. ",
             number: "8 ")
         
-        let player16 = KaderModel(
+        let player23 = KaderModel(
             name: "FELIX GÖTZE ",
             position: "TORHÜTER ",
             birthDate: "GEBURTSTDATUM: 11.02.1998 ",
@@ -52,7 +52,7 @@ class MitteViewModel: ObservableObject {
             previousClub: "LETZTER VEREIN: FC AUGSBURG ",
             number: "24 ")
         
-        let player17 = KaderModel(
+        let player24 = KaderModel(
             name: "TORBEN MÜSEL ",
             position: "TORHÜTER ",
             birthDate: "GEBURTSTDATUM: 25.07.1999 ",
@@ -62,7 +62,7 @@ class MitteViewModel: ObservableObject {
             previousClub: "LETZTER VEREIN: BOR. M'GLADBACH ",
             number: "26 ")
         
-        let player18 = KaderModel(
+        let player25 = KaderModel(
             name: "NIKLAS TARNAT ",
             position: "TORHÜTER ",
             birthDate: "GEBURTSTDATUM: 26.05.1998 ",
@@ -72,7 +72,7 @@ class MitteViewModel: ObservableObject {
             previousClub: "LETZTER VEREIN: HANNOVER 96 ",
             number: "31 ")
         
-        let player19 = KaderModel(
+        let player26 = KaderModel(
             name: "THOMAS EISFELD ",
             position: "TORHÜTER ",
             birthDate: "GEBURTSTDATUM: 18.01.1993 ",
@@ -82,8 +82,17 @@ class MitteViewModel: ObservableObject {
             previousClub: "LETZTER VEREIN: VFL BOCHUM ",
             number: "32 ")
         
-        //TODO: weitere Spieler
+        let player27 = KaderModel(
+            name: "THOMAS EISFELD ",
+            position: "TORHÜTER ",
+            birthDate: "GEBURTSTDATUM: 18.01.1993 ",
+            birthPlace: "GEBURTSORT: FINSTERWALDE ",
+            since: "ROT-WEISSER SEIT 2022 ",
+            photo: "eisfeld",
+            previousClub: "LETZTER VEREIN: VFL BOCHUM ",
+            number: "32 ")
         
-        self.kader = [player13, player14, player15, player16, player17, player18, player19]
+        
+        self.kader = [player20, player21, player22, player23, player24, player25, player26, player27]
     }
 }
