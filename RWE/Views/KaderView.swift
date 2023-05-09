@@ -60,6 +60,8 @@ struct KaderView: View {
                 ScrollView {
                     
                     //TEAMFOTO
+                    
+                    
                     VStack{
                         Button(action: {
                             self.isPresented = true
@@ -103,7 +105,10 @@ struct KaderView: View {
                                 }
                         }
                         
+                        //TOR-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                         
+                        
+                        //KLICKLEISTE-------------------------------------------------------------------------------
                         Text("TOR ")
                             .onTapGesture {
                                 showTorPlayers.toggle()
@@ -114,6 +119,7 @@ struct KaderView: View {
                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                             .padding(.top, 15)
                         
+                        //SPIELER TOR_______________________________________________________________________________
                         
                         if showTorPlayers {
                             ForEach(kaderViewModel.kader, id: \.id) { spieler in
@@ -128,10 +134,10 @@ struct KaderView: View {
                                                 .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                                 .padding(.top, 15)
                                         }
-                                        HStack(alignment: .top, spacing: 20) {
+                                        HStack(alignment: .top, spacing: 50){
                                             Image("\(spieler.photo)")
                                                 .resizable()
-                                                .frame(width: 120, height: 155)
+                                                .frame(width: 130, height: 170)
                                                 .shadow(radius: 5)
                                                 .background(
                                                     Color.clear
@@ -143,19 +149,19 @@ struct KaderView: View {
                                                         .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2))
                                             
                                             
-                                            VStack(alignment: .leading, spacing: 15) {
+                                            VStack(alignment: .leading, spacing: 23) {
                                                 Text("\(spieler.name)")
-                                                    .font(.custom("SignPainter", size: 25))
+                                                    .font(.custom("SignPainter", size: 23))
                                                     .foregroundColor(.red)
                                                 
                                                 Text("\(spieler.birthDate)")
-                                                    .font(.custom("SignPainter", size: 17))
+                                                    .font(.custom("SignPainter", size: 15))
                                                     .foregroundColor(.black)
                                                 Text("\(spieler.birthPlace)")
-                                                    .font(.custom("SignPainter", size: 17))
+                                                    .font(.custom("SignPainter", size: 15))
                                                     .foregroundColor(.black)
                                                 Text("\(spieler.previousClub)")
-                                                    .font(.custom("SignPainter", size: 17))
+                                                    .font(.custom("SignPainter", size: 15))
                                                     .foregroundColor(.black)
                                                 Text("\(spieler.since)")
                                                     .font(.custom("SignPainter", size: 20))
@@ -190,6 +196,11 @@ struct KaderView: View {
                         }
                         
                     }
+                    
+                    //ABW-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                    
+                    
+                    //KLICKLEISTE-------------------------------------------------------------------------------
                     Text("ABWEHR ")
                         .onTapGesture {
                             showAbwPlayers.toggle()
@@ -199,6 +210,8 @@ struct KaderView: View {
                         .foregroundColor(.white)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                         .padding(.top, 15)
+                    
+                    //SPIELER ABW_______________________________________________________________________________
                     
                     if showAbwPlayers {
                         ForEach(abwehrViewModel.kader, id: \.id) { spieler in
@@ -213,10 +226,10 @@ struct KaderView: View {
                                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                             .padding(.top, 15)
                                     }
-                                    HStack(alignment: .top, spacing: 20) {
+                                    HStack(alignment: .top, spacing: 50){
                                         Image("\(spieler.photo)")
                                             .resizable()
-                                            .frame(width: 120, height: 155)
+                                            .frame(width: 130, height: 170)
                                             .shadow(radius: 5)
                                             .background(
                                                 Color.clear
@@ -228,19 +241,19 @@ struct KaderView: View {
                                                     .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2))
                                         
                                         
-                                        VStack(alignment: .leading, spacing: 15) {
+                                        VStack(alignment: .leading, spacing: 23) {
                                             Text("\(spieler.name)")
-                                                .font(.custom("SignPainter", size: 25))
+                                                .font(.custom("SignPainter", size: 23))
                                                 .foregroundColor(.red)
                                             
                                             Text("\(spieler.birthDate)")
-                                                .font(.custom("SignPainter", size: 17))
+                                                .font(.custom("SignPainter", size: 15))
                                                 .foregroundColor(.black)
                                             Text("\(spieler.birthPlace)")
-                                                .font(.custom("SignPainter", size: 17))
+                                                .font(.custom("SignPainter", size: 15))
                                                 .foregroundColor(.black)
                                             Text("\(spieler.previousClub)")
-                                                .font(.custom("SignPainter", size: 17))
+                                                .font(.custom("SignPainter", size: 15))
                                                 .foregroundColor(.black)
                                             Text("\(spieler.since)")
                                                 .font(.custom("SignPainter", size: 20))
@@ -299,10 +312,10 @@ struct KaderView: View {
                                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                             .padding(.top, 15)
                                     }
-                                    HStack(alignment: .top, spacing: 20) {
+                                    HStack(alignment: .top, spacing: 50){
                                         Image("\(spieler.photo)")
                                             .resizable()
-                                            .frame(width: 120, height: 155)
+                                            .frame(width: 130, height: 170)
                                             .shadow(radius: 5)
                                             .background(
                                                 Color.clear
@@ -314,19 +327,19 @@ struct KaderView: View {
                                                     .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2))
                                         
                                         
-                                        VStack(alignment: .leading, spacing: 15) {
+                                        VStack(alignment: .leading, spacing: 23) {
                                             Text("\(spieler.name)")
-                                                .font(.custom("SignPainter", size: 25))
+                                                .font(.custom("SignPainter", size: 23))
                                                 .foregroundColor(.red)
                                             
                                             Text("\(spieler.birthDate)")
-                                                .font(.custom("SignPainter", size: 17))
+                                                .font(.custom("SignPainter", size: 15))
                                                 .foregroundColor(.black)
                                             Text("\(spieler.birthPlace)")
-                                                .font(.custom("SignPainter", size: 17))
+                                                .font(.custom("SignPainter", size: 15))
                                                 .foregroundColor(.black)
                                             Text("\(spieler.previousClub)")
-                                                .font(.custom("SignPainter", size: 17))
+                                                .font(.custom("SignPainter", size: 15))
                                                 .foregroundColor(.black)
                                             Text("\(spieler.since)")
                                                 .font(.custom("SignPainter", size: 20))
@@ -386,10 +399,10 @@ struct KaderView: View {
                                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                             .padding(.top, 15)
                                     }
-                                    HStack(alignment: .top, spacing: 20) {
+                                    HStack(alignment: .top, spacing: 50){
                                         Image("\(spieler.photo)")
                                             .resizable()
-                                            .frame(width: 120, height: 155)
+                                            .frame(width: 130, height: 170)
                                             .shadow(radius: 5)
                                             .background(
                                                 Color.clear
@@ -401,19 +414,19 @@ struct KaderView: View {
                                                     .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2))
                                         
                                         
-                                        VStack(alignment: .leading, spacing: 15) {
+                                        VStack(alignment: .leading, spacing: 23) {
                                             Text("\(spieler.name)")
-                                                .font(.custom("SignPainter", size: 25))
+                                                .font(.custom("SignPainter", size: 23))
                                                 .foregroundColor(.red)
                                             
                                             Text("\(spieler.birthDate)")
-                                                .font(.custom("SignPainter", size: 17))
+                                                .font(.custom("SignPainter", size: 15))
                                                 .foregroundColor(.black)
                                             Text("\(spieler.birthPlace)")
-                                                .font(.custom("SignPainter", size: 17))
+                                                .font(.custom("SignPainter", size: 15))
                                                 .foregroundColor(.black)
                                             Text("\(spieler.previousClub)")
-                                                .font(.custom("SignPainter", size: 17))
+                                                .font(.custom("SignPainter", size: 15))
                                                 .foregroundColor(.black)
                                             Text("\(spieler.since)")
                                                 .font(.custom("SignPainter", size: 20))
@@ -473,10 +486,10 @@ struct KaderView: View {
                                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                             .padding(.top, 15)
                                     }
-                                    HStack(alignment: .top, spacing: 20) {
+                                    HStack(alignment: .top, spacing: 50){
                                         Image("\(spieler.photo)")
                                             .resizable()
-                                            .frame(width: 120, height: 155)
+                                            .frame(width: 130, height: 170)
                                             .shadow(radius: 5)
                                             .background(
                                                 Color.clear
@@ -488,19 +501,19 @@ struct KaderView: View {
                                                     .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2))
                                         
                                         
-                                        VStack(alignment: .leading, spacing: 15) {
+                                        VStack(alignment: .leading, spacing: 23) {
                                             Text("\(spieler.name)")
-                                                .font(.custom("SignPainter", size: 25))
+                                                .font(.custom("SignPainter", size: 23))
                                                 .foregroundColor(.red)
                                             
                                             Text("\(spieler.birthDate)")
-                                                .font(.custom("SignPainter", size: 17))
+                                                .font(.custom("SignPainter", size: 15))
                                                 .foregroundColor(.black)
                                             Text("\(spieler.birthPlace)")
-                                                .font(.custom("SignPainter", size: 17))
+                                                .font(.custom("SignPainter", size: 15))
                                                 .foregroundColor(.black)
                                             Text("\(spieler.previousClub)")
-                                                .font(.custom("SignPainter", size: 17))
+                                                .font(.custom("SignPainter", size: 15))
                                                 .foregroundColor(.black)
                                             Text("\(spieler.since)")
                                                 .font(.custom("SignPainter", size: 20))
