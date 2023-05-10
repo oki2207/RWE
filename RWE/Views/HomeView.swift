@@ -39,46 +39,214 @@ struct HomeView: View {
                         .padding(.top, 20)
                 )
                 
-                VStack(spacing: 20) {
-                    // News-Box
-                    VStack {
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 10) {
-                                ForEach(1...5, id: \.self) { index in
-                                    Text("News \(index)")
-                                        .font(.title)
+                // News-Box
+                ZStack {
+                    Color.gray.opacity(0.2)
+                        .ignoresSafeArea()
+                    ScrollView {
+                        VStack(spacing: 20) {
+                            VStack {
+                                Spacer()
+                                ZStack {
+                                    Text("NEWS ")
+                                        .font(.custom("SignPainter", size: 30))
+                                        .frame(maxWidth: 350, alignment: .trailing)
+                                        .foregroundColor(.white)
+                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                                        .padding(.top, 15)
+                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                    
+                                }
+                                Image("")
+                                    .resizable()
+                                    .frame(maxWidth: 100, maxHeight: 100)
+                                    .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
+                                Text("")
+                                    .font(.custom("SignPainter", size: 20))
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                                    .foregroundColor(.black)
+                                    .background(
+                                        Color.white
+                                            .frame(width: 120) // Hier die Breite einstellen
+                                            .cornerRadius(0)
+                                            .padding(.horizontal)
+                                    )
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 0)
+                                            .stroke(LinearGradient(gradient: Gradient(colors: [.red, .white]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
+                                            .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                    )
+                                    .padding(.horizontal, 130)
+                                
+                                
+                                Spacer()
+                            }
+                            
+                            //BOX
+                            .background(
+                                RoundedRectangle(cornerRadius: 0)
+                                    .fill(Color.white.opacity(0.8))
+                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 0)
+                                            .stroke(
+                                                LinearGradient(
+                                                    gradient: Gradient(colors: [Color.clear, .red]),
+                                                    startPoint: .topLeading,
+                                                    endPoint: .bottomTrailing
+                                                ),
+                                                lineWidth: 2
+                                            )
+                                    )
+                                
+                            )
+                            .frame(width: 380, height: 200 )
+                            .padding(3)
+                        }
+                        
+                        ZStack {
+                            Color.gray.opacity(0.2)
+                                .ignoresSafeArea()
+                            ScrollView {
+                                VStack(spacing: 20) {
+                                    VStack {
+                                        Spacer()
+                                        ZStack {
+                                            Text("NÄCHSTES SPIEL ")
+                                                .font(.custom("SignPainter", size: 30))
+                                                .frame(maxWidth: 350, alignment: .trailing)
+                                                .foregroundColor(.white)
+                                                .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                                                .padding(.top, 15)
+                                                .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                            
+                                        }
+                                        Image("")
+                                            .resizable()
+                                            .frame(maxWidth: 100, maxHeight: 100)
+                                            .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
+                                        Text("")
+                                            .font(.custom("SignPainter", size: 20))
+                                            .frame(maxWidth: .infinity, alignment: .center)
+                                            .foregroundColor(.black)
+                                            .background(
+                                                Color.white
+                                                    .frame(width: 120) // Hier die Breite einstellen
+                                                    .cornerRadius(0)
+                                                    .padding(.horizontal)
+                                            )
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 0)
+                                                    .stroke(LinearGradient(gradient: Gradient(colors: [.red, .white]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
+                                                    .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                            )
+                                            .padding(.horizontal, 130)
+                                        
+                                        Spacer()
+                                        
+                                        
+                                        
+                                    }
+                                    
+                                    //BOX
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 0)
+                                            .fill(Color.white.opacity(0.8))
+                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 0)
+                                                    .stroke(
+                                                        LinearGradient(
+                                                            gradient: Gradient(colors: [Color.clear, .red]),
+                                                            startPoint: .topLeading,
+                                                            endPoint: .bottomTrailing
+                                                        ),
+                                                        lineWidth: 2
+                                                    )
+                                            )
+                                        
+                                    )
+                                    .frame(width: 380, height: 200)
+                                    .padding(3)
+                                    
+                                    
+                                }
+                                ZStack {
+                                    Color.gray.opacity(0.2)
+                                        .ignoresSafeArea()
+                                    ScrollView {
+                                        VStack(spacing: 20) {
+                                            VStack {
+                                                Spacer()
+                                                ZStack {
+                                                    Text("LETZTES SPIEL ")
+                                                        .font(.custom("SignPainter", size: 30))
+                                                        .frame(maxWidth: 350, alignment: .trailing)
+                                                        .foregroundColor(.white)
+                                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                                                        .padding(.top, 15)
+                                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                                    
+                                                }
+                                                Image("")
+                                                    .resizable()
+                                                    .frame(maxWidth: 100, maxHeight: 100)
+                                                    .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
+                                                Text("")
+                                                    .font(.custom("SignPainter", size: 20))
+                                                    .frame(maxWidth: .infinity, alignment: .center)
+                                                    .foregroundColor(.black)
+                                                    .background(
+                                                        Color.white
+                                                            .frame(width: 120) // Hier die Breite einstellen
+                                                            .cornerRadius(0)
+                                                            .padding(.horizontal)
+                                                    )
+                                                    .overlay(
+                                                        RoundedRectangle(cornerRadius: 0)
+                                                            .stroke(LinearGradient(gradient: Gradient(colors: [.red, .white]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
+                                                            .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                                    )
+                                                    .padding(.horizontal, 130)
+                                                
+                                                
+                                                Spacer()
+                                            }
+                                            
+                                            //BOX
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 0)
+                                                    .fill(Color.white.opacity(0.8))
+                                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                                    .overlay(
+                                                        RoundedRectangle(cornerRadius: 0)
+                                                            .stroke(
+                                                                LinearGradient(
+                                                                    gradient: Gradient(colors: [Color.clear, .red]),
+                                                                    startPoint: .topLeading,
+                                                                    endPoint: .bottomTrailing
+                                                                ),
+                                                                lineWidth: 2
+                                                            )
+                                                    )
+                                                
+                                            )
+                                            .frame(width: 380, height: 200)
+                                            .padding(3)
+                                            
+                                        }
+                                    }
                                 }
                             }
                         }
-                        .frame(height: 180)
-                        HStack {
-                            ForEach(1...5, id: \.self) { index in
-                                Circle()
-                                    .frame(width: 10, height: 10)
-                                    .foregroundColor(index == 1 ? .white : .gray)
-                            }
-                        }
                     }
-                    .background(Color.white.opacity(0.7))
-                    .cornerRadius(10)
-                    
-                    // Nächstes Spiel
-                    Rectangle()
-                        .foregroundColor(.white.opacity(0.7))
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    
-                    // Letztes Spiel
-                    Rectangle()
-                        .foregroundColor(.white.opacity(0.7))
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
-                .padding()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.gray.opacity(0.2))
             }
         }
     }
 }
+                                
+                                
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {

@@ -101,7 +101,7 @@ struct KaderView: View {
                                     .background(
                                         Image("rwesheet")
                                         
-                                            .opacity(0.4)
+                                            .opacity(1.0)
                                     )
                                 }
                         }
