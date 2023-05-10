@@ -84,11 +84,11 @@ struct KaderView: View {
                                     
                                     // Inhalt des Sheets
                                     VStack {
-                                        Text("ROT-WEISSE JUNGS 2022/2023 ")
+                                        Text("ROT-WEISSE JUNGS 22/23 ")
                                             .font(.custom("SignPainter", size: 30))
                                             .frame(maxWidth: 380, alignment: .trailing)
-                                            .foregroundColor(.red)
-                                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .leading, endPoint: .trailing))
+                                            .foregroundColor(.white)
+                                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                             .padding(.top, 15)
                                         Image("teamfoto")
                                             .resizable()

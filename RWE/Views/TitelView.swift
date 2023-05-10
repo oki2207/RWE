@@ -62,13 +62,13 @@ struct TitelView: View {
                                     Text("1 ")
                                         .font(.custom("SignPainter", size: 55))
                                         .foregroundColor(.red)
-                                        .padding(.leading, -130)
+                                        .padding(.leading, -150)
                                         .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     
                                     Text("X ")
                                         .font(.custom("SignPainter", size: 40))
                                         .foregroundColor(.red)
-                                        .padding(.leading, -115)
+                                        .padding(.leading, -135)
                                         .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                 }
                                 
@@ -142,13 +142,13 @@ struct TitelView: View {
                                     Text("1 ")
                                         .font(.custom("SignPainter", size: 55))
                                         .foregroundColor(.red)
-                                        .padding(.leading, -130)
+                                        .padding(.leading, -150)
                                         .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     
                                     Text("X ")
                                         .font(.custom("SignPainter", size: 40))
                                         .foregroundColor(.red)
-                                        .padding(.leading, -115)
+                                        .padding(.leading, -135)
                                         .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     
                                     
@@ -213,13 +213,13 @@ struct TitelView: View {
                                     Text("9 ")
                                         .font(.custom("SignPainter", size: 55))
                                         .foregroundColor(.red)
-                                        .padding(.leading, -130)
+                                        .padding(.leading, -150)
                                         .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     
                                     Text("X ")
                                         .font(.custom("SignPainter", size: 40))
                                         .foregroundColor(.red)
-                                        .padding(.leading, -105)
+                                        .padding(.leading, -125)
                                         .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     
                                     
@@ -446,13 +446,13 @@ struct TitelView: View {
                                     Text("1 ")
                                         .font(.custom("SignPainter", size: 55))
                                         .foregroundColor(.red)
-                                        .padding(.leading, -130)
+                                        .padding(.leading, -150)
                                         .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     
                                     Text("X ")
                                         .font(.custom("SignPainter", size: 40))
                                         .foregroundColor(.red)
-                                        .padding(.leading, -115)
+                                        .padding(.leading, -135)
                                         .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     
                                 }
