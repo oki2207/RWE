@@ -12,7 +12,7 @@ struct HeaderView: View {
             Text("ROT-WEISS ESSEN ")
                 .font(.custom("SignPainter", size: 48))
                 .foregroundColor(.red)
-                .shadow(color: Color.white.opacity(0.4), radius: 10, x: 0, y: 2)
+                .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                 
             VStack {
                 Rectangle()
@@ -24,7 +24,7 @@ struct HeaderView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 60, height: 60)
-                .shadow(color: Color.white.opacity(1.0), radius: 10, x: 0, y: 2)
+                .shadow(color: Color.red.opacity(1.0), radius: 10, x: 0, y: 2)
         
         }
         .padding()

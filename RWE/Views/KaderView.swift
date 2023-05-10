@@ -69,6 +69,7 @@ struct KaderView: View {
                             Image("teamfoto")
                                 .resizable()
                                 .frame(width: 380, height: 250)
+                                .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 0)
                                         .stroke(
@@ -118,6 +119,7 @@ struct KaderView: View {
                             .foregroundColor(.white)
                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                             .padding(.top, 15)
+                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                         
                         //SPIELER TOR_______________________________________________________________________________
                         
@@ -133,12 +135,13 @@ struct KaderView: View {
                                                 .foregroundColor(.white)
                                                 .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                                 .padding(.top, 15)
+                                                .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                         }
                                         HStack(alignment: .top, spacing: 50){
                                             Image("\(spieler.photo)")
                                                 .resizable()
                                                 .frame(width: 130, height: 170)
-                                                .shadow(radius: 5)
+                                                .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                                 .background(
                                                     Color.clear
                                                         .padding(.horizontal)
@@ -153,6 +156,7 @@ struct KaderView: View {
                                                 Text("\(spieler.name)")
                                                     .font(.custom("SignPainter", size: 23))
                                                     .foregroundColor(.red)
+                                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                                 
                                                 Text("\(spieler.birthDate)")
                                                     .font(.custom("SignPainter", size: 15))
@@ -185,7 +189,7 @@ struct KaderView: View {
                                                         lineWidth: 2
                                                     )
                                             )
-                                            .shadow(radius: 0)
+                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                             .frame(width: 380)
                                     )
                                     
@@ -210,6 +214,7 @@ struct KaderView: View {
                         .foregroundColor(.white)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                         .padding(.top, 15)
+                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                     
                     //SPIELER ABW_______________________________________________________________________________
                     
@@ -225,12 +230,13 @@ struct KaderView: View {
                                             .foregroundColor(.white)
                                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                             .padding(.top, 15)
+                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     }
                                     HStack(alignment: .top, spacing: 50){
                                         Image("\(spieler.photo)")
                                             .resizable()
                                             .frame(width: 130, height: 170)
-                                            .shadow(radius: 5)
+                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                             .background(
                                                 Color.clear
                                                     .padding(.horizontal)
@@ -277,7 +283,7 @@ struct KaderView: View {
                                                     lineWidth: 2
                                                 )
                                         )
-                                        .shadow(radius: 0)
+                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                         .frame(width: 380)
                                 )
                                 
@@ -295,6 +301,7 @@ struct KaderView: View {
                         }
                         .font(.custom("SignPainter", size: 30))
                         .frame(maxWidth: 350, alignment: .trailing)
+                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                         .foregroundColor(.white)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                         .padding(.top, 15)
@@ -311,12 +318,13 @@ struct KaderView: View {
                                             .foregroundColor(.white)
                                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                             .padding(.top, 15)
+                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     }
                                     HStack(alignment: .top, spacing: 50){
                                         Image("\(spieler.photo)")
                                             .resizable()
                                             .frame(width: 130, height: 170)
-                                            .shadow(radius: 5)
+                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                             .background(
                                                 Color.clear
                                                     .padding(.horizontal)
@@ -331,6 +339,7 @@ struct KaderView: View {
                                             Text("\(spieler.name)")
                                                 .font(.custom("SignPainter", size: 23))
                                                 .foregroundColor(.red)
+                                                .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                             
                                             Text("\(spieler.birthDate)")
                                                 .font(.custom("SignPainter", size: 15))
@@ -363,7 +372,7 @@ struct KaderView: View {
                                                     lineWidth: 2
                                                 )
                                         )
-                                        .shadow(radius: 0)
+                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                         .frame(width: 380)
                                 )
                                 
@@ -382,6 +391,7 @@ struct KaderView: View {
                         }
                         .font(.custom("SignPainter", size: 30))
                         .frame(maxWidth: 350, alignment: .trailing)
+                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                         .foregroundColor(.white)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                         .padding(.top, 15)
@@ -398,12 +408,13 @@ struct KaderView: View {
                                             .foregroundColor(.white)
                                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                             .padding(.top, 15)
+                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     }
                                     HStack(alignment: .top, spacing: 50){
                                         Image("\(spieler.photo)")
                                             .resizable()
                                             .frame(width: 130, height: 170)
-                                            .shadow(radius: 5)
+                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                             .background(
                                                 Color.clear
                                                     .padding(.horizontal)
@@ -418,6 +429,7 @@ struct KaderView: View {
                                             Text("\(spieler.name)")
                                                 .font(.custom("SignPainter", size: 23))
                                                 .foregroundColor(.red)
+                                                .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                             
                                             Text("\(spieler.birthDate)")
                                                 .font(.custom("SignPainter", size: 15))
@@ -450,7 +462,7 @@ struct KaderView: View {
                                                     lineWidth: 2
                                                 )
                                         )
-                                        .shadow(radius: 0)
+                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                         .frame(width: 380)
                                 )
                                 
@@ -469,6 +481,7 @@ struct KaderView: View {
                         }
                         .font(.custom("SignPainter", size: 30))
                         .frame(maxWidth: 350, alignment: .trailing)
+                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                         .foregroundColor(.white)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                         .padding(.top, 15)
@@ -485,12 +498,13 @@ struct KaderView: View {
                                             .foregroundColor(.white)
                                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                             .padding(.top, 15)
+                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     }
                                     HStack(alignment: .top, spacing: 50){
                                         Image("\(spieler.photo)")
                                             .resizable()
                                             .frame(width: 130, height: 170)
-                                            .shadow(radius: 5)
+                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                             .background(
                                                 Color.clear
                                                     .padding(.horizontal)
@@ -505,6 +519,7 @@ struct KaderView: View {
                                             Text("\(spieler.name)")
                                                 .font(.custom("SignPainter", size: 23))
                                                 .foregroundColor(.red)
+                                                .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                             
                                             Text("\(spieler.birthDate)")
                                                 .font(.custom("SignPainter", size: 15))
@@ -537,7 +552,7 @@ struct KaderView: View {
                                                     lineWidth: 2
                                                 )
                                         )
-                                        .shadow(radius: 0)
+                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                         .frame(width: 380)
                                 )
                                 
