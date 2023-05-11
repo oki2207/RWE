@@ -126,71 +126,53 @@ struct HomeView: View {
                                                     .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                                 
                                             }
-                                            Spacer()
+                                            
                                             
                                             VStack {
                                                 Text("\(game.league) - \(game.day) - \(game.date) - \(game.time)")
-                                                    .font(.custom("SignPainter", size: 20))
-                                                    .frame(maxWidth: .infinity, alignment: .center)
-                                                    .foregroundColor(.black)
-                                                    .background(
-                                                        Color.white
-                                                            .frame(width: 250)
-                                                            .cornerRadius(0)
-                                                            .padding(.horizontal)
-                                                    )
+                                                    .font(.custom("SignPainter", size: 18))
+                                                    .frame(maxWidth: 350, alignment: .trailing)
+                                                    .foregroundColor(.white)
+                                                    .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                                                    .padding(.top, 1)
+                                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                                    
                                                 
                                                 
                                                 ZStack{
                                                     HStack {
-                                                        
-                                                        Image("\(game.homeTeamLogo)")
-                                                            .resizable()
-                                                            .frame(maxWidth: 70, maxHeight: 70)
-                                                            .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
-                                                            .padding(.leading, 60)
-                                                        
-                                                        Spacer()
-                                                        
-                                                        Image("\(game.awayTeamLogo)")
-                                                            .resizable()
-                                                            .frame(maxWidth: 30, maxHeight: 50)
-                                                            .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
-                                                            .padding(.trailing, 30)
-                                                        
-                                                        VStack{
+                                                        VStack {
+                                                            Image("\(game.homeTeamLogo)")
+                                                                .resizable()
+                                                                .frame(maxWidth: 70, maxHeight: 70)
+                                                                .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
+                                                                .padding(.leading, 50)
                                                             
                                                             Text("\(game.homeTeamName)")
                                                                 .font(.custom("SignPainter", size: 20))
-                                                                .frame(maxWidth: .infinity, alignment: .center)
                                                                 .foregroundColor(.black)
-                                                                .background(
-                                                                    Color.white
-                                                                        .frame(width: 120)
-                                                                        .cornerRadius(0)
-                                                                        .padding(.horizontal)
-                                                                )
-                                                                .overlay(
-                                                                    RoundedRectangle(cornerRadius: 0)
-                                                                        .stroke(LinearGradient(gradient: Gradient(colors: [.red, .white]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
-                                                                        .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
-                                                                )
-                                                            
-                                                            
-                                                            
-                                                                .overlay(
-                                                                    RoundedRectangle(cornerRadius: 0)
-                                                                        .stroke(LinearGradient(gradient: Gradient(colors: [.red, .white]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
-                                                                        .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
-                                                                )
-                                                                .padding(.horizontal, 50)
-                                                            Spacer()
-                                                            
-                                                            
-                                                            
+                                                                .padding(.leading, 50)
                                                         }
+                                                        Spacer()
+                                                        
+                                                        VStack {
+                                                            Image("\(game.awayTeamLogo)")
+                                                                .resizable()
+                                                                .frame(maxWidth: 55, maxHeight: 70)
+                                                                .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
+                                                                .padding(.trailing, 65)
+                                                            
+                                                            Text("\(game.awayTeamName)")
+                                                                .font(.custom("SignPainter", size: 20))
+                                                                .foregroundColor(.black)
+                                                                .padding(.trailing, 65)
+                                                            
+                                                    
+                                                        }
+                                                    
                                                     }
                                                 }
+
                                             }
                                         }
                                         
