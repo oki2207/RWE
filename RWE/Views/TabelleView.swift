@@ -64,7 +64,7 @@ struct TabelleView: View {
                                RoundedRectangle(cornerRadius: 0)
                                   .stroke(
                                      LinearGradient(
-                                        gradient: Gradient(colors: [.white, .red]),
+                                        gradient: Gradient(colors: [Color.clear, .red]),
                                         startPoint: .topLeading,
                                         endPoint: .bottomTrailing
                                      ),
@@ -77,15 +77,15 @@ struct TabelleView: View {
                                 
                             HStack {
                                 Text("\(tabellenEintrag.platz)")
-                                    .font(.custom("SignPainter", size: 18))
+                                    .font(.custom("SignPainter", size: 21))
                                     .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.black)
-                                    .background(Color.white)
+                                    .foregroundColor(.white)
+                                    .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]), startPoint: .leading, endPoint: .trailing))
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 0)
                                             .stroke(
                                                 LinearGradient(
-                                                    gradient: Gradient(colors: [.white, .red]),
+                                                    gradient: Gradient(colors: [.clear, .clear]),
                                                     startPoint: .leading,
                                                     endPoint: .trailing
                                                 ),
@@ -101,13 +101,13 @@ struct TabelleView: View {
                                 Text("\(tabellenEintrag.teamName)")
                                     .frame(width: 150, alignment: .leading)
                                     .font(.custom("SignPainter", size: 18))
-                                    .foregroundColor(.black)
-                                    .background(Color.white)
+                                    .foregroundColor(.white)
+                                    .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]), startPoint: .leading, endPoint: .trailing))
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 0)
                                             .stroke(
                                                 LinearGradient(
-                                                    gradient: Gradient(colors: [.white, .red]),
+                                                    gradient: Gradient(colors: [.clear, .clear]),
                                                     startPoint: .leading,
                                                     endPoint: .trailing
                                                 ),
@@ -118,13 +118,13 @@ struct TabelleView: View {
                                 Text("\(tabellenEintrag.spiele)")
                                     .font(.custom("SignPainter", size: 18))
                                     .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.black)
-                                    .background(Color.white)
+                                    .foregroundColor(.white)
+                                    .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]), startPoint: .leading, endPoint: .trailing))
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 0)
                                             .stroke(
                                                 LinearGradient(
-                                                    gradient: Gradient(colors: [.white, .red]),
+                                                    gradient: Gradient(colors: [.clear, .clear]),
                                                     startPoint: .leading,
                                                     endPoint: .trailing
                                                 ),
@@ -134,13 +134,13 @@ struct TabelleView: View {
                                 Text("\(tabellenEintrag.differenz)")
                                             .font(.custom("SignPainter", size: 18))
                                             .frame(maxWidth: .infinity, alignment: .center)
-                                            .foregroundColor(.black)
-                                            .background(Color.white)
+                                            .foregroundColor(.white)
+                                            .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]), startPoint: .leading, endPoint: .trailing))
                                             .overlay(
                                                 RoundedRectangle(cornerRadius: 0)
                                                     .stroke(
                                                         LinearGradient(
-                                                            gradient: Gradient(colors: [.white, .red]),
+                                                            gradient: Gradient(colors: [.clear, .clear]),
                                                             startPoint: .leading,
                                                             endPoint: .trailing
                                                         ),
@@ -150,13 +150,13 @@ struct TabelleView: View {
                                 Text("\(tabellenEintrag.punkte)")
                                                     .font(.custom("SignPainter", size: 18))
                                                     .frame(maxWidth: .infinity, alignment: .center)
-                                                    .foregroundColor(.black)
-                                                    .background(Color.white)
+                                                    .foregroundColor(.white)
+                                                    .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]), startPoint: .leading, endPoint: .trailing))
                                                     .overlay(
                                                         RoundedRectangle(cornerRadius: 0)
                                                             .stroke(
                                                                 LinearGradient(
-                                                                    gradient: Gradient(colors: [.white, .red]),
+                                                                    gradient: Gradient(colors: [.clear, .clear]),
                                                                     startPoint: .leading,
                                                                     endPoint: .trailing
                                                                 ),
