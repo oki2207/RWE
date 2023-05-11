@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		47440C132A064D31006F5875 /* Bangers-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47440C122A064D31006F5875 /* Bangers-Regular.ttf */; };
-		47440C192A090D60006F5875 /* Player.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 47440C172A090D60006F5875 /* Player.xcdatamodeld */; };
-		47440C1B2A091151006F5875 /* PlayerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47440C1A2A091151006F5875 /* PlayerRow.swift */; };
 		47440C1F2A092C68006F5875 /* KaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47440C1E2A092C68006F5875 /* KaderViewModel.swift */; };
 		47440C212A093198006F5875 /* KaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47440C202A093198006F5875 /* KaderModel.swift */; };
 		47440C232A0A743E006F5875 /* AbwehrViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47440C222A0A743E006F5875 /* AbwehrViewModel.swift */; };
@@ -48,8 +46,6 @@
 
 /* Begin PBXFileReference section */
 		47440C122A064D31006F5875 /* Bangers-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bangers-Regular.ttf"; sourceTree = "<group>"; };
-		47440C182A090D60006F5875 /* KaderModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KaderModel.xcdatamodel; sourceTree = "<group>"; };
-		47440C1A2A091151006F5875 /* PlayerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRow.swift; sourceTree = "<group>"; };
 		47440C1E2A092C68006F5875 /* KaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaderViewModel.swift; sourceTree = "<group>"; };
 		47440C202A093198006F5875 /* KaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaderModel.swift; sourceTree = "<group>"; };
 		47440C222A0A743E006F5875 /* AbwehrViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbwehrViewModel.swift; sourceTree = "<group>"; };
@@ -89,7 +85,6 @@
 		47440C162A090D47006F5875 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				47440C172A090D60006F5875 /* Player.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -155,7 +150,6 @@
 				47440C242A0A8229006F5875 /* MitteViewModel.swift */,
 				47440C262A0A8244006F5875 /* SturmViewModel.swift */,
 				47440C282A0A8254006F5875 /* TrainerViewModel.swift */,
-				47440C1A2A091151006F5875 /* PlayerRow.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -255,14 +249,12 @@
 				47440C212A093198006F5875 /* KaderModel.swift in Sources */,
 				47826D4B2A0293D3009242FC /* RoundedTabBarStyle.swift in Sources */,
 				47826D5C2A02DF08009242FC /* ImageDetailView.swift in Sources */,
-				47440C192A090D60006F5875 /* Player.xcdatamodeld in Sources */,
 				477AF7FC2A04D759005891C9 /* TabelleModel.swift in Sources */,
 				47826D492A0293D3009242FC /* HeaderView.swift in Sources */,
 				47440C232A0A743E006F5875 /* AbwehrViewModel.swift in Sources */,
 				47440C252A0A8229006F5875 /* MitteViewModel.swift in Sources */,
 				47826D482A0293D3009242FC /* SpielplanView.swift in Sources */,
 				47826D472A0293D3009242FC /* HomeView.swift in Sources */,
-				47440C1B2A091151006F5875 /* PlayerRow.swift in Sources */,
 				47826D292A0292BF009242FC /* RWEApp.swift in Sources */,
 				47440C272A0A8244006F5875 /* SturmViewModel.swift in Sources */,
 				477AF7FA2A04D744005891C9 /* TabelleViewModel.swift in Sources */,
@@ -469,19 +461,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		47440C172A090D60006F5875 /* Player.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				47440C182A090D60006F5875 /* KaderModel.xcdatamodel */,
-			);
-			currentVersion = 47440C182A090D60006F5875 /* KaderModel.xcdatamodel */;
-			path = Player.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 47826D1D2A0292BF009242FC /* Project object */;
 }

@@ -456,9 +456,9 @@ struct TitelView: View {
                                         .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     
                                 }
-                                Image("westpokal")
+                                Image("702")
                                     .resizable()
-                                    .frame(maxWidth: 120, maxHeight: 100)
+                                    .frame(maxWidth: 100, maxHeight: 100)
                                     .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
                                 Text("2022 ")
                                     .font(.custom("SignPainter", size: 20))
