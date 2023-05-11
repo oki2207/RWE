@@ -46,6 +46,7 @@ struct ContentView: View {
             
             NavigationView {
                 HomeView()
+                    .environmentObject(NextGame())
                 
             }
             .tabItem {

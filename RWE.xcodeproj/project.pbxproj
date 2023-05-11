@@ -14,6 +14,8 @@
 		47440C252A0A8229006F5875 /* MitteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47440C242A0A8229006F5875 /* MitteViewModel.swift */; };
 		47440C272A0A8244006F5875 /* SturmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47440C262A0A8244006F5875 /* SturmViewModel.swift */; };
 		47440C292A0A8254006F5875 /* TrainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47440C282A0A8254006F5875 /* TrainerViewModel.swift */; };
+		47440C2B2A0D113F006F5875 /* NextGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47440C2A2A0D113F006F5875 /* NextGame.swift */; };
+		47440C2D2A0D122E006F5875 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47440C2C2A0D122E006F5875 /* GameModel.swift */; };
 		477AF7FA2A04D744005891C9 /* TabelleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477AF7F92A04D744005891C9 /* TabelleViewModel.swift */; };
 		477AF7FC2A04D759005891C9 /* TabelleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477AF7FB2A04D759005891C9 /* TabelleModel.swift */; };
 		47826D292A0292BF009242FC /* RWEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47826D282A0292BF009242FC /* RWEApp.swift */; };
@@ -52,6 +54,8 @@
 		47440C242A0A8229006F5875 /* MitteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MitteViewModel.swift; sourceTree = "<group>"; };
 		47440C262A0A8244006F5875 /* SturmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SturmViewModel.swift; sourceTree = "<group>"; };
 		47440C282A0A8254006F5875 /* TrainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerViewModel.swift; sourceTree = "<group>"; };
+		47440C2A2A0D113F006F5875 /* NextGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextGame.swift; sourceTree = "<group>"; };
+		47440C2C2A0D122E006F5875 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		477AF7F92A04D744005891C9 /* TabelleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelleViewModel.swift; sourceTree = "<group>"; };
 		477AF7FB2A04D759005891C9 /* TabelleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelleModel.swift; sourceTree = "<group>"; };
 		47826D252A0292BF009242FC /* RWE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RWE.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +98,7 @@
 			children = (
 				477AF7FB2A04D759005891C9 /* TabelleModel.swift */,
 				47440C202A093198006F5875 /* KaderModel.swift */,
+				47440C2C2A0D122E006F5875 /* GameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 				47826D5B2A02DF08009242FC /* ImageDetailView.swift */,
 				477AF7F92A04D744005891C9 /* TabelleViewModel.swift */,
 				47440C1E2A092C68006F5875 /* KaderViewModel.swift */,
+				47440C2A2A0D113F006F5875 /* NextGame.swift */,
 				47440C222A0A743E006F5875 /* AbwehrViewModel.swift */,
 				47440C242A0A8229006F5875 /* MitteViewModel.swift */,
 				47440C262A0A8244006F5875 /* SturmViewModel.swift */,
@@ -244,9 +250,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				47826D4A2A0293D3009242FC /* KaderView.swift in Sources */,
+				47440C2B2A0D113F006F5875 /* NextGame.swift in Sources */,
 				47826D4C2A0293D3009242FC /* ContentView.swift in Sources */,
 				47440C1F2A092C68006F5875 /* KaderViewModel.swift in Sources */,
 				47440C212A093198006F5875 /* KaderModel.swift in Sources */,
+				47440C2D2A0D122E006F5875 /* GameModel.swift in Sources */,
 				47826D4B2A0293D3009242FC /* RoundedTabBarStyle.swift in Sources */,
 				47826D5C2A02DF08009242FC /* ImageDetailView.swift in Sources */,
 				477AF7FC2A04D759005891C9 /* TabelleModel.swift in Sources */,
