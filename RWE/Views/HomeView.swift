@@ -115,7 +115,7 @@ struct HomeView: View {
                                 ScrollView {
                                     VStack(spacing: 20) {
                                         VStack {
-                                            Spacer()
+                                    
                                             ZStack {
                                                 Text("NÄCHSTES SPIEL ")
                                                     .font(.custom("SignPainter", size: 30))
@@ -150,9 +150,22 @@ struct HomeView: View {
                                                             
                                                             Text("\(game.homeTeamName)")
                                                                 .font(.custom("SignPainter", size: 20))
+                                                                .frame(maxWidth: .infinity, alignment: .center)
                                                                 .foregroundColor(.black)
-                                                                .padding(.leading, 50)
+                                                                .background(Color.white)
+                                                                .overlay(
+                                                                    RoundedRectangle(cornerRadius: 0)
+                                                                        .stroke(
+                                                                            LinearGradient(
+                                                                                gradient: Gradient(colors: [.red, .white]),
+                                                                                startPoint: .leading,
+                                                                                endPoint: .trailing
+                                                                            ),
+                                                                            lineWidth: 2
+                                                                        )
+                                                                        .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2))
                                                         }
+                                                        
                                                         Spacer()
                                                         
                                                         VStack {
@@ -190,10 +203,13 @@ struct HomeView: View {
                                                                             gradient: Gradient(colors: [Color.clear, .red]),
                                                                             startPoint: .topLeading,
                                                                             endPoint: .bottomTrailing
+                                                                
                                                                         ),
                                                                         lineWidth: 2
                                                                     )
+                                                                
                                                             )
+                                                        
                                                         
                                                     )
                                                     .frame(width: 380, height: 200)
