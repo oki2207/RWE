@@ -12,6 +12,7 @@ struct HomeView: View {
     @State private var selectedTab = 0
     @EnvironmentObject var gameViewModel: NextGame
     @EnvironmentObject var gameViewModel2: LastGame
+    @EnvironmentObject var NewsViewModel: NewsViewModel
     
     var body: some View {
         ZStack {
@@ -21,7 +22,7 @@ struct HomeView: View {
                 .opacity(1.0)
                 .edgesIgnoringSafeArea(.all)
             
-            //Obere Leiste der Tabelle
+            //Obere Leiste der HomeView
             
             VStack(spacing: 3) {
                 
@@ -42,278 +43,336 @@ struct HomeView: View {
                 )
                 
                 // News-Box
-                ZStack {
-                    Color.gray.opacity(0.2)
-                        .ignoresSafeArea()
-                    ScrollView {
-                        VStack(spacing: 20) {
-                            VStack {
-                                Spacer()
-                                ZStack {
-                                    Text("NEWS ")
-                                        .font(.custom("SignPainter", size: 30))
-                                        .frame(maxWidth: 350, alignment: .trailing)
-                                        .foregroundColor(.white)
-                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                                        .padding(.top, 15)
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                    
-                                }
-                                Image("")
-                                    .resizable()
-                                    .frame(maxWidth: 100, maxHeight: 100)
-                                    .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
-                                Text("")
-                                    .font(.custom("SignPainter", size: 20))
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.black)
-                                    .background(
-                                        Color.white
-                                            .frame(width: 120) // Hier die Breite einstellen
-                                            .cornerRadius(0)
-                                            .padding(.horizontal)
-                                    )
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 0)
-                                            .stroke(LinearGradient(gradient: Gradient(colors: [.red, .white]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
-                                            .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
-                                    )
-                                    .padding(.horizontal, 130)
-                                
-                                
-                                Spacer()
-                            }
-                            
-                            //BOX
-                            .background(
-                                RoundedRectangle(cornerRadius: 0)
-                                    .fill(Color.white.opacity(0.8))
-                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 0)
-                                            .stroke(
-                                                LinearGradient(
-                                                    gradient: Gradient(colors: [Color.clear, .red]),
-                                                    startPoint: .topLeading,
-                                                    endPoint: .bottomTrailing
-                                                ),
-                                                lineWidth: 2
-                                            )
-                                    )
-                                
-                            )
-                            .frame(width: 380, height: 200 )
-                            .padding(3)
-                        }
-                        
-                        
-                        //NÄCHSTES SPIEL____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-                        
-                        ForEach(gameViewModel.game, id: \.id) { game in
-                            
-                            ZStack {
-                                Color.gray.opacity(0.2)
-                                    .ignoresSafeArea()
-                                ScrollView {
-                                    VStack(spacing: 20) {
-                                        VStack {
-                                            
-                                            ZStack {
-                                                Text("NÄCHSTES SPIEL ")
-                                                    .font(.custom("SignPainter", size: 30))
-                                                    .frame(maxWidth: 350, alignment: .trailing)
-                                                    .foregroundColor(.white)
-                                                    .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                                                    .padding(.top, 15)
-                                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                                
-                                            }
-                                            
-                                            
-                                            VStack {
-                                                Text("\(game.spieltag) - \(game.league) - \(game.day) - \(game.date) - \(game.time)")
-                                                    .font(.custom("SignPainter", size: 15))
-                                                    .frame(maxWidth: 350, alignment: .trailing)
-                                                    .foregroundColor(.white)
-                                                    .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                                                    .padding(.top, 1)
-                                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                                
-                                                //HEIMTEAM
-                                                
-                                                ZStack{
-                                                    HStack {
-                                                        VStack {
-                                                            Image("\(game.homeTeamLogo)")
-                                                                .resizable()
-                                                                .frame(maxWidth: 70, maxHeight: 70)
-                                                                .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
-                                                                .padding(.leading, 40)
-                                                            
-                                                            Text("\(game.homeTeamName)")
-                                                                .font(.custom("SignPainter", size: 16))
-                                                                .foregroundColor(.black)
-                                                                .padding(.leading, 40)
-                                                            
-                                                        }
-                                                        
-                                                        Spacer()
-                                                        
-                                                        //AWAYTEAM
-                                                        
-                                                        VStack {
-                                                            Image("\(game.awayTeamLogo)")
-                                                                .resizable()
-                                                                .frame(maxWidth: 70, maxHeight: 70)
-                                                                .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
-                                                                .padding(.trailing, 20)
-                                                            
-                                                            Text("\(game.awayTeamName)")
-                                                                .font(.custom("SignPainter", size: 16))
-                                                                .foregroundColor(.black)
-                                                                .padding(.trailing, 20)
-                                                            
-                                                            
-                                                        }
-                                                        
-                                                    }
-                                                }
-                                                
-                                            }
-                                        }
-                                        
-                                        
-                                        
-                                        //BOX
-                                        .background(
-                                            RoundedRectangle(cornerRadius: 0)
-                                                .fill(Color.white.opacity(0.8))
-                                                .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                                .overlay(
-                                                    RoundedRectangle(cornerRadius: 0)
-                                                        .stroke(
-                                                            LinearGradient(
-                                                                gradient: Gradient(colors: [Color.clear, .red]),
-                                                                startPoint: .topLeading,
-                                                                endPoint: .bottomTrailing
-                                                                
-                                                            ),
-                                                            lineWidth: 2
-                                                        )
-                                                    
-                                                )
-                                            
-                                            
-                                        )
-                                        .frame(width: 380, height: 200)
-                                        .padding(3)
+                
+                ForEach(NewsViewModel.news, id: \.id) { news in
+                    
+                    ZStack {
+                        Color.gray.opacity(0.2)
+                            .ignoresSafeArea()
+                        ScrollView {
+                            VStack(spacing: 20) {
+                                VStack {
+                                    Spacer()
+                                    ZStack {
+                                        Text("NEWS ")
+                                            .font(.custom("SignPainter", size: 30))
+                                            .frame(maxWidth: 350, alignment: .trailing)
+                                            .foregroundColor(.white)
+                                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                                            .padding(.top, 15)
+                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     }
                                     
-                                    //LETZTES SPIEL____________________________________________________________________________________________________________________________________________________________________________________________________________________________
                                     
-                                    ForEach(gameViewModel2.game, id: \.id) { game in
+                                    VStack {
+                                        Text("\(news.textHead)")
+                                            .font(.custom("SignPainter", size: 15))
+                                            .frame(maxWidth: 350, alignment: .trailing)
+                                            .foregroundColor(.white)
+                                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                                            .padding(.top, 1)
+                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                         
-                                        ZStack {
-                                            Color.gray.opacity(0.2)
-                                                .ignoresSafeArea()
-                                            ScrollView {
-                                                VStack(spacing: 20) {
-                                                    VStack {
-                                                        
-                                                        ZStack {
-                                                            Text("LETZTES SPIEL ")
-                                                                .font(.custom("SignPainter", size: 30))
-                                                                .frame(maxWidth: 350, alignment: .trailing)
-                                                                .foregroundColor(.white)
-                                                                .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                                                                .padding(.top, 15)
-                                                                .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        
+                                        VStack{
+                                            
+                                            Image("\(news.pic)")
+                                                .resizable()
+                                                .frame(width: 220, height: 130)
+                                                .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
+                                            
+                                            
+                                                .padding(.trailing)
+                                            
+                                            
+                                            
+                                            
+                                            Spacer()
+                                        }
+                                    }
+                                }
+                                
+                                //BOX
+                                .background(
+                                    RoundedRectangle(cornerRadius: 0)
+                                        .fill(Color.white.opacity(0.8))
+                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 0)
+                                                .stroke(
+                                                    LinearGradient(
+                                                        gradient: Gradient(colors: [Color.clear, .red]),
+                                                        startPoint: .topLeading,
+                                                        endPoint: .bottomTrailing
+                                                    ),
+                                                    lineWidth: 2
+                                                )
+                                        )
+                                    
+                                )
+                                .frame(width: 380, height: 200 )
+                                .padding(3)
+                            }
+                            
+                            
+                            //NÄCHSTES SPIEL____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+                            
+                            ForEach(gameViewModel.game, id: \.id) { game in
+                                
+                                ZStack {
+                                    Color.gray.opacity(0.2)
+                                        .ignoresSafeArea()
+                                    ScrollView {
+                                        VStack(spacing: 20) {
+                                            VStack {
+                                                
+                                                ZStack {
+                                                    Text("NÄCHSTES SPIEL ")
+                                                        .font(.custom("SignPainter", size: 30))
+                                                        .frame(maxWidth: 350, alignment: .trailing)
+                                                        .foregroundColor(.white)
+                                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                                                        .padding(.top, 15)
+                                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                                    
+                                                }
+                                                
+                                                
+                                                VStack {
+                                                    Text("\(game.spieltag) - \(game.league) - \(game.day) - \(game.date) - \(game.time)")
+                                                        .font(.custom("SignPainter", size: 15))
+                                                        .frame(maxWidth: 350, alignment: .trailing)
+                                                        .foregroundColor(.white)
+                                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                                                        .padding(.top, 1)
+                                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                                    
+                                                    
+                                                    
+                                                    //HEIMTEAM
+                                                    
+                                                    ZStack{
+                                                        HStack {
+                                                            VStack {
+                                                                Image("\(game.homeTeamLogo)")
+                                                                    .resizable()
+                                                                    .frame(maxWidth: 70, maxHeight: 70)
+                                                                    .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
+                                                                    .padding(.leading, 40)
+                                                                
+                                                                Text("\(game.homeTeamName)")
+                                                                    .font(.custom("SignPainter", size: 14))
+                                                                    .foregroundColor(.black)
+                                                                    .padding(.leading, 40)
+                                                                
+                                                                Spacer()
+                                                                
+                                                            }
+                                                            VStack{
+                                                                Text("- : - ")
+                                                                    .font(.custom("SignPainter", size: 40))
+                                                                    .frame(maxWidth: 100, alignment: .center)
+                                                                    .foregroundColor(.black)
+                                                                    .background(Color.white)
+                                                                    .overlay(
+                                                                        RoundedRectangle(cornerRadius: 0)
+                                                                            .stroke(
+                                                                                LinearGradient(
+                                                                                    gradient: Gradient(colors: [.red, .white]),
+                                                                                    startPoint: .leading,
+                                                                                    endPoint: .trailing
+                                                                                ),
+                                                                                lineWidth: 2
+                                                                            )
+                                                                            .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                                                    )
+                                                                    .padding(.leading)
+                                                            }
                                                             
-                                                        }
-                                                        
-                                                        
-                                                        VStack {
-                                                            Text("\(game.spieltag) - \(game.league) - \(game.day) - \(game.date) - \(game.time)")
-                                                                .font(.custom("SignPainter", size: 15))
-                                                                .frame(maxWidth: 350, alignment: .trailing)
-                                                                .foregroundColor(.white)
-                                                                .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                                                                .padding(.top, 1)
-                                                                .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                                            Spacer()
                                                             
-                                                            //HEIMTEAM
+                                                            //AWAYTEAM
                                                             
-                                                            ZStack{
-                                                                HStack {
-                                                                    VStack {
-                                                                        Image("\(game.homeTeamLogo)")
-                                                                            .resizable()
-                                                                            .frame(maxWidth: 70, maxHeight: 70)
-                                                                            .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
-                                                                            .padding(.leading, 40)
-                                                                        
-                                                                        Text("\(game.homeTeamName)")
-                                                                            .font(.custom("SignPainter", size: 16))
-                                                                            .foregroundColor(.black)
-                                                                            .padding(.leading, 40)
-                                                                        
-                                                                    }
-                                                                    
-                                                                    Spacer()
-                                                                    
-                                                                    //AWAYTEAM
-                                                                    
-                                                                    VStack {
-                                                                        Image("\(game.awayTeamLogo)")
-                                                                            .resizable()
-                                                                            .frame(maxWidth: 60, maxHeight: 70)
-                                                                            .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
-                                                                            .padding(.trailing, 55)
-                                                                        
-                                                                        Text("\(game.awayTeamName)")
-                                                                            .font(.custom("SignPainter", size: 16))
-                                                                            .foregroundColor(.black)
-                                                                            .padding(.trailing, 55)
-                                                                        
-                                                                        
-                                                                    }
-                                                                    
-                                                                }
+                                                            VStack {
+                                                                Image("\(game.awayTeamLogo)")
+                                                                    .resizable()
+                                                                    .frame(maxWidth: 70, maxHeight: 70)
+                                                                    .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
+                                                                    .padding(.trailing, 35)
+                                                                
+                                                                Text("\(game.awayTeamName)")
+                                                                    .font(.custom("SignPainter", size: 14))
+                                                                    .foregroundColor(.black)
+                                                                    .padding(.trailing, 35)
+                                                                
+                                                                Spacer()
+                                                                
+                                                                
                                                             }
                                                             
                                                         }
                                                     }
                                                     
-                                                    
-                                                    
-                                                    //BOX
-                                                    .background(
-                                                        RoundedRectangle(cornerRadius: 0)
-                                                            .fill(Color.white.opacity(0.8))
-                                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                                            .overlay(
-                                                                RoundedRectangle(cornerRadius: 0)
-                                                                    .stroke(
-                                                                        LinearGradient(
-                                                                            gradient: Gradient(colors: [Color.clear, .red]),
-                                                                            startPoint: .topLeading,
-                                                                            endPoint: .bottomTrailing
-                                                                            
-                                                                        ),
-                                                                        lineWidth: 2
-                                                                    )
-                                                                
-                                                            )
-                                                        
-                                                        
-                                                    )
-                                                    .frame(width: 380, height: 200)
-                                                    .padding(3)
                                                 }
                                             }
+                                            
+                                            
+                                            
+                                            //BOX
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 0)
+                                                    .fill(Color.white.opacity(0.8))
+                                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                                    .overlay(
+                                                        RoundedRectangle(cornerRadius: 0)
+                                                            .stroke(
+                                                                LinearGradient(
+                                                                    gradient: Gradient(colors: [Color.clear, .red]),
+                                                                    startPoint: .topLeading,
+                                                                    endPoint: .bottomTrailing
+                                                                    
+                                                                ),
+                                                                lineWidth: 2
+                                                            )
+                                                        
+                                                    )
+                                                
+                                                
+                                            )
+                                            .frame(width: 380, height: 200)
+                                            .padding(3)
                                         }
                                         
+                                        //LETZTES SPIEL____________________________________________________________________________________________________________________________________________________________________________________________________________________________
                                         
+                                        ForEach(gameViewModel2.game, id: \.id) { game in
+                                            
+                                            ZStack {
+                                                Color.gray.opacity(0.2)
+                                                    .ignoresSafeArea()
+                                                ScrollView {
+                                                    VStack(spacing: 20) {
+                                                        VStack {
+                                                            
+                                                            ZStack {
+                                                                Text("LETZTES SPIEL ")
+                                                                    .font(.custom("SignPainter", size: 30))
+                                                                    .frame(maxWidth: 350, alignment: .trailing)
+                                                                    .foregroundColor(.white)
+                                                                    .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                                                                    .padding(.top, 15)
+                                                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                                                
+                                                            }
+                                                            
+                                                            
+                                                            VStack {
+                                                                Text("\(game.spieltag) - \(game.league) - \(game.day) - \(game.date) - \(game.time)")
+                                                                    .font(.custom("SignPainter", size: 15))
+                                                                    .frame(maxWidth: 350, alignment: .trailing)
+                                                                    .foregroundColor(.white)
+                                                                    .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                                                                    .padding(.top, 1)
+                                                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                                                
+                                                                //HEIMTEAM
+                                                                
+                                                                ZStack{
+                                                                    HStack {
+                                                                        VStack {
+                                                                            Image("\(game.homeTeamLogo)")
+                                                                                .resizable()
+                                                                                .frame(maxWidth: 70, maxHeight: 70)
+                                                                                .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
+                                                                                .padding(.leading, 40)
+                                                                            
+                                                                            Text("\(game.homeTeamName)")
+                                                                                .font(.custom("SignPainter", size: 14))
+                                                                                .foregroundColor(.black)
+                                                                                .padding(.leading, 40)
+                                                                            
+                                                                            Spacer()
+                                                                            
+                                                                        }
+                                                                        VStack{
+                                                                            Text("2 : 2 ")
+                                                                                .font(.custom("SignPainter", size: 40))
+                                                                                .frame(maxWidth: 100, alignment: .center)
+                                                                                .foregroundColor(.black)
+                                                                                .background(Color.white)
+                                                                                .overlay(
+                                                                                    RoundedRectangle(cornerRadius: 0)
+                                                                                        .stroke(
+                                                                                            LinearGradient(
+                                                                                                gradient: Gradient(colors: [.red, .white]),
+                                                                                                startPoint: .leading,
+                                                                                                endPoint: .trailing
+                                                                                            ),
+                                                                                            lineWidth: 2
+                                                                                        )
+                                                                                        .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                                                                )
+                                                                                .padding(.leading)
+                                                                        }
+                                                                        
+                                                                        Spacer()
+                                                                        
+                                                                        //AWAYTEAM
+                                                                        
+                                                                        VStack {
+                                                                            Image("\(game.awayTeamLogo)")
+                                                                                .resizable()
+                                                                                .frame(maxWidth: 60, maxHeight: 70)
+                                                                                .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
+                                                                                .padding(.trailing, 40)
+                                                                            
+                                                                            Text("\(game.awayTeamName)")
+                                                                                .font(.custom("SignPainter", size: 14))
+                                                                                .foregroundColor(.black)
+                                                                                .padding(.trailing, 40)
+                                                                            
+                                                                            Spacer()
+                                                                            
+                                                                            
+                                                                        }
+                                                                        
+                                                                    }
+                                                                }
+                                                                
+                                                            }
+                                                        }
+                                                        
+                                                        
+                                                        
+                                                        //BOX
+                                                        .background(
+                                                            RoundedRectangle(cornerRadius: 0)
+                                                                .fill(Color.white.opacity(0.8))
+                                                                .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                                                .overlay(
+                                                                    RoundedRectangle(cornerRadius: 0)
+                                                                        .stroke(
+                                                                            LinearGradient(
+                                                                                gradient: Gradient(colors: [Color.clear, .red]),
+                                                                                startPoint: .topLeading,
+                                                                                endPoint: .bottomTrailing
+                                                                                
+                                                                            ),
+                                                                            lineWidth: 2
+                                                                        )
+                                                                    
+                                                                )
+                                                            
+                                                            
+                                                        )
+                                                        .frame(width: 380, height: 200)
+                                                        .padding(3)
+                                                    }
+                                                }
+                                            }
+                                            
+                                            
+                                        }
                                     }
                                 }
                             }
@@ -333,6 +392,7 @@ struct HomeView_Previews: PreviewProvider {
         HomeView()
             .environmentObject(NextGame())
             .environmentObject(LastGame())
+            .environmentObject(NewsViewModel())
     }
 }
 

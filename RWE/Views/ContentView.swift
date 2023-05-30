@@ -48,6 +48,7 @@ struct ContentView: View {
                 HomeView()
                     .environmentObject(NextGame())
                     .environmentObject(LastGame())
+                    .environmentObject(NewsViewModel())
                 
             }
             .tabItem {
