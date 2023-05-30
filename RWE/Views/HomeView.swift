@@ -39,6 +39,7 @@ struct HomeView: View {
                 )
                 
                 // News-Box
+                
                 ForEach(NewsViewModel.news, id: \.id) { news in
                     
                     VStack {
