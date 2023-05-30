@@ -146,12 +146,12 @@ struct HomeView: View {
                                                                 .resizable()
                                                                 .frame(maxWidth: 70, maxHeight: 70)
                                                                 .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
-                                                                .padding(.leading, 50)
+                                                                .padding(.leading, 40)
                                                             
                                                             Text("\(game.homeTeamName)")
                                                                 .font(.custom("SignPainter", size: 16))
                                                                 .foregroundColor(.black)
-                                                                .padding(.leading, 50)
+                                                                .padding(.leading, 40)
                                                                 
                                                         }
                                                         
@@ -164,12 +164,12 @@ struct HomeView: View {
                                                                 .resizable()
                                                                 .frame(maxWidth: 70, maxHeight: 70)
                                                                 .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
-                                                                .padding(.trailing, 65)
+                                                                .padding(.trailing, 40)
                                                             
                                                             Text("\(game.awayTeamName)")
                                                                 .font(.custom("SignPainter", size: 16))
                                                                 .foregroundColor(.black)
-                                                                .padding(.trailing, 65)
+                                                                .padding(.trailing, 40)
                                                             
                                                     
                                                         }
