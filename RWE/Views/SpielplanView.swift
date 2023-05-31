@@ -48,48 +48,83 @@ struct SpielplanView: View {
                 
                 
                 ScrollView {
-                    
                     ForEach(spielplanViewModel.spiel, id: \.id) { spiel in
-                        
                         VStack {
-                            
+                            // Obere Zeile mit Spieltag, Datum und Uhrzeit
                             ZStack {
-                                Text("\(spiel.spieltag) ")
-                                    .font(.custom("SignPainter", size: 30))
+                                Text("\(spiel.spieltag) - \(spiel.datum) - \(spiel.uhrzeit)")
+                                    .font(.custom("SignPainter", size: 24))
                                     .frame(maxWidth: 350, alignment: .trailing)
                                     .foregroundColor(.white)
                                     .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                     .padding(.top, 15)
                                     .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                             }
-                            // News Box
-                            .frame(width: 380, height: 80)
-                            .background(
-                                RoundedRectangle(cornerRadius: 0)
-                                    .fill(Color.white.opacity(0.8))
-                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 0)
-                                            .stroke(
-                                                LinearGradient(
-                                                    gradient: Gradient(colors: [Color.clear, .red]),
-                                                    startPoint: .topLeading,
-                                                    endPoint: .bottomTrailing
-                                                ),
-                                                lineWidth: 2
-                                            )
-                                    )
-                            )
-                            .padding(3)
+                           // .padding(3)
                             
-                            // Weitere Inhalte der News-Box
+                            // Untere Zeile mit Heimlogo, Teamnamen, Ergebnis, Auswärtsteamnamen und Auswärtslogo
+                            HStack {
+                                Image("\(spiel.teamLogoHome)")
+                                    .resizable()
+                                    .frame(width: 40, height: 40)
+                                    .padding(.leading, 10)
+                                    .shadow(color: Color.black.opacity(1.0), radius: 5, x: 0, y: 2)
+                                Text("\(spiel.teamNameHome)")
+                                    .font(.custom("SignPainter", size: 18))
+                                    .foregroundColor(.white)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.leading, 10)
+                                    .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                Text("\(spiel.ergebnis)")
+                                    .font(.custom("SignPainter", size: 24))
+                                    .foregroundColor(.white)
+                                    .frame(width: 60)
+                                    .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                Text("\(spiel.teamNameAway)")
+                                    .font(.custom("SignPainter", size: 18))
+                                    .foregroundColor(.white)
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                                    .padding(.trailing, 10)
+                                    .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                Image("\(spiel.teamLogoAway)")
+                                    .resizable()
+                                    .frame(width: 40, height: 40)
+                                    .padding(.trailing, 10)
+                                    .shadow(color: Color.black.opacity(1.0), radius: 5, x: 0, y: 2)
+                            }
+                           // .padding(.vertical, 10)
                         }
+                        .frame(width: 380)
+                        
+                        .frame(width: 380, height: 100)
+                        .background(
+                            RoundedRectangle(cornerRadius: 0)
+                                .fill(Color.white.opacity(0.8))
+                                .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 0)
+                                        .stroke(
+                                            LinearGradient(
+                                                gradient: Gradient(colors: [Color.clear, .red]),
+                                                startPoint: .topLeading,
+                                                endPoint: .bottomTrailing
+                                            ),
+                                            lineWidth: 2
+                                        )
+                                )
+                        )
+                        .padding(3)
                     }
                 }
+                
             }
+            
         }
+        
     }
-    
 }
                         
                         

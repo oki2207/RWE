@@ -12,18 +12,19 @@ class SpielplanViewModel: ObservableObject {
     
     init() {
         
-        let spiel1 = SpielplanModel(teamNameHome: "ROT-WEISS ESSEN ", teamNameAway: "SV ELVERSBERG ", ergebnis: "1:5 ", teamLogoHome: "", teamLogoAway: "", spieltag: "1. SPIELTAG ", datum: "", uhrzeit: "14:00 ")
-        /*
-        let spiel2 = SpielplanModel(teamNameHome: <#String#>, teamNameAway: <#String#>, ergebnis: <#String#>, teamLogoHome: <#String#>, teamLogoAway: <#String#>, spieltag: <#String#>, datum: <#String#>, uhrzeit: <#String#>)
+        let spiel1 = SpielplanModel(teamNameHome: "ROT-WEISS ESSEN ", teamNameAway: "SV ELVERSBERG ", ergebnis: "1 : 5 ", teamLogoHome: "rwetabelle 1", teamLogoAway: "elvlogotabelle", spieltag: "1. SPIELTAG ", datum: "23.07.2022 ", uhrzeit: "14:00 ")
         
-        let spiel3 = SpielplanModel(teamNameHome: <#String#>, teamNameAway: <#String#>, ergebnis: <#String#>, teamLogoHome: <#String#>, teamLogoAway: <#String#>, spieltag: <#String#>, datum: <#String#>, uhrzeit: <#String#>)
+        let spiel2 = SpielplanModel(teamNameHome: "MSV DUISBURG ", teamNameAway: "ROT-WEISS ESSEN ", ergebnis: "2 : 2 ", teamLogoHome: "msvlogo", teamLogoAway: "rwetabelle 1", spieltag: "2. SPIELTAG", datum: "05.08.2022", uhrzeit: "19:00 ")
         
-        let spiel4 = SpielplanModel(teamNameHome: <#String#>, teamNameAway: <#String#>, ergebnis: <#String#>, teamLogoHome: <#String#>, teamLogoAway: <#String#>, spieltag: <#String#>, datum: <#String#>, uhrzeit: <#String#>)
+        let spiel3 = SpielplanModel(teamNameHome: "ROT-WEISS ESSEN ", teamNameAway: "VIKTORIA KÖLN ", ergebnis: "1 : 4 ", teamLogoHome: "rwetabelle 1", teamLogoAway: "viklogo", spieltag: "3. SPIELTAG ", datum: "09.08.2022 ", uhrzeit: "19:00 ")
         
-        let spiel5 = SpielplanModel(teamNameHome: <#String#>, teamNameAway: <#String#>, ergebnis: <#String#>, teamLogoHome: <#String#>, teamLogoAway: <#String#>, spieltag: <#String#>, datum: <#String#>, uhrzeit: <#String#>)
+        let spiel4 = SpielplanModel(teamNameHome: "BORUSSIA DORTMUND II ", teamNameAway: "ROT-WEISS ESSEN ", ergebnis: "1 : 0 ", teamLogoHome: "bvblogo", teamLogoAway: "rwetabelle 1", spieltag: "4. SPIELTAG ", datum: "13.08.2022 ", uhrzeit: "14:00 ")
         
-        let spiel6 = SpielplanModel(teamNameHome: <#String#>, teamNameAway: <#String#>, ergebnis: <#String#>, teamLogoHome: <#String#>, teamLogoAway: <#String#>, spieltag: <#String#>, datum: <#String#>, uhrzeit: <#String#>)
+        let spiel5 = SpielplanModel(teamNameHome: "ROT-WEISS ESSEN ", teamNameAway: "FC INGOLSTADT ", ergebnis: "2 : 2 ", teamLogoHome: "rwetabelle 1", teamLogoAway: "fcilogo", spieltag: "5. SPIELTAG ", datum: "20.08.2022 ", uhrzeit: "14:00 ")
         
+        let spiel6 = SpielplanModel(teamNameHome: "SPVGG BAYREUTH ", teamNameAway: "ROT-WEISS ESSEN ", ergebnis: "1 : 1 ", teamLogoHome: "baylogo", teamLogoAway: "rwetabelle 1", spieltag: "6. SPIELTAG ", datum: "27.08.2022 ", uhrzeit: "14:00 ")
+        
+         /*
         let spiel7 = SpielplanModel(teamNameHome: <#String#>, teamNameAway: <#String#>, ergebnis: <#String#>, teamLogoHome: <#String#>, teamLogoAway: <#String#>, spieltag: <#String#>, datum: <#String#>, uhrzeit: <#String#>)
         
         let spiel8 = SpielplanModel(teamNameHome: <#String#>, teamNameAway: <#String#>, ergebnis: <#String#>, teamLogoHome: <#String#>, teamLogoAway: <#String#>, spieltag: <#String#>, datum: <#String#>, uhrzeit: <#String#>)
@@ -90,6 +91,6 @@ class SpielplanViewModel: ObservableObject {
         
         */
         
-        self.spiel = [spiel1]
+        self.spiel = [spiel1, spiel2, spiel3, spiel4, spiel5, spiel6]
     }
 }
