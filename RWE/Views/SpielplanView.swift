@@ -53,7 +53,7 @@ struct SpielplanView: View {
                             // Obere Zeile mit Spieltag, Datum und Uhrzeit
                             ZStack {
                                 Text("\(spiel.spieltag) - \(spiel.datum) - \(spiel.uhrzeit)")
-                                    .font(.custom("SignPainter", size: 24))
+                                    .font(.custom("SignPainter", size: 20))
                                     .frame(maxWidth: 350, alignment: .trailing)
                                     .foregroundColor(.white)
                                     .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
@@ -65,12 +65,12 @@ struct SpielplanView: View {
                             // Untere Zeile mit Heimlogo, Teamnamen, Ergebnis, Auswärtsteamnamen und Auswärtslogo
                             HStack {
                                 Image("\(spiel.teamLogoHome)")
-                                    .resizable()
-                                    .frame(width: 40, height: 40)
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                                    .font(.system(size: 14))
                                     .padding(.leading, 10)
                                     .shadow(color: Color.black.opacity(1.0), radius: 5, x: 0, y: 2)
                                 Text("\(spiel.teamNameHome)")
-                                    .font(.custom("SignPainter", size: 18))
+                                    .font(.custom("SignPainter", size: 14))
                                     .foregroundColor(.white)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .padding(.leading, 10)
@@ -83,15 +83,15 @@ struct SpielplanView: View {
                                     .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.red]), startPoint: .trailing, endPoint: .leading))
                                     .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                 Text("\(spiel.teamNameAway)")
-                                    .font(.custom("SignPainter", size: 18))
+                                    .font(.custom("SignPainter", size: 14))
                                     .foregroundColor(.white)
                                     .frame(maxWidth: .infinity, alignment: .trailing)
                                     .padding(.trailing, 10)
                                     .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
                                     .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                 Image("\(spiel.teamLogoAway)")
-                                    .resizable()
-                                    .frame(width: 40, height: 40)
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                                    .font(.system(size: 14))
                                     .padding(.trailing, 10)
                                     .shadow(color: Color.black.opacity(1.0), radius: 5, x: 0, y: 2)
                             }
