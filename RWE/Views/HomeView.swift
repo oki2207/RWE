@@ -22,7 +22,7 @@ struct HomeView: View {
                 .opacity(1.0)
                 .edgesIgnoringSafeArea(.all)
             
-            VStack(spacing: 3) {
+            VStack(spacing: 5) {
                 HStack {
                     Text("HAFENSTRASSE ")
                         .font(.custom("SignPainter", size: 30))

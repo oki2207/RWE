@@ -49,6 +49,7 @@ struct SpielplanView: View {
                 
                 
                 //KLICKLEISTE-------------------------------------------------------------------------------
+                
                 Text("3. LIGA ")
                     .onTapGesture {
                         showDritteLiga.toggle()
