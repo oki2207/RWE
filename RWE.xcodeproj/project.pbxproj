@@ -19,6 +19,8 @@
 		47685F112A26060B0039642A /* LastGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47685F102A26060B0039642A /* LastGame.swift */; };
 		47685F132A2625020039642A /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47685F122A2625020039642A /* NewsModel.swift */; };
 		47685F152A2625C60039642A /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47685F142A2625C60039642A /* NewsViewModel.swift */; };
+		47685F172A27297F0039642A /* SpielplanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47685F162A27297F0039642A /* SpielplanModel.swift */; };
+		47685F192A2729940039642A /* SpielplanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47685F182A2729940039642A /* SpielplanViewModel.swift */; };
 		477AF7FA2A04D744005891C9 /* TabelleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477AF7F92A04D744005891C9 /* TabelleViewModel.swift */; };
 		477AF7FC2A04D759005891C9 /* TabelleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477AF7FB2A04D759005891C9 /* TabelleModel.swift */; };
 		47826D292A0292BF009242FC /* RWEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47826D282A0292BF009242FC /* RWEApp.swift */; };
@@ -62,6 +64,8 @@
 		47685F102A26060B0039642A /* LastGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastGame.swift; sourceTree = "<group>"; };
 		47685F122A2625020039642A /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		47685F142A2625C60039642A /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		47685F162A27297F0039642A /* SpielplanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpielplanModel.swift; sourceTree = "<group>"; };
+		47685F182A2729940039642A /* SpielplanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpielplanViewModel.swift; sourceTree = "<group>"; };
 		477AF7F92A04D744005891C9 /* TabelleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelleViewModel.swift; sourceTree = "<group>"; };
 		477AF7FB2A04D759005891C9 /* TabelleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelleModel.swift; sourceTree = "<group>"; };
 		47826D252A0292BF009242FC /* RWE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RWE.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +110,7 @@
 				47440C202A093198006F5875 /* KaderModel.swift */,
 				47440C2C2A0D122E006F5875 /* GameModel.swift */,
 				47685F122A2625020039642A /* NewsModel.swift */,
+				47685F162A27297F0039642A /* SpielplanModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 				47440C282A0A8254006F5875 /* TrainerViewModel.swift */,
 				47685F102A26060B0039642A /* LastGame.swift */,
 				47685F142A2625C60039642A /* NewsViewModel.swift */,
+				47685F182A2729940039642A /* SpielplanViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -258,7 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47685F172A27297F0039642A /* SpielplanModel.swift in Sources */,
 				47826D4A2A0293D3009242FC /* KaderView.swift in Sources */,
+				47685F192A2729940039642A /* SpielplanViewModel.swift in Sources */,
 				47440C2B2A0D113F006F5875 /* NextGame.swift in Sources */,
 				47826D4C2A0293D3009242FC /* ContentView.swift in Sources */,
 				47440C1F2A092C68006F5875 /* KaderViewModel.swift in Sources */,

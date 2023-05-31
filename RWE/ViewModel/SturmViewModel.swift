@@ -28,69 +28,69 @@ class SturmViewModel: ObservableObject {
             birthDate: "GEBURTSTDATUM: 16.10.1994 ",
             birthPlace: "GEBURTSORT: JÜLICH ",
             since: "ROT-WEISSER SEIT 2021 ",
-            photo: "holzweiler",
+            photo: "holzeiler",
             previousClub: "LETZTER VEREIN: VIKTORIA KÖLN ",
             number: "10 ")
-       // ---------------------------------------------------------------//HIER WEITERMACHEN 
+       
         let player22 = KaderModel(
-            name: "CEDRIC HARENBROCK ",
+            name: "SIMON ENGELMANN ",
             position: "TORHÜTER ",
-            birthDate: "GEBURTSTDATUM: 19.04.1998 ",
-            birthPlace: "GEBURTSORT: WUPPERTAL ",
-            since: "ROT-WEISSER SEIT 2017 ",
-            photo: "harenbrock",
-            previousClub: "LETZTER VEREIN: BAYER 04 LEV. ",
-            number: "8 ")
+            birthDate: "GEBURTSTDATUM: 22.03.1989 ",
+            birthPlace: "GEBURTSORT: VECHTA ",
+            since: "ROT-WEISSER SEIT 2020 ",
+            photo: "engel",
+            previousClub: "LETZTER VEREIN: SV RÖDINGHAUSEN ",
+            number: "11 ")
         
         let player23 = KaderModel(
-            name: "FELIX GÖTZE ",
+            name: "LUCA WOLLSCHLÄGER ",
             position: "TORHÜTER ",
-            birthDate: "GEBURTSTDATUM: 11.02.1998 ",
-            birthPlace: "GEBURTSORT: DORTMUND ",
+            birthDate: "GEBURTSTDATUM: 08.02.2003 ",
+            birthPlace: "GEBURTSORT: BERLIN ",
             since: "ROT-WEISSER SEIT 2022 ",
-            photo: "goetze",
-            previousClub: "LETZTER VEREIN: FC AUGSBURG ",
-            number: "24 ")
+            photo: "wolle",
+            previousClub: "LETZTER VEREIN: HERTHA BSC ",
+            number: "13 ")
         
         let player24 = KaderModel(
-            name: "TORBEN MÜSEL ",
+            name: "LAWRENCE ENNALI ",
             position: "TORHÜTER ",
-            birthDate: "GEBURTSTDATUM: 25.07.1999 ",
-            birthPlace: "GEBURTSORT: GRÜNSTADT ",
+            birthDate: "GEBURTSTDATUM: 07.03.2002 ",
+            birthPlace: "GEBURTSORT: HANNOVER ",
             since: "ROT-WEISSER SEIT 2022 ",
-            photo: "muesel",
-            previousClub: "LETZTER VEREIN: BOR. M'GLADBACH ",
-            number: "26 ")
+            photo: "ennali",
+            previousClub: "LETZTER VEREIN: HANNOVER 96 ",
+            number: "18 ")
         
         let player25 = KaderModel(
-            name: "NIKLAS TARNAT ",
+            name: "AUREL LOUBONGO ",
             position: "TORHÜTER ",
-            birthDate: "GEBURTSTDATUM: 26.05.1998 ",
-            birthPlace: "GEBURTSORT: SOLINGEN ",
+            birthDate: "GEBURTSTDATUM: 19.06.2001 ",
+            birthPlace: "GEBURTSORT: HAMBURG ",
             since: "ROT-WEISSER SEIT 2022 ",
-            photo: "tarnat",
-            previousClub: "LETZTER VEREIN: HANNOVER 96 ",
-            number: "31 ")
+            photo: "loubongo",
+            previousClub: "LETZTER VEREIN: FC ST.PAULI ",
+            number: "22 ")
         
         let player26 = KaderModel(
-            name: "THOMAS EISFELD ",
+            name: "ISAIAH YOUNG ",
             position: "TORHÜTER ",
-            birthDate: "GEBURTSTDATUM: 18.01.1993 ",
-            birthPlace: "GEBURTSORT: FINSTERWALDE ",
-            since: "ROT-WEISSER SEIT 2022 ",
-            photo: "eisfeld",
-            previousClub: "LETZTER VEREIN: VFL BOCHUM ",
-            number: "32 ")
+            birthDate: "GEBURTSTDATUM: 30.03.1998 ",
+            birthPlace: "GEBURTSORT: BERLIN/USA ",
+            since: "ROT-WEISSER SEIT 2021 ",
+            photo: "young",
+            previousClub: "LETZTER VEREIN: WERDER BREMEN ",
+            number: "30 ")
         
         let player27 = KaderModel(
-            name: "THOMAS EISFELD ",
+            name: "OGUZHAN KEFKIR ",
             position: "TORHÜTER ",
-            birthDate: "GEBURTSTDATUM: 18.01.1993 ",
-            birthPlace: "GEBURTSORT: FINSTERWALDE ",
-            since: "ROT-WEISSER SEIT 2022 ",
-            photo: "eisfeld",
-            previousClub: "LETZTER VEREIN: VFL BOCHUM ",
-            number: "32 ")
+            birthDate: "GEBURTSTDATUM: 27.08.1991 ",
+            birthPlace: "GEBURTSORT: WUPPERTAL ",
+            since: "ROT-WEISSER SEIT 2019 ",
+            photo: "kefkir",
+            previousClub: "LETZTER VEREIN: KFC UERDINEGEN ",
+            number: "38 ")
         
         
         self.kader = [player20, player21, player22, player23, player24, player25, player26, player27]
