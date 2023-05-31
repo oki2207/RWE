@@ -38,6 +38,7 @@ struct ContentView: View {
             NavigationView {
                 SpielplanView()
                     .environmentObject(SpielplanViewModel())
+                    .environmentObject(NrPokalViewModel())
             }
             .tabItem {
                 Image(systemName: "calendar")

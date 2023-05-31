@@ -25,7 +25,7 @@ class SpielplanViewModel: ObservableObject {
         let spiel6 = SpielplanModel(teamNameHome: "SPVGG BAYREUTH ", teamNameAway: "ROT-WEISS ESSEN ", ergebnis: " 1 : 1 ", teamLogoHome: "baylogo", teamLogoAway: "rwetabelle 1", spieltag: "6. SPIELTAG ", datum: "27. AUG. 2022 ", uhrzeit: "14 UHR ")
         
          
-        let spiel7 = SpielplanModel(teamNameHome: "ROT-WEISS ESSEN ", teamNameAway: "ERZGEBIERGE AUE ", ergebnis: " 2 : 1 ", teamLogoHome: "rwetabelle 1", teamLogoAway: "auelogoneu", spieltag: "7. SPIELTAG ", datum: "02. SEP. 2022", uhrzeit: " 19 Uhr ")
+        let spiel7 = SpielplanModel(teamNameHome: "ROT-WEISS ESSEN ", teamNameAway: "ERZGEBIERGE AUE ", ergebnis: " 2 : 1 ", teamLogoHome: "rwetabelle 1", teamLogoAway: "auelogoneu", spieltag: "7. SPIELTAG ", datum: "02. SEP. 2022", uhrzeit: " 19 UHR ")
         
         let spiel8 = SpielplanModel(teamNameHome: "VFL OSNABRÜCK", teamNameAway: "ROT-WEISS ESSEN ", ergebnis: " 1 : 0 ", teamLogoHome: "osnalogotabelle", teamLogoAway: "rwetabelle 1", spieltag: "8. SPIELTAG ", datum: "09. SEP. 2022 ", uhrzeit: "19 UHR ")
         
@@ -51,13 +51,13 @@ class SpielplanViewModel: ObservableObject {
         
         let spiel19 = SpielplanModel(teamNameHome: "SC VERL ", teamNameAway: "ROT-WEISS ESSEN ", ergebnis: " 1 : 1 ", teamLogoHome: "verllogo", teamLogoAway: "rwetabelle 1", spieltag: "19. SPIELTAG ", datum: "21. JAN. 2023 ", uhrzeit: "14 UHR ")
         
-        let spiel20 = SpielplanModel(teamNameHome: "SV ELVERSBERG ", teamNameAway: "ROT-WEISS ESSEN ", ergebnis: " 3 : 0 ", teamLogoHome: "elvlogotabelle", teamLogoAway: "rwetabelle 1", spieltag: "20. SPIELTAG ", datum: "19 UHR ", uhrzeit: "27. JAN. 2023 ")
+        let spiel20 = SpielplanModel(teamNameHome: "SV ELVERSBERG ", teamNameAway: "ROT-WEISS ESSEN ", ergebnis: " 3 : 0 ", teamLogoHome: "elvlogotabelle", teamLogoAway: "rwetabelle 1", spieltag: "20. SPIELTAG ", datum: "27. JAN. 2023 ", uhrzeit: "19 UHR ")
         
         let spiel21 = SpielplanModel(teamNameHome: "ROT-WEISS ESSEN ", teamNameAway: "MSV DUISBURG ", ergebnis: " 1 : 1 ", teamLogoHome: "rwetabelle 1", teamLogoAway: "msvlogo", spieltag: "21. SPIELTAG ", datum: "05. FEB. 2023 ", uhrzeit: "14 UHR ")
         
         let spiel22 = SpielplanModel(teamNameHome: "VIKTORIA KÖLN ", teamNameAway: "ROT-WEISS ESSEN ", ergebnis: " 1 : 0 ", teamLogoHome: "viklogo", teamLogoAway: "rwetabelle 1", spieltag: "22. SPIELTAG ", datum: "13. FEB. 2023 ", uhrzeit: "19 UHR ")
         
-        let spiel23 = SpielplanModel(teamNameHome: "ROT-WEISS ESSEN ", teamNameAway: "BORUSSIA DORTMUND II ", ergebnis: " 2 : 0 ", teamLogoHome: "rwetabelle 1", teamLogoAway: "bvblogo", spieltag: "23. SPIELTAG ", datum: "19. AUG. 2023 ", uhrzeit: "14 UHR ")
+        let spiel23 = SpielplanModel(teamNameHome: "ROT-WEISS ESSEN ", teamNameAway: "BORUSSIA DORTMUND II ", ergebnis: " 2 : 0 ", teamLogoHome: "rwetabelle 1", teamLogoAway: "bvblogo", spieltag: "23. SPIELTAG ", datum: "19. FEB. 2023 ", uhrzeit: "14 UHR ")
         
         let spiel24 = SpielplanModel(teamNameHome: "FC INGOLSTADT ", teamNameAway: "ROT-WEISS ESSEN ", ergebnis: " 1 : 1 ", teamLogoHome: "fcilogo", teamLogoAway: "rwetabelle 1", spieltag: "24. SPIELTAG ", datum: "25. FEB. 2023 ", uhrzeit: "14 UHR ")
         
