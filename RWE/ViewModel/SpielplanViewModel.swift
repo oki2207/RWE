@@ -85,7 +85,7 @@ class SpielplanViewModel: ObservableObject {
         
         let spiel36 = SpielplanModel(teamNameHome: "ROT-WEISS ESSEN ", teamNameAway: "1860 MÜNCHEN ", ergebnis: " 2 : 2 ", teamLogoHome: "rwetabelle 1", teamLogoAway: "1860logo", spieltag: "36. SPIELTAG ", datum: "14. MAI 2023 ", uhrzeit: "13 UHR ")
         
-        let spiel37 = SpielplanModel(teamNameHome: "HALLESCHER FC ", teamNameAway: "ROT-WEISS ESSEN ", ergebnis: " 2 : 0 ", teamLogoHome: "HALLESCHER FC ", teamLogoAway: "rwetabelle 1", spieltag: "37. SPIELTAG ", datum: "20. MAI 2023 ", uhrzeit: "14 UHR ")
+        let spiel37 = SpielplanModel(teamNameHome: "HALLESCHER FC ", teamNameAway: "ROT-WEISS ESSEN ", ergebnis: " 2 : 0 ", teamLogoHome: "hfclogo", teamLogoAway: "rwetabelle 1", spieltag: "37. SPIELTAG ", datum: "20. MAI 2023 ", uhrzeit: "14 UHR ")
         
         let spiel38 = SpielplanModel(teamNameHome: "ROT-WEISS ESSEN ", teamNameAway: "SC VERL ", ergebnis: " 2 : 2 ", teamLogoHome: "rwetabelle 1", teamLogoAway: "verllogo", spieltag: "38. SPIELTAG ", datum: "27. MAI 2023 ", uhrzeit: "14 UHR ")
         

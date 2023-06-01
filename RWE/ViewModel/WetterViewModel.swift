@@ -12,9 +12,10 @@ import CoreData
 
 class WetterViewModel: ObservableObject {
     let persistentContainer: NSPersistentContainer
+    //HARD GECODET
+    @Published var wetterEssen: Wetter = Wetter(stadt: "", land: "", witterung: "", temperatur_jetzt: "", temperatur_max: "", temperatur_min: "", windgeschwindigkeit: "", feuchtigkeit: "", thumbnail: "")
     
-    // MARK: Datum ist Einzahl von Daten
-    //       hier speichern wir für die Städte die letzten WetterWerte ein
+   //HARD GECODET
     @Published var wetterDaten: [WetterDatum] = []
     
     init() {
@@ -24,7 +25,7 @@ class WetterViewModel: ObservableObject {
                 fatalError("Fehler beim Erstellen des ViewModels: \(error.localizedDescription)")
             }
         }
-        fetchWetterDatum("HAFENSTRASSE")
+        fetchWetterDatum("ESSEN")
         saveAndReadWetterDaten()
     }
     
@@ -96,6 +97,7 @@ class WetterViewModel: ObservableObject {
                 let wetterResponse = try JSONDecoder().decode(WetterResponse.self, from: data)
                 DispatchQueue.main.async {
                     self?.createOrUpdateWetterDatum(stadt, Wetter.fromWetterResponse(wetterResponse))
+                    self?.wetterEssen = Wetter.fromWetterResponse(wetterResponse)
                 }
             } catch {
                 print("Fehler beim Decoden der Response: \(error)")
