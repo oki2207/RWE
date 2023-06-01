@@ -75,9 +75,10 @@ struct HomeView: View {
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                         .padding(.top, 15)
                                         .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                    Spacer()
                                 }
                                 // News Box
-                                .frame(width: 380, height: 200)
+                                .frame(width: 380, height: 210)
                                 .background(
                                     RoundedRectangle(cornerRadius: 0)
                                         .fill(Color.white.opacity(0.8))
@@ -94,12 +95,13 @@ struct HomeView: View {
                                                 )
                                         )
                                 )
-                                .padding(3)
                                 Spacer()
                                 // Weitere Inhalte der News-Box
                             }
+                            
                            
                         }
+                        
                         
                         
                         //NÄCHSTES SPIEL____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
@@ -110,7 +112,7 @@ struct HomeView: View {
                                 Color.gray.opacity(0.2)
                                     .ignoresSafeArea()
                                 
-                                VStack(spacing: 20) {
+                                VStack {
                                     VStack {
                                         
                                         ZStack {
@@ -201,7 +203,7 @@ struct HomeView: View {
                                                 
                                                 
                                             }
-                                            
+                                            Spacer()
                                         }
                                     }
                                     
@@ -229,7 +231,7 @@ struct HomeView: View {
                                         
                                         
                                     )
-                                    .frame(width: 380, height: 120)
+                                    .frame(width: 380, height: 133)
                                     
                                     
                                     
@@ -311,7 +313,7 @@ struct HomeView: View {
                                                                 
                                                                 Image("\(game.awayTeamLogo)")
                                                                     .resizable()
-                                                                    .frame(width: 45, height: 50)
+                                                                    .frame(width: 50, height: 50)
                                                                     .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
                                                                     .padding(.trailing,20)
                                                                 
@@ -325,7 +327,10 @@ struct HomeView: View {
                                                                 
                                                                 
                                                             }
+                                                            Spacer()
                                                             
+                                                             
+
                                                         }
                                                     }
                                                     
@@ -353,7 +358,7 @@ struct HomeView: View {
                                                         
                                                         
                                                     )
-                                                    .frame(width: 380, height: 120)
+                                                    .frame(width: 380, height: 133)
                                                     
                                                 }
                                             }

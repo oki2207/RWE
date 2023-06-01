@@ -82,19 +82,12 @@ struct TitelView: View {
                                     .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
                                 Text("1955 ")
                                     .font(.custom("SignPainter", size: 20))
+                                    .foregroundColor(.white)
                                     .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.black)
-                                    .background(
-                                        Color.white
-                                            .frame(width: 120) // Hier die Breite einstellen
-                                            .cornerRadius(0)
-                                            .padding(.horizontal)
-                                    )
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 0)
-                                            .stroke(LinearGradient(gradient: Gradient(colors: [.red, .white]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
-                                            .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
-                                    )
+                                    .padding(.trailing, 10)
+                                    .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                    
                                     .padding(.horizontal, 130)
                                 
                                 
@@ -159,20 +152,15 @@ struct TitelView: View {
                                     .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
                                 Text("1953 ")
                                     .font(.custom("SignPainter", size: 20))
+                                    .foregroundColor(.white)
                                     .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.black)
-                                    .background(
-                                        Color.white
-                                            .frame(width: 120) // Hier die Breite einstellen
-                                            .cornerRadius(0)
-                                            .padding(.horizontal)
-                                    )
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 0)
-                                            .stroke(LinearGradient(gradient: Gradient(colors: [.red, .white]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
-                                            .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
-                                    )
+                                    .padding(.trailing, 10)
+                                    .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                    
                                     .padding(.horizontal, 130)
+                                
+                                
                                 Spacer()
                             }
                             .background(
@@ -232,60 +220,31 @@ struct TitelView: View {
                                 HStack{
                                     Text("1995 ")
                                         .font(.custom("SignPainter", size: 20))
+                                        .foregroundColor(.white)
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.black)
-                                        .background(Color.white)
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 0)
-                                                .stroke(
-                                                    LinearGradient(
-                                                        gradient: Gradient(colors: [.red, .white]),
-                                                        startPoint: .leading,
-                                                        endPoint: .trailing
-                                                    ),
-                                                    lineWidth: 2
-                                                )
-                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
-                                        )
+                                        .padding(.trailing, 10)
+                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        
                                     
                                     
                                     
                                     
                                     Text("2002 ")
                                         .font(.custom("SignPainter", size: 20))
+                                        .foregroundColor(.white)
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.black)
-                                        .background(Color.white)
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 0)
-                                                .stroke(
-                                                    LinearGradient(
-                                                        gradient: Gradient(colors: [.red, .white]),
-                                                        startPoint: .leading,
-                                                        endPoint: .trailing
-                                                    ),
-                                                    lineWidth: 2
-                                                )
-                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
-                                        )
+                                        .padding(.trailing, 10)
+                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     
                                     Text("2004 ")
                                         .font(.custom("SignPainter", size: 20))
+                                        .foregroundColor(.white)
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.black)
-                                        .background(Color.white)
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 0)
-                                                .stroke(
-                                                    LinearGradient(
-                                                        gradient: Gradient(colors: [.red, .white]),
-                                                        startPoint: .leading,
-                                                        endPoint: .trailing
-                                                    ),
-                                                    lineWidth: 2
-                                                )
-                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
-                                        )
+                                        .padding(.trailing, 10)
+                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     
                                 }
                                 
@@ -295,114 +254,54 @@ struct TitelView: View {
                                 HStack{
                                     Text("2008 ")
                                         .font(.custom("SignPainter", size: 20))
+                                        .foregroundColor(.white)
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.black)
-                                        .background(Color.white)
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 0)
-                                                .stroke(
-                                                    LinearGradient(
-                                                        gradient: Gradient(colors: [.red, .white]),
-                                                        startPoint: .leading,
-                                                        endPoint: .trailing
-                                                    ),
-                                                    lineWidth: 2
-                                                )
-                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
-                                        )
+                                        .padding(.trailing, 10)
+                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     
                                     Text("2011 ")
                                         .font(.custom("SignPainter", size: 20))
+                                        .foregroundColor(.white)
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.black)
-                                        .background(Color.white)
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 0)
-                                                .stroke(
-                                                    LinearGradient(
-                                                        gradient: Gradient(colors: [.red, .white]),
-                                                        startPoint: .leading,
-                                                        endPoint: .trailing
-                                                    ),
-                                                    lineWidth: 2
-                                                )
-                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
-                                        )
+                                        .padding(.trailing, 10)
+                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     
                                     Text("2012 ")
                                         .font(.custom("SignPainter", size: 20))
+                                        .foregroundColor(.white)
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.black)
-                                        .background(Color.white)
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 0)
-                                                .stroke(
-                                                    LinearGradient(
-                                                        gradient: Gradient(colors: [.red, .white]),
-                                                        startPoint: .leading,
-                                                        endPoint: .trailing
-                                                    ),
-                                                    lineWidth: 2
-                                                )
-                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
-                                        )
+                                        .padding(.trailing, 10)
+                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                 }
                                 Spacer()
                                 
                                 HStack{
                                     Text("2015 ")
                                         .font(.custom("SignPainter", size: 20))
+                                        .foregroundColor(.white)
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.black)
-                                        .background(Color.white)
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 0)
-                                                .stroke(
-                                                    LinearGradient(
-                                                        gradient: Gradient(colors: [.red, .white]),
-                                                        startPoint: .leading,
-                                                        endPoint: .trailing
-                                                    ),
-                                                    lineWidth: 2
-                                                )
-                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
-                                        )
+                                        .padding(.trailing, 10)
+                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     
                                     Text("2016 ")
                                         .font(.custom("SignPainter", size: 20))
+                                        .foregroundColor(.white)
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.black)
-                                        .background(Color.white)
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 0)
-                                                .stroke(
-                                                    LinearGradient(
-                                                        gradient: Gradient(colors: [.red, .white]),
-                                                        startPoint: .leading,
-                                                        endPoint: .trailing
-                                                    ),
-                                                    lineWidth: 2
-                                                )
-                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
-                                        )
+                                        .padding(.trailing, 10)
+                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     
                                     Text("2020 ")
                                         .font(.custom("SignPainter", size: 20))
+                                        .foregroundColor(.white)
                                         .frame(maxWidth: .infinity, alignment: .center)
-                                        .foregroundColor(.black)
-                                        .background(Color.white)
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 0)
-                                                .stroke(
-                                                    LinearGradient(
-                                                        gradient: Gradient(colors: [.red, .white]),
-                                                        startPoint: .leading,
-                                                        endPoint: .trailing
-                                                    ),
-                                                    lineWidth: 2
-                                                )
-                                                .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
-                                        )
+                                        .padding(.trailing, 10)
+                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                 }
                                 Spacer()
                                 
@@ -462,19 +361,12 @@ struct TitelView: View {
                                     .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
                                 Text("2022 ")
                                     .font(.custom("SignPainter", size: 20))
+                                    .foregroundColor(.white)
                                     .frame(maxWidth: .infinity, alignment: .center)
-                                    .foregroundColor(.black)
-                                    .background(
-                                        Color.white
-                                            .frame(width: 120) // Hier die Breite einstellen
-                                            .cornerRadius(0)
-                                            .padding(.horizontal)
-                                    )
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 0)
-                                            .stroke(LinearGradient(gradient: Gradient(colors: [.red, .white]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
-                                            .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
-                                    )
+                                    .padding(.trailing, 10)
+                                    .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                    
                                     .padding(.horizontal, 130)
                                 Spacer()
                             }

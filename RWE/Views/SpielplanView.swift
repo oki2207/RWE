@@ -143,7 +143,7 @@ struct SpielplanView: View {
                 
                 
                 //KLICKLEISTE-------------------------------------------------------------------------------
-                Text("NIEDERRHEIN-POKAL ")
+                Text("NIEDERRHEINPOKAL ")
                     .onTapGesture {
                         showNrPokal.toggle()
                     }
