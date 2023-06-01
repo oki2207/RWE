@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22D49" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="WetterDatum" representedClassName="WetterDatum" syncable="YES" codeGenerationType="class">
+        <attribute name="feuchtigkeit" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="land" optional="YES" attributeType="String"/>
+        <attribute name="stadt" optional="YES" attributeType="String"/>
+        <attribute name="stadtIntern" optional="YES" attributeType="String"/>
+        <attribute name="temperatur_jetzt" optional="YES" attributeType="String"/>
+        <attribute name="temperatur_max" optional="YES" attributeType="String"/>
+        <attribute name="temperatur_min" optional="YES" attributeType="String"/>
+        <attribute name="thumbnail" optional="YES" attributeType="String"/>
+        <attribute name="windgeschwindigkeit" optional="YES" attributeType="String"/>
+        <attribute name="witterung" optional="YES" attributeType="String"/>
+    </entity>
+</model>

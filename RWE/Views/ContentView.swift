@@ -22,66 +22,68 @@ struct ContentView: View {
         }
         
     // NAVIGATIONSBAR
-        
-        TabView(selection: $selectedTab) {
-            NavigationView {
+        NavigationView {
+            TabView(selection: $selectedTab) {
+                
                 TabelleView()
                     .environmentObject(TabelleViewModel())
-                    
-            }
-            .tabItem {
-                Image(systemName: "list.dash")
-                Text("Tabelle")
-            }
-            .tag(2)
-            
-            NavigationView {
+                
+                
+                    .tabItem {
+                        Image(systemName: "list.dash")
+                        Text("Tabelle")
+                    }
+                    .tag(2)
+                
+                
                 SpielplanView()
                     .environmentObject(SpielplanViewModel())
                     .environmentObject(NrPokalViewModel())
-            }
-            .tabItem {
-                Image(systemName: "calendar")
-                Text("Spielplan")
-            }
-            .tag(1)
-            
-            NavigationView {
+                
+                    .tabItem {
+                        Image(systemName: "calendar")
+                        Text("Spielplan")
+                    }
+                    .tag(1)
+                
+                
                 HomeView()
                     .environmentObject(NextGame())
                     .environmentObject(LastGame())
                     .environmentObject(NewsViewModel())
+                    .environmentObject(WetterViewModel())
                 
-            }
-            .tabItem {
-                Image("rwetabbar")
-                    .frame(width: 30, height: 30)
                 
-            }
-            .tag(0)
-            
-            NavigationView {
+                    .tabItem {
+                        Image("rwetabbar")
+                            .frame(width: 30, height: 30)
+                        
+                    }
+                    .tag(0)
+                
+                
                 KaderView()
                     .environmentObject(KaderViewModel())
                     .environmentObject(AbwehrViewModel())
                     .environmentObject(MitteViewModel())
                     .environmentObject(SturmViewModel())
                     .environmentObject(TrainerViewModel())
-            }
-            .tabItem {
-                Image(systemName: "person.3")
-                Text("Team")
-            }
-            .tag(3)
-            
-            NavigationView {
+                
+                    .tabItem {
+                        Image(systemName: "person.3")
+                        Text("Team")
+                    }
+                    .tag(3)
+                
+                
                 TitelView()
+                
+                    .tabItem {
+                        Image(systemName: "rosette")
+                        Text("Erfolge")
+                    }
+                    .tag(4)
             }
-            .tabItem {
-                Image(systemName: "rosette")
-                Text("Erfolge")
-            }
-            .tag(4)
         }
         
         //NAVIGATIONSBAR FARBE
