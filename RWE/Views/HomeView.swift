@@ -63,6 +63,7 @@ struct HomeView: View {
                         ForEach(NewsViewModel.news, id: \.id) { news in
                             
                             ZStack {
+                            
                                 Color.gray.opacity(0.2)
                                     .ignoresSafeArea()
                                 
@@ -94,9 +95,10 @@ struct HomeView: View {
                                         )
                                 )
                                 .padding(3)
-                                
+                                Spacer()
                                 // Weitere Inhalte der News-Box
                             }
+                           
                         }
                         
                         
@@ -131,6 +133,8 @@ struct HomeView: View {
                                                 .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                                 .padding(.top, 1)
                                                 .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                            
+                                            
                                             
                                             
                                             

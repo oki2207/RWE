@@ -231,7 +231,9 @@ struct SpielplanView: View {
                     }
                     
                 }
+                Spacer()
                 }
+           
                 
             }
             
