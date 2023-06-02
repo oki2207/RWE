@@ -14,6 +14,7 @@ struct SpielplanView: View {
     @State private var showDritteLiga = false
     @State private var showNrPokal = false
     
+    
     var body: some View {
         ZStack {
             Image("screen4") // Hier musst du den Namen deines Bildes angeben
@@ -50,9 +51,10 @@ struct SpielplanView: View {
                 
                 //KLICKLEISTE-------------------------------------------------------------------------------
                 
-                Text("3. LIGA ")
+                Text("3. LIGA \(showDritteLiga ? "- " : "+ ")")
                     .onTapGesture {
                         showDritteLiga.toggle()
+                        
                     }
                     .font(.custom("SignPainter", size: 30))
                     .frame(maxWidth: 350, alignment: .trailing)
@@ -60,6 +62,7 @@ struct SpielplanView: View {
                     .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                     .padding(.top, 15)
                     .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                   
                 
                 //SPIELPLAN 3. LIGA_______________________________________________________________________________
                 
@@ -143,10 +146,14 @@ struct SpielplanView: View {
                 
                 
                 //KLICKLEISTE-------------------------------------------------------------------------------
-                Text("NIEDERRHEINPOKAL ")
-                    .onTapGesture {
+                Text("NIEDERRHEINPOKAL \(showNrPokal ? "- " : "+ ")")
+            
+                .onTapGesture {
                         showNrPokal.toggle()
                     }
+            
+            
+            
                     .font(.custom("SignPainter", size: 30))
                     .frame(maxWidth: 350, alignment: .trailing)
                     .foregroundColor(.white)

@@ -110,7 +110,7 @@ struct KaderView: View {
                         
                         
                         //KLICKLEISTE-------------------------------------------------------------------------------
-                        Text("TOR ")
+                        Text("TOR \(showTorPlayers ? "- " : "+ ") ")
                             .onTapGesture {
                                 showTorPlayers.toggle()
                             }
@@ -205,7 +205,7 @@ struct KaderView: View {
                     
                     
                     //KLICKLEISTE-------------------------------------------------------------------------------
-                    Text("ABWEHR ")
+                    Text("ABWEHR \(showAbwPlayers ? "- " : "+ ") ")
                         .onTapGesture {
                             showAbwPlayers.toggle()
                         }
@@ -295,7 +295,7 @@ struct KaderView: View {
                     
                     
                     
-                    Text("MITTELFELD ")
+                    Text("MITTELFELD \(showMitPlayers ? "- " : "+ ") ")
                         .onTapGesture {
                             showMitPlayers.toggle()
                         }
@@ -385,7 +385,7 @@ struct KaderView: View {
                     
                     
                     
-                    Text("STURM ")
+                    Text("STURM \(showStPlayers ? "- " : "+ ") ")
                         .onTapGesture {
                             showStPlayers.toggle()
                         }
@@ -475,7 +475,7 @@ struct KaderView: View {
                     
                     
                     
-                    Text("TRAINER ")
+                    Text("TRAINER \(showTrPlayers ? "- " : "+ ") ")
                         .onTapGesture {
                             showTrPlayers.toggle()
                         }
