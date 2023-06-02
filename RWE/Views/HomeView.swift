@@ -106,33 +106,24 @@ struct HomeView: View {
                                 Color.gray.opacity(0.2)
                                     .ignoresSafeArea()
                                 
-                                VStack(spacing: 20) {
-                                    Text("NEWS ")
-                                        .font(.custom("SignPainter", size: 30))
-                                        .frame(maxWidth: 350, alignment: .trailing)
-                                        .foregroundColor(.white)
-                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                                        .padding(.top, 15)
+                                
+                                .frame(width: 380, height: 210)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 0)
+                                        .fill(Color.white.opacity(0.8))
                                         .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                    Spacer()
-                                }
-                                    .frame(width: 380, height: 210)
-                                    .background(
-                                        RoundedRectangle(cornerRadius: 0)
-                                            .fill(Color.white.opacity(0.8))
-                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                            .overlay(
-                                                RoundedRectangle(cornerRadius: 0)
-                                                    .stroke(
-                                                        LinearGradient(
-                                                            gradient: Gradient(colors: [Color.clear, .red]),
-                                                            startPoint: .topLeading,
-                                                            endPoint: .bottomTrailing
-                                                        ),
-                                                        lineWidth: 2
-                                                    )
-                                            )
-                                    )
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 0)
+                                                .stroke(
+                                                    LinearGradient(
+                                                        gradient: Gradient(colors: [Color.clear, .red]),
+                                                        startPoint: .topLeading,
+                                                        endPoint: .bottomTrailing
+                                                    ),
+                                                    lineWidth: 2
+                                                )
+                                        )
+                                )
                                 ScrollView(.horizontal, showsIndicators: false) {
                                     
                                     HStack(spacing: 0) {
@@ -141,31 +132,56 @@ struct HomeView: View {
                                                 Color.gray.opacity(0.0)
                                                     .ignoresSafeArea()
                                                 
-                                                .frame(width: 380, height: 210)
-                                                .background(
-                                                    RoundedRectangle(cornerRadius: 0)
-                                                        .fill(Color.white.opacity(0.0))
-                                                        .shadow(color: Color.black.opacity(0.0), radius: 2, x: 3, y: 5)
-                                                        .overlay(
-                                                            RoundedRectangle(cornerRadius: 0)
-                                                                .stroke(
-                                                                    LinearGradient(
-                                                                        gradient: Gradient(colors: [Color.clear, Color.clear]),
-                                                                        startPoint: .topLeading,
-                                                                        endPoint: .bottomTrailing
-                                                                    ),
-                                                                    lineWidth: 0
-                                                                )
-                                                        )
-                                                )
+                                                    .frame(width: 380, height: 210)
+                                                    .background(
+                                                        RoundedRectangle(cornerRadius: 0)
+                                                            .fill(Color.white.opacity(0.0))
+                                                            .shadow(color: Color.black.opacity(0.0), radius: 2, x: 3, y: 5)
+                                                            .overlay(
+                                                                RoundedRectangle(cornerRadius: 0)
+                                                                    .stroke(
+                                                                        LinearGradient(
+                                                                            gradient: Gradient(colors: [Color.clear, Color.clear]),
+                                                                            startPoint: .topLeading,
+                                                                            endPoint: .bottomTrailing
+                                                                        ),
+                                                                        lineWidth: 0
+                                                                    )
+                                                            )
+                                                    )
                                                 
-                                                Text(news.pic) // Anzeige des Nachrichteninhalts
+                                                Image(news.pic)
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fill)
+                                                    .frame(width: 380, height: 210)
+                                                
+                                                VStack{
+                                                    Text(news.textHead)
+                                                        .font(.headline)
+                                                        .foregroundColor(.white)
+                                                        .padding(.horizontal, 16)
+                                                        .padding(.top, 16)
+                                                        .frame(maxWidth: .infinity, alignment: .trailing)
+                                                    
+                                                    VStack{
+                                                        Text(news.textinfo)
+                                                            .foregroundColor(.white)
+                                                            .padding(.horizontal, 16)
+                                                            .padding(.vertical, 8)
+                                                            .background(Color.white.opacity(0.2))
+                                                            .cornerRadius(8)
+                                                    }
+                                                }
+                                                
+                                                // Anzeige des Nachrichteninhalts
                                                 
                                                 Button(action: {
                                                     print("Button für Nachricht \(news.pic) wurde geklickt.")
                                                 }) {
                                                     Color.clear
                                                 }
+                                                
+                                                
                                                 .frame(width: 380, height: 210)
                                                 .gesture(
                                                     DragGesture()
@@ -179,30 +195,52 @@ struct HomeView: View {
                                                 )
                                                 .opacity(index == currentIndex ? 1 : 0) // Nur die aktuelle Nachricht anzeigen, andere ausblenden
                                             }
+                                            
+                                            
+                                            
+                                            
                                         }
+                                        
                                     }
                                 }
-                                VStack {
+                                VStack(spacing:20){
+                                    Text("NEWS ")
+                                        .font(.custom("SignPainter", size: 30))
+                                        .frame(maxWidth: 350, alignment: .trailing)
+                                        .foregroundColor(.white)
+                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                                        .padding(.top, 15)
+                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     Spacer()
+                                    
+                                    
+                                    
+                                    VStack {
+                                        Spacer()
                                         
-                                HStack {
-                                    
-
-                                        ForEach(NewsViewModel.news.indices, id: \.self) { index in
-                                            Circle()
-                                                .frame(width: 10, height: 10)
-                                                .foregroundColor(index == currentIndex ? .red : .gray)
+                                        HStack {
+                                            
+                                            
+                                            ForEach(NewsViewModel.news.indices, id: \.self) { index in
+                                                Circle()
+                                                    .frame(width: 10, height: 10)
+                                                    .foregroundColor(index == currentIndex ? .red : .gray)
+                                            }
+                                            
                                         }
-                                    
+                                        .padding(.bottom, 10)
+                                        
                                     }
-                                .padding(.bottom, 10)
-                                    
                                 }
                             }
                         }
+                                
+                                
                                 .padding(.top, 10)
+                            
+                        
                                 
-                                
+                                //----
                                 
                                 
                                 
@@ -482,6 +520,8 @@ struct HomeView: View {
                 }
             }
         }
+    
+
     
 
 
