@@ -40,6 +40,7 @@ struct HomeView: View {
                         .frame(maxWidth: 280, alignment: .trailing)
                         .foregroundColor(.red)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .leading, endPoint: .trailing))
+                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                 }
                 .padding(.top, 20)
                 .overlay(
@@ -163,16 +164,17 @@ struct HomeView: View {
                                                         .frame(maxWidth: 350, alignment: .trailing)
                                                         .foregroundColor(.white)
                                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                                                        .padding(.top, -30)
+                                                        .padding(.top, -45)
                                                         .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                                     
                                                     VStack{
                                                         Text(news.textinfo)
+                                                            .font(.custom("SignPainter", size: 16))
+                                                            .frame(maxWidth: 350, alignment: .trailing)
                                                             .foregroundColor(.white)
-                                                            .padding(.horizontal, 16)
-                                                            .padding(.vertical, 8)
-                                                            .background(Color.white.opacity(0.2))
-                                                            .cornerRadius(8)
+                                                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                                                            .padding(.top, -25)
+                                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                                     }
                                                 }
                                                 

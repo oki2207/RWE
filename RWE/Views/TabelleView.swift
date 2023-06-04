@@ -31,6 +31,7 @@ struct TabelleView: View {
                         .frame(maxWidth: 280, alignment: .trailing)
                         .foregroundColor(.red)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .leading, endPoint: .trailing))
+                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                     
                 }
                 .padding(.top, 20)

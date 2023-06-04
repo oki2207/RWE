@@ -22,7 +22,7 @@ class NrPokalViewModel: ObservableObject {
         
         let spiel5 = SpielplanModel(teamNameHome: "1. FC BOCHOLDT ", teamNameAway: "ROT-WEISS ESSEN ", ergebnis: " 5 : 6 n.E. ", teamLogoHome: "bosp.svg", teamLogoAway: "rwetabelle 1", spieltag: "HALBFINALE ", datum: "28. MÄR. 2023 ", uhrzeit: "19 UHR ")
         
-        let spiel6 = SpielplanModel(teamNameHome: "ROT-WEISS ESSEN ", teamNameAway: "ROT-WEISS OBERHAUSEN ", ergebnis: " - : - ", teamLogoHome: "rwetabelle 1", teamLogoAway: "rwosp.svg", spieltag: "FINALE ", datum: "03. JUN. 2023 ", uhrzeit: "16:15 UHR ")
+        let spiel6 = SpielplanModel(teamNameHome: "ROT-WEISS ESSEN ", teamNameAway: "ROT-WEISS OBERHAUSEN ", ergebnis: " 2 : 0 ", teamLogoHome: "rwetabelle 1", teamLogoAway: "rwosp.svg", spieltag: "FINALE ", datum: "03. JUN. 2023 ", uhrzeit: "16:15 UHR ")
         
          
         
