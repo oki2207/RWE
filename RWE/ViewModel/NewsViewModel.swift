@@ -13,9 +13,9 @@ class NewsViewModel: ObservableObject {
     init() {
         
         let news1 = NewsModel(pic:"sapinanews", textHead: "ROT-WEISS ESSEN  ", textinfo: "NEWSNEWSNEWS")
-        let news2 = NewsModel(pic:"TESTTESTTEST2", textHead: "ROT-WEISS ESSEN  ", textinfo: "NEWSNEWSNEWS")
-        let news3 = NewsModel(pic:"VinkoNews", textHead: "ROT-WEISS ESSEN  ", textinfo: "NEWSNEWSNEWS")
-        let news4 = NewsModel(pic:"TESTTESTTEST4", textHead: "ROT-WEISS ESSEN  ", textinfo: "NEWSNEWSNEWS")
+        let news2 = NewsModel(pic:"dabro 1", textHead: "„MAXIMAL INVESTIEREN UND DOCH LOCKER SEIN!“  ", textinfo: "")
+        let news3 = NewsModel(pic:"VinkoNews", textHead: "ROT-WEISS ESSEN VERPFLICHTET VINKO ŠAPINA  ", textinfo: "")
+        let news4 = NewsModel(pic:"rwverl", textHead: "2:2 ZUM SAISONABSCHLUSS GEGEN VERL  ", textinfo: "")
         let news5 = NewsModel(pic:"TESTTESTTEST5", textHead: "ROT-WEISS ESSEN  ", textinfo: "NEWSNEWSNEWS")
         
         

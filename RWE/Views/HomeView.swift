@@ -123,7 +123,8 @@ struct HomeView: View {
                                                     lineWidth: 2
                                                 )
                                         )
-                                )
+                                    )
+                                
                                 ScrollView(.horizontal, showsIndicators: false) {
                                     
                                     HStack(spacing: 0) {
@@ -150,6 +151,7 @@ struct HomeView: View {
                                                             )
                                                     )
                                                 
+                                                
                                                 Image(news.pic)
                                                     .resizable()
                                                     .aspectRatio(contentMode: .fill)
@@ -157,11 +159,12 @@ struct HomeView: View {
                                                 
                                                 VStack{
                                                     Text(news.textHead)
-                                                        .font(.headline)
+                                                        .font(.custom("SignPainter", size: 20))
+                                                        .frame(maxWidth: 350, alignment: .trailing)
                                                         .foregroundColor(.white)
-                                                        .padding(.horizontal, 16)
-                                                        .padding(.top, 16)
-                                                        .frame(maxWidth: .infinity, alignment: .trailing)
+                                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                                                        .padding(.top, -30)
+                                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                                     
                                                     VStack{
                                                         Text(news.textinfo)
@@ -225,18 +228,24 @@ struct HomeView: View {
                                                 Circle()
                                                     .frame(width: 10, height: 10)
                                                     .foregroundColor(index == currentIndex ? .red : .gray)
+                                            
                                             }
+                                            
                                             
                                         }
                                         .padding(.bottom, 10)
                                         
                                     }
+                                    
                                 }
+                                    
                             }
+                                    
                         }
                                 
                                 
                                 .padding(.top, 10)
+                                    
                             
                         
                                 
@@ -260,7 +269,7 @@ struct HomeView: View {
                                             VStack {
                                                 
                                                 ZStack {
-                                                    Text("NÄCHSTES SPIEL ")
+                                                    Text("LETZTES SPIEL (NR-POKAL) ")
                                                         .font(.custom("SignPainter", size: 30))
                                                         .frame(maxWidth: 350, alignment: .trailing)
                                                         .foregroundColor(.white)
@@ -309,7 +318,7 @@ struct HomeView: View {
                                                         
                                                         
                                                         
-                                                        Text(" - : - ")
+                                                        Text(" 2 : 0 ")
                                                             .font(.custom("SignPainter", size: 25))
                                                             .frame(width: 60, alignment: .center)
                                                             .foregroundColor(.white)
@@ -391,7 +400,7 @@ struct HomeView: View {
                                                             VStack {
                                                                 
                                                                 ZStack {
-                                                                    Text("LETZTES SPIEL ")
+                                                                    Text("LETZTES SPIEL (3. LIGA) ")
                                                                         .font(.custom("SignPainter", size: 30))
                                                                         .frame(maxWidth: 350, alignment: .trailing)
                                                                         .foregroundColor(.white)

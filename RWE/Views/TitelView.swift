@@ -87,7 +87,7 @@ struct TitelView: View {
                                     .padding(.trailing, 10)
                                     .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
                                     .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                    
+                                
                                     .padding(.horizontal, 130)
                                 
                                 
@@ -110,7 +110,7 @@ struct TitelView: View {
                                                 lineWidth: 2
                                             )
                                     )
-                                    
+                                
                             )
                             .frame(maxWidth: 380)
                             
@@ -130,7 +130,7 @@ struct TitelView: View {
                                         .padding(.top, 15)
                                         .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     
-                                        
+                                    
                                     
                                     Text("1 ")
                                         .font(.custom("SignPainter", size: 55))
@@ -157,7 +157,7 @@ struct TitelView: View {
                                     .padding(.trailing, 10)
                                     .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
                                     .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                    
+                                
                                     .padding(.horizontal, 130)
                                 
                                 
@@ -178,7 +178,7 @@ struct TitelView: View {
                                                 lineWidth: 2
                                             )
                                     )
-                                    
+                                
                             )
                             .frame(maxWidth: 380)
                             
@@ -225,7 +225,7 @@ struct TitelView: View {
                                         .padding(.trailing, 10)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
                                         .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                        
+                                    
                                     
                                     
                                     
@@ -305,104 +305,117 @@ struct TitelView: View {
                                 }
                                 Spacer()
                                 
-                                
-                            }
-                            //BOX
-                            .background(
-                                RoundedRectangle(cornerRadius: 0)
-                                    .fill(Color.white.opacity(0.8))
-                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 0)
-                                            .stroke(
-                                                LinearGradient(
-                                                    gradient: Gradient(colors: [Color.clear, .red]),
-                                                    startPoint: .topLeading,
-                                                    endPoint: .bottomTrailing
-                                                ),
-                                                lineWidth: 2
-                                            )
-                                    )
-                                    
-                            )
-                            .frame(maxWidth: 380)
-                            
-                            .onTapGesture {
-                                selectedImage = "1955"
-                                isShowingModal.toggle()
-                            }
-                            VStack {
-                                Spacer()
-                                ZStack{
-                                    Text("MEISTER RL-WEST ")
-                                        .font(.custom("SignPainter", size: 30))
-                                        .frame(maxWidth: 350, alignment: .trailing)
+                                HStack{
+                                    Text("2023 ")
+                                        .font(.custom("SignPainter", size: 20))
                                         .foregroundColor(.white)
-                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                                        .padding(.top, 15)
+                                        .frame(maxWidth: 110, alignment: .center)
+                                        .padding(.trailing, 10)
+                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
                                         .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     
-                                    Text("1 ")
-                                        .font(.custom("SignPainter", size: 55))
-                                        .foregroundColor(.red)
-                                        .padding(.leading, -150)
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                    
-                                    Text("X ")
-                                        .font(.custom("SignPainter", size: 40))
-                                        .foregroundColor(.red)
-                                        .padding(.leading, -135)
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                     
                                 }
-                                Image("702")
-                                    .resizable()
-                                    .frame(maxWidth: 100, maxHeight: 100)
-                                    .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
-                                Text("2022 ")
-                                    .font(.custom("SignPainter", size: 20))
-                                    .foregroundColor(.white)
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .padding(.trailing, 10)
-                                    .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                    
-                                    .padding(.horizontal, 130)
-                                Spacer()
+                                
                             }
                             
-                            // BOX
-                            .background(
-                                RoundedRectangle(cornerRadius: 0)
-                                    .fill(Color.white.opacity(0.8))
-                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 0)
-                                            .stroke(
-                                                LinearGradient(
-                                                    gradient: Gradient(colors: [Color.clear, .red]),
-                                                    startPoint: .topLeading,
-                                                    endPoint: .bottomTrailing
-                                                ),
-                                                lineWidth: 2
-                                            )
-                                    )
+                                //BOX
+                                .background(
+                                    RoundedRectangle(cornerRadius: 0)
+                                        .fill(Color.white.opacity(0.8))
+                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 0)
+                                                .stroke(
+                                                    LinearGradient(
+                                                        gradient: Gradient(colors: [Color.clear, .red]),
+                                                        startPoint: .topLeading,
+                                                        endPoint: .bottomTrailing
+                                                    ),
+                                                    lineWidth: 2
+                                                )
+                                        )
                                     
-                            )
-                            .frame(maxWidth: 380)
-                            .padding(10)
-                            
+                                )
+                                .frame(maxWidth: 380)
+                                
                                 .onTapGesture {
                                     selectedImage = "1955"
                                     isShowingModal.toggle()
                                 }
+                                VStack {
+                                    Spacer()
+                                    ZStack{
+                                        Text("MEISTER RL-WEST ")
+                                            .font(.custom("SignPainter", size: 30))
+                                            .frame(maxWidth: 350, alignment: .trailing)
+                                            .foregroundColor(.white)
+                                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                                            .padding(.top, 15)
+                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        
+                                        Text("1 ")
+                                            .font(.custom("SignPainter", size: 55))
+                                            .foregroundColor(.red)
+                                            .padding(.leading, -150)
+                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        
+                                        Text("X ")
+                                            .font(.custom("SignPainter", size: 40))
+                                            .foregroundColor(.red)
+                                            .padding(.leading, -135)
+                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        
+                                    }
+                                    Image("702")
+                                        .resizable()
+                                        .frame(maxWidth: 100, maxHeight: 100)
+                                        .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
+                                    Text("2022 ")
+                                        .font(.custom("SignPainter", size: 20))
+                                        .foregroundColor(.white)
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                        .padding(.trailing, 10)
+                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                    
+                                        .padding(.horizontal, 130)
+                                    Spacer()
+                                }
+                                
+                                // BOX
+                                .background(
+                                    RoundedRectangle(cornerRadius: 0)
+                                        .fill(Color.white.opacity(0.8))
+                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 0)
+                                                .stroke(
+                                                    LinearGradient(
+                                                        gradient: Gradient(colors: [Color.clear, .red]),
+                                                        startPoint: .topLeading,
+                                                        endPoint: .bottomTrailing
+                                                    ),
+                                                    lineWidth: 2
+                                                )
+                                        )
+                                    
+                                )
+                                .frame(maxWidth: 380)
+                                .padding(10)
+                                
+                                .onTapGesture {
+                                    selectedImage = "1955"
+                                    isShowingModal.toggle()
+                                }
+                            }
                         }
                     }
                 }
             }
+            
         }
-        
-    }
+    
     
     
     
