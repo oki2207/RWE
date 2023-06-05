@@ -54,10 +54,13 @@ struct HomeView: View {
                 )
                 
                 if networkMonitor.isConnected{
-                    
-                    Text("AKTUELLE TEMPERATUR  \(wetterviewModel.wetterEssen.temperatur_jetzt) \(showWetter ? "- " : "+ ") ")
-                        .onTapGesture {
-                            showWetter.toggle()
+                    HStack{
+                    Text("AKTUELLES WETTER ")
+                        Image(systemName: wetterviewModel.wetterEssen.thumbnail)
+                    Text("\(wetterviewModel.wetterEssen.temperatur_jetzt) \(showWetter ? "- " : "+ ") ")
+                            .onTapGesture {
+                                showWetter.toggle()
+                            }
                             
                         }
                         .font(.custom("SignPainter", size: 30))
@@ -68,6 +71,7 @@ struct HomeView: View {
                         .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                     
                     if showWetter {
+                        
                         Text("TEMPERATUR MIN.  \(wetterviewModel.wetterEssen.temperatur_min) ")
                             .font(.custom("SignPainter", size: 25))
                             .frame(maxWidth: 350, alignment: .trailing)
@@ -103,11 +107,15 @@ struct HomeView: View {
                     }
                 } else {
                     
-                    
-                    Text("AKTUELLE TEMPERATUR  \(wetterviewModel.wetterDaten[1]) \(showWetter ? "- " : "+ ") ")
-                        .onTapGesture {
-                            showWetter.toggle()
-                            
+                    //TODO: Überprüfen ob [0] oder [wetterviewModel.wetterDaten.count] richtig ist.
+                    HStack{
+                    Text("AKTUELLES WETTER ")
+                        
+                        Image(systemName: wetterviewModel.wetterEssen.thumbnail)
+                        Text("\(wetterviewModel.wetterDaten[0].temperatur_jetzt ?? "ERROR ") \(showWetter ? "- " : "+ ") ")
+                            .onTapGesture {
+                                showWetter.toggle()
+                            }
                         }
                         .font(.custom("SignPainter", size: 30))
                         .frame(maxWidth: 350, alignment: .trailing)
@@ -117,7 +125,7 @@ struct HomeView: View {
                         .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                     
                     if showWetter {
-                        Text("TEMPERATUR MIN.  \(wetterviewModel.wetterEssen.temperatur_min) ")
+                        Text("TEMPERATUR MIN.  \(wetterviewModel.wetterDaten[0].temperatur_min ?? "ERROR ") ")
                             .font(.custom("SignPainter", size: 25))
                             .frame(maxWidth: 350, alignment: .trailing)
                             .foregroundColor(.white)
@@ -125,7 +133,7 @@ struct HomeView: View {
                             .padding(.top, 15)
                             .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                         
-                        Text("TEMPERATUR MAX.  \(wetterviewModel.wetterEssen.temperatur_max) ")
+                        Text("TEMPERATUR MAX.  \(wetterviewModel.wetterDaten[0].temperatur_max ?? "ERROR ") ")
                             .font(.custom("SignPainter", size: 25))
                             .frame(maxWidth: 350, alignment: .trailing)
                             .foregroundColor(.white)
@@ -133,7 +141,7 @@ struct HomeView: View {
                             .padding(.top, 15)
                             .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                         
-                        Text("WIND  \(wetterviewModel.wetterEssen.windgeschwindigkeit) KM/H ")
+                        Text("WIND  \(wetterviewModel.wetterDaten[0].windgeschwindigkeit ?? "ERROR ") KM/H ")
                             .font(.custom("SignPainter", size: 25))
                             .frame(maxWidth: 350, alignment: .trailing)
                             .foregroundColor(.white)
@@ -141,7 +149,7 @@ struct HomeView: View {
                             .padding(.top, 15)
                             .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                         
-                        Text("FEUCHTIGKEIT  \(wetterviewModel.wetterEssen.feuchtigkeit) % ")
+                        Text("FEUCHTIGKEIT  \(wetterviewModel.wetterDaten[0].feuchtigkeit ?? "ERROR ") % ")
                             .font(.custom("SignPainter", size: 25))
                             .frame(maxWidth: 350, alignment: .trailing)
                             .foregroundColor(.white)

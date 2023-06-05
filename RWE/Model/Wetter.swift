@@ -57,16 +57,16 @@ func temperatur(_ temperatur: Float) -> String {
 
 func thumbnailFromWitterung(_ witterung: String) -> String {
     switch witterung {
-    case "Sonnig": return "sun.max.fill"
-    case "Klarer Himmel": return "sun.max.fill"
-    case "Leicht Bedeckt": return "cloud.sun.fill"
-    case "Ein paar Wolken": return "cloud.sun.fill"
-    case "Bedeckt": return "cloud.fill"
-    case "Wolkig": return "cloud.fill"
-    case "Leichter Regen": return "cloud.drizzle.fill"
-    case "Mäßiger Regen": return "cloud.rain.fill"
-    case "Regen": return "cloud.rain.fill"
-    case "Gewitter": return "cloud.bolt.rain.fill"
+    case "SONNIG ": return "sun.max.fill"
+    case "KLARER HIMMEL ": return "sun.max.fill"
+    case "LEICHT BEDECKT ": return "cloud.sun.fill"
+    case "EIN PAAR WOLKEN ": return "cloud.sun.fill"
+    case "BEDECKT ": return "cloud.fill"
+    case "Wolkig ": return "cloud.fill"
+    case "LEICHTER REGEN ": return "cloud.drizzle.fill"
+    case "MÄ?IGER REGEN ": return "cloud.rain.fill"
+    case "REGEN ": return "cloud.rain.fill"
+    case "GEWITTER ": return "cloud.bolt.rain.fill"
     case _: return "cloud.sun.fill"
     }
 }
