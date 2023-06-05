@@ -5,7 +5,14 @@
 //  Created by Olli on 30.05.23.
 //
 
+
+import SwiftUI
 import Foundation
+
+extension UIScreen{
+   static let screenWidth = UIScreen.main.bounds.size.width
+   static let screenHeight = UIScreen.main.bounds.size.height
+}
 
 class NewsViewModel: ObservableObject {
     @Published var news: [NewsModel]

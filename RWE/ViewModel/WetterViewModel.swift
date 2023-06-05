@@ -26,6 +26,7 @@ class WetterViewModel: ObservableObject {
             }
         }
         fetchWetterDatum("ESSEN")
+        createWetterDatum(wetterEssen, "ESSEN")
         saveAndReadWetterDaten()
     }
     
@@ -42,7 +43,7 @@ class WetterViewModel: ObservableObject {
         do {
             try persistentContainer.viewContext.save()
             wetterDaten = try persistentContainer.viewContext.fetch(
-                NSFetchRequest<WetterDatum>(entityName: String(describing: WetterDatum.self))
+                NSFetchRequest<WetterDatum>(entityName: "WetterDatum")
             )
         } catch {
             print("Fehler beim Speichern oder Lesen der Wetterdaten: \(error.localizedDescription)")
@@ -60,6 +61,7 @@ class WetterViewModel: ObservableObject {
         wetterDatum.feuchtigkeit = wetter.feuchtigkeit
         wetterDatum.thumbnail = wetter.thumbnail
         saveAndReadWetterDaten()
+        print("UPDATE", wetterDatum.stadt, wetterDaten)
     }
 
     func deleteWetterDatum(indexSet: IndexSet) {
@@ -98,6 +100,7 @@ class WetterViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self?.createOrUpdateWetterDatum(stadt, Wetter.fromWetterResponse(wetterResponse))
                     self?.wetterEssen = Wetter.fromWetterResponse(wetterResponse)
+                   // self?.updateWetterDatum(WetterDatum(), Wetter.fromWetterResponse(wetterResponse))
                 }
             } catch {
                 print("Fehler beim Decoden der Response: \(error)")

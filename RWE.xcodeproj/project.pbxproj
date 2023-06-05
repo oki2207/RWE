@@ -29,6 +29,7 @@
 		47685F262A286FDD0039642A /* Wetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47685F252A286FDD0039642A /* Wetter.swift */; };
 		47685F2C2A28704C0039642A /* WetterDaten.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 47685F2A2A28704C0039642A /* WetterDaten.xcdatamodeld */; };
 		47685F2E2A2872D50039642A /* WetterSmallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47685F2D2A2872D50039642A /* WetterSmallView.swift */; };
+		47685F302A2E1A2D0039642A /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47685F2F2A2E1A2D0039642A /* NetworkMonitor.swift */; };
 		477AF7FA2A04D744005891C9 /* TabelleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477AF7F92A04D744005891C9 /* TabelleViewModel.swift */; };
 		477AF7FC2A04D759005891C9 /* TabelleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477AF7FB2A04D759005891C9 /* TabelleModel.swift */; };
 		47826D292A0292BF009242FC /* RWEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47826D282A0292BF009242FC /* RWEApp.swift */; };
@@ -82,6 +83,7 @@
 		47685F252A286FDD0039642A /* Wetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wetter.swift; sourceTree = "<group>"; };
 		47685F2B2A28704C0039642A /* WetterDaten.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WetterDaten.xcdatamodel; sourceTree = "<group>"; };
 		47685F2D2A2872D50039642A /* WetterSmallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WetterSmallView.swift; sourceTree = "<group>"; };
+		47685F2F2A2E1A2D0039642A /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		477AF7F92A04D744005891C9 /* TabelleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelleViewModel.swift; sourceTree = "<group>"; };
 		477AF7FB2A04D759005891C9 /* TabelleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelleModel.swift; sourceTree = "<group>"; };
 		47826D252A0292BF009242FC /* RWE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RWE.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +203,7 @@
 				47685F182A2729940039642A /* SpielplanViewModel.swift */,
 				47685F1A2A27D5530039642A /* NrPokalViewModel.swift */,
 				47685F1E2A286D640039642A /* WetterViewModel.swift */,
+				47685F2F2A2E1A2D0039642A /* NetworkMonitor.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				47685F242A286F690039642A /* WetterDetailView.swift in Sources */,
 				47685F1D2A286D160039642A /* WetterModel.swift in Sources */,
 				47685F2C2A28704C0039642A /* WetterDaten.xcdatamodeld in Sources */,
+				47685F302A2E1A2D0039642A /* NetworkMonitor.swift in Sources */,
 				47826D472A0293D3009242FC /* HomeView.swift in Sources */,
 				47826D292A0292BF009242FC /* RWEApp.swift in Sources */,
 				47440C272A0A8244006F5875 /* SturmViewModel.swift in Sources */,

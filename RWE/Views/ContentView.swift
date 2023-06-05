@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var selectedTab = 0
     @StateObject var viewModel = TabelleViewModel()
     @StateObject var viewModelkader = KaderViewModel()
+    @StateObject var wetterViewModel = WetterViewModel()
     
     //HEADER VIEW
     
@@ -91,6 +92,8 @@ struct ContentView: View {
         .onAppear() {
               UITabBar.appearance().backgroundColor = .white
               UITabBar.appearance().unselectedItemTintColor = .red
+              wetterViewModel.saveAndReadWetterDaten()
+            
             }
         
     

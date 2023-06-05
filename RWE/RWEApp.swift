@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct RWEApp: App {
+    @StateObject var networkMonitor = NetworkMonitor()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(NetworkMonitor())
         }
     }
 }

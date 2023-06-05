@@ -8,6 +8,7 @@
 import SwiftUI
 
 
+
 struct HomeView: View {
     
     @State private var selectedTab = 0
@@ -15,8 +16,10 @@ struct HomeView: View {
     @EnvironmentObject var gameViewModel2: LastGame
     @EnvironmentObject var NewsViewModel: NewsViewModel
     @EnvironmentObject var wetterviewModel: WetterViewModel
+    @EnvironmentObject var networkMonitor: NetworkMonitor
     @State private var currentIndex = 0
     @State private var showWetter = false
+    
     
     var body: some View {
         
@@ -50,53 +53,103 @@ struct HomeView: View {
                         .padding(.top, 20)
                 )
                 
-                Text("AKTUELLE TEMPERATUR  \(wetterviewModel.wetterEssen.temperatur_jetzt) \(showWetter ? "- " : "+ ") ")
-                    .onTapGesture {
-                        showWetter.toggle()
+                if networkMonitor.isConnected{
+                    
+                    Text("AKTUELLE TEMPERATUR  \(wetterviewModel.wetterEssen.temperatur_jetzt) \(showWetter ? "- " : "+ ") ")
+                        .onTapGesture {
+                            showWetter.toggle()
+                            
+                        }
+                        .font(.custom("SignPainter", size: 30))
+                        .frame(maxWidth: 350, alignment: .trailing)
+                        .foregroundColor(.white)
+                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                        .padding(.top, 15)
+                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                    
+                    if showWetter {
+                        Text("TEMPERATUR MIN.  \(wetterviewModel.wetterEssen.temperatur_min) ")
+                            .font(.custom("SignPainter", size: 25))
+                            .frame(maxWidth: 350, alignment: .trailing)
+                            .foregroundColor(.white)
+                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                            .padding(.top, 15)
+                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                        
+                        Text("TEMPERATUR MAX.  \(wetterviewModel.wetterEssen.temperatur_max) ")
+                            .font(.custom("SignPainter", size: 25))
+                            .frame(maxWidth: 350, alignment: .trailing)
+                            .foregroundColor(.white)
+                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                            .padding(.top, 15)
+                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                        
+                        Text("WIND  \(wetterviewModel.wetterEssen.windgeschwindigkeit) KM/H ")
+                            .font(.custom("SignPainter", size: 25))
+                            .frame(maxWidth: 350, alignment: .trailing)
+                            .foregroundColor(.white)
+                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                            .padding(.top, 15)
+                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                        
+                        Text("FEUCHTIGKEIT  \(wetterviewModel.wetterEssen.feuchtigkeit) % ")
+                            .font(.custom("SignPainter", size: 25))
+                            .frame(maxWidth: 350, alignment: .trailing)
+                            .foregroundColor(.white)
+                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                            .padding(.top, 15)
+                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                         
                     }
-                    .font(.custom("SignPainter", size: 30))
-                    .frame(maxWidth: 350, alignment: .trailing)
-                    .foregroundColor(.white)
-                    .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                    .padding(.top, 15)
-                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                
-                if showWetter {
-                    Text("TEMPERATUR MIN.  \(wetterviewModel.wetterEssen.temperatur_min) ")
-                        .font(.custom("SignPainter", size: 25))
+                } else {
+                    
+                    
+                    Text("AKTUELLE TEMPERATUR  \(wetterviewModel.wetterDaten[1]) \(showWetter ? "- " : "+ ") ")
+                        .onTapGesture {
+                            showWetter.toggle()
+                            
+                        }
+                        .font(.custom("SignPainter", size: 30))
                         .frame(maxWidth: 350, alignment: .trailing)
                         .foregroundColor(.white)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                         .padding(.top, 15)
                         .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                     
-                    Text("TEMPERATUR MAX.  \(wetterviewModel.wetterEssen.temperatur_max) ")
-                        .font(.custom("SignPainter", size: 25))
-                        .frame(maxWidth: 350, alignment: .trailing)
-                        .foregroundColor(.white)
-                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                        .padding(.top, 15)
-                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                    
-                    Text("WIND  \(wetterviewModel.wetterEssen.windgeschwindigkeit) KM/H ")
-                        .font(.custom("SignPainter", size: 25))
-                        .frame(maxWidth: 350, alignment: .trailing)
-                        .foregroundColor(.white)
-                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                        .padding(.top, 15)
-                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                    
-                    Text("FEUCHTIGKEIT  \(wetterviewModel.wetterEssen.feuchtigkeit) % ")
-                        .font(.custom("SignPainter", size: 25))
-                        .frame(maxWidth: 350, alignment: .trailing)
-                        .foregroundColor(.white)
-                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                        .padding(.top, 15)
-                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                    
+                    if showWetter {
+                        Text("TEMPERATUR MIN.  \(wetterviewModel.wetterEssen.temperatur_min) ")
+                            .font(.custom("SignPainter", size: 25))
+                            .frame(maxWidth: 350, alignment: .trailing)
+                            .foregroundColor(.white)
+                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                            .padding(.top, 15)
+                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                        
+                        Text("TEMPERATUR MAX.  \(wetterviewModel.wetterEssen.temperatur_max) ")
+                            .font(.custom("SignPainter", size: 25))
+                            .frame(maxWidth: 350, alignment: .trailing)
+                            .foregroundColor(.white)
+                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                            .padding(.top, 15)
+                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                        
+                        Text("WIND  \(wetterviewModel.wetterEssen.windgeschwindigkeit) KM/H ")
+                            .font(.custom("SignPainter", size: 25))
+                            .frame(maxWidth: 350, alignment: .trailing)
+                            .foregroundColor(.white)
+                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                            .padding(.top, 15)
+                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                        
+                        Text("FEUCHTIGKEIT  \(wetterviewModel.wetterEssen.feuchtigkeit) % ")
+                            .font(.custom("SignPainter", size: 25))
+                            .frame(maxWidth: 350, alignment: .trailing)
+                            .foregroundColor(.white)
+                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                            .padding(.top, 15)
+                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                    }
                 }
-                
                 
                 
                 // News-Box
@@ -157,6 +210,8 @@ struct HomeView: View {
                                                     .resizable()
                                                     .aspectRatio(contentMode: .fill)
                                                     .frame(width: 380, height: 210)
+                                                    
+                                                
                                                 
                                                 VStack{
                                                     Text(news.textHead)
@@ -208,6 +263,9 @@ struct HomeView: View {
                                         
                                     }
                                 }
+                                .frame(width: UIScreen.screenWidth)
+                                
+                                
                                 VStack(spacing:20){
                                     Text("NEWS ")
                                         .font(.custom("SignPainter", size: 30))
@@ -222,7 +280,7 @@ struct HomeView: View {
                                     
                                     VStack {
                                         Spacer()
-                                        
+                                    /*
                                         HStack {
                                             
                                             
@@ -234,7 +292,7 @@ struct HomeView: View {
                                             }
                                             
                                             
-                                        }
+                                        }*/
                                         .padding(.bottom, 10)
                                         
                                     }
@@ -546,7 +604,7 @@ struct HomeView: View {
             HomeView()
                 .environmentObject(NextGame())
                 .environmentObject(LastGame())
-                .environmentObject(NewsViewModel())
+               // .environmentObject(NewsViewModel())
                 .environmentObject(WetterViewModel())
         }
     }
