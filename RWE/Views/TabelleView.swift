@@ -17,7 +17,7 @@ struct TabelleView: View {
             Image("screen3")
                 .resizable()
                 .scaledToFill()
-                .opacity(1.0)
+                .opacity(0.7)
                 .edgesIgnoringSafeArea(.all)
 
             

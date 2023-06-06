@@ -21,6 +21,7 @@ struct SpielplanView: View {
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
+                .opacity(0.7)
             
             //Obere Leiste der Tabelle
             
