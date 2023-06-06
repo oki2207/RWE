@@ -1,8 +1,8 @@
 //
 //  TabelleView.swift
-//  HafenstraßeNeu
+//  RWE
 //
-//  Created by Olli on 02.05.23.
+//  Created by Olli on 06.06.23.
 //
 
 import SwiftUI
@@ -19,7 +19,7 @@ struct TabelleView: View {
             
             //Obere Leiste der Tabelle
             
-            VStack(spacing: 3) {
+            VStack(spacing: 5) {
                 
                 HStack {
                     Text("TABELLE ")
@@ -45,10 +45,16 @@ struct TabelleView: View {
                         
                         ZStack {
                             Group {
-                                if tabellenEintrag.platz >= 1 && tabellenEintrag.platz <= 3 {
+                                if tabellenEintrag.platz.compare(" 1 ", options: .numeric) == .orderedSame ||
+                                   tabellenEintrag.platz.compare("2", options: .numeric) == .orderedSame ||
+                                   tabellenEintrag.platz.compare(" 3 ", options: .numeric) == .orderedSame ||
+                                    tabellenEintrag.platz.compare(" 4 ", options: .numeric) == .orderedSame{
                                     LinearGradient(gradient: Gradient(colors: [Color.green.opacity(0.8), Color.white.opacity(0.8)]), startPoint: .leading, endPoint: .trailing)
                                         .border(Color.green.opacity(0.7), width: 0)
-                                } else if tabellenEintrag.platz >= 17 && tabellenEintrag.platz <= 20 {
+                                } else if tabellenEintrag.platz.compare(" 17 ", options: .numeric) == .orderedSame ||
+                                          tabellenEintrag.platz.compare(" 18 ", options: .numeric) == .orderedSame ||
+                                          tabellenEintrag.platz.compare(" 19 ", options: .numeric) == .orderedSame ||
+                                          tabellenEintrag.platz.compare(" 20 ", options: .numeric) == .orderedSame {
                                     LinearGradient(gradient: Gradient(colors: [Color.red.opacity(0.8), Color.white.opacity(0.8)]), startPoint: .leading, endPoint: .trailing)
                                         .border(Color.red.opacity(0.7), width: 0)
                                 } else {
@@ -73,106 +79,66 @@ struct TabelleView: View {
                                 
                             HStack {
                                 Text("\(tabellenEintrag.platz)")
-                                    .font(.custom("SignPainter", size: 21))
-                                    .frame(maxWidth: .infinity, alignment: .center)
+                                    .font(.custom("SignPainter", size: 25))
+                                    .frame(width: 30, alignment: .center)
                                     .foregroundColor(.white)
-                                    .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]), startPoint: .leading, endPoint: .trailing))
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 0)
-                                            .stroke(
-                                                LinearGradient(
-                                                    gradient: Gradient(colors: [.clear, .clear]),
-                                                    startPoint: .leading,
-                                                    endPoint: .trailing
-                                                ),
-                                                lineWidth: 1
-                                            )
-                                            .shadow(color: Color.white.opacity(0.0), radius: 0, x: 0, y: 0)
-                                    )
+                                    .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                    .cornerRadius(5)
+                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                    .padding(.leading, 5)
+                                
                                 Spacer()
                                 Image("\(tabellenEintrag.logo)")
                                     .frame(maxWidth: .infinity, alignment: .center)
                                     .font(.system(size: 14))
+                                    .shadow(color: Color.black.opacity(1.0), radius: 5, x: 3, y: 5)
                                 Spacer()
                                 Text("\(tabellenEintrag.teamName)")
                                     .frame(width: 150, alignment: .leading)
                                     .font(.custom("SignPainter", size: 18))
-                                    .foregroundColor(.white)
-                                    .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]), startPoint: .leading, endPoint: .trailing))
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 0)
-                                            .stroke(
-                                                LinearGradient(
-                                                    gradient: Gradient(colors: [.clear, .clear]),
-                                                    startPoint: .leading,
-                                                    endPoint: .trailing
-                                                ),
-                                                lineWidth: 1
-                                            )
-                                            .shadow(color: Color.black.opacity(0.0), radius: 0, x: 0, y: 0))
+                                    .foregroundColor(.black)
                                    
                                 
                                 Spacer()
                                 Text("\(tabellenEintrag.spiele)")
-                                    .font(.custom("SignPainter", size: 18))
-                                    .frame(maxWidth: .infinity, alignment: .center)
+                                    .font(.custom("SignPainter", size: 22))
+                                    .frame(width: 30, alignment: .center)
                                     .foregroundColor(.white)
-                                    .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]), startPoint: .leading, endPoint: .trailing))
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 0)
-                                            .stroke(
-                                                LinearGradient(
-                                                    gradient: Gradient(colors: [.clear, .clear]),
-                                                    startPoint: .leading,
-                                                    endPoint: .trailing
-                                                ),
-                                                lineWidth: 1
-                                            )
-                                            .shadow(color: Color.white.opacity(0.0), radius: 0, x: 0, y: 0))
+                                    .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                    .cornerRadius(5)
+                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                
                                 Text("\(tabellenEintrag.differenz)")
-                                            .font(.custom("SignPainter", size: 18))
-                                            .frame(maxWidth: .infinity, alignment: .center)
-                                            .foregroundColor(.white)
-                                            .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]), startPoint: .leading, endPoint: .trailing))
-                                            .overlay(
-                                                RoundedRectangle(cornerRadius: 0)
-                                                    .stroke(
-                                                        LinearGradient(
-                                                            gradient: Gradient(colors: [.clear, .clear]),
-                                                            startPoint: .leading,
-                                                            endPoint: .trailing
-                                                        ),
-                                                        lineWidth: 1
-                                                    )
-                                                    .shadow(color: Color.white.opacity(0.0), radius: 0, x: 0, y: 0))
+                                    .font(.custom("SignPainter", size: 22))
+                                    .frame(width: 33, alignment: .center)
+                                    .foregroundColor(.white)
+                                    .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                    .cornerRadius(5)
+                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                
                                 Text("\(tabellenEintrag.punkte)")
-                                                    .font(.custom("SignPainter", size: 18))
-                                                    .frame(maxWidth: .infinity, alignment: .center)
-                                                    .foregroundColor(.white)
-                                                    .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]), startPoint: .leading, endPoint: .trailing))
-                                                    .overlay(
-                                                        RoundedRectangle(cornerRadius: 0)
-                                                            .stroke(
-                                                                LinearGradient(
-                                                                    gradient: Gradient(colors: [.clear, .clear]),
-                                                                    startPoint: .leading,
-                                                                    endPoint: .trailing
-                                                                ),
-                                                                lineWidth: 1
-                                                            )
-                                                            .shadow(color: Color.white.opacity(0.0), radius: 0, x: 0, y: 0))
+                                    .font(.custom("SignPainter", size: 22))
+                                    .frame(width: 30, alignment: .center)
+                                    .foregroundColor(.white)
+                                    .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                    .cornerRadius(5)
+                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                             }
                             .padding(.vertical, 10)
                             .cornerRadius(5)
                             .background(Color.clear)
-                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
+                            
                         }
                         .frame(width: UIScreen.main.bounds.width * 0.9)
                     }
                 }
+                 
             }
+             
         }
+             
     }
+     
 }
 
 

@@ -11,7 +11,7 @@ class NextGame: ObservableObject {
     @Published var game: [GameModel]
     
     init() {
-        let nextGame1 = GameModel(spieltag: "FINALE ", league: "NR-POKAL ", day: "SAMSTAG ", date: "06. JUNI 2023 ", time: "16:15 UHR ", homeTeamLogo: "Logo_Rot-Weiss_Essen", awayTeamLogo: "RWOLogo", homeTeamName: "ROT-WEISS ESSEN ", awayTeamName: "RW OBERHAU. ")
+        let nextGame1 = GameModel(spieltag: "FINALE ", league: "NR-POKAL ", day: "SAMSTAG ", date: "06. JUNI 2023 ", time: "16:15 UHR ", homeTeamLogo: "Logo_Rot-Weiss_Essen", awayTeamLogo: "RWOLogo", homeTeamName: "ROT-WEISS ESSEN ", awayTeamName: "RW OBERHAUSEN ")
         
         
         self.game = [nextGame1]

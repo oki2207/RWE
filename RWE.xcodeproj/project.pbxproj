@@ -32,8 +32,9 @@
 		47685F302A2E1A2D0039642A /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47685F2F2A2E1A2D0039642A /* NetworkMonitor.swift */; };
 		47685F322A2F24150039642A /* SplashscreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47685F312A2F24150039642A /* SplashscreenViewController.swift */; };
 		47685F342A2F243F0039642A /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47685F332A2F243F0039642A /* Splash.swift */; };
-		477AF7FA2A04D744005891C9 /* TabelleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477AF7F92A04D744005891C9 /* TabelleViewModel.swift */; };
-		477AF7FC2A04D759005891C9 /* TabelleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477AF7FB2A04D759005891C9 /* TabelleModel.swift */; };
+		47685F3B2A2FBAA40039642A /* TabelleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47685F3A2A2FBAA40039642A /* TabelleModel.swift */; };
+		47685F3D2A2FBAF70039642A /* TabelleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47685F3C2A2FBAF70039642A /* TabelleViewModel.swift */; };
+		47685F3F2A2FBB610039642A /* TabelleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47685F3E2A2FBB610039642A /* TabelleView.swift */; };
 		47826D292A0292BF009242FC /* RWEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47826D282A0292BF009242FC /* RWEApp.swift */; };
 		47826D2D2A0292C0009242FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47826D2C2A0292C0009242FC /* Assets.xcassets */; };
 		47826D302A0292C0009242FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47826D2F2A0292C0009242FC /* Preview Assets.xcassets */; };
@@ -44,7 +45,6 @@
 		47826D4A2A0293D3009242FC /* KaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47826D3F2A0293D3009242FC /* KaderView.swift */; };
 		47826D4B2A0293D3009242FC /* RoundedTabBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47826D402A0293D3009242FC /* RoundedTabBarStyle.swift */; };
 		47826D4C2A0293D3009242FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47826D412A0293D3009242FC /* ContentView.swift */; };
-		47826D4D2A0293D3009242FC /* TabelleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47826D422A0293D3009242FC /* TabelleView.swift */; };
 		47826D4F2A02A592009242FC /* rwetabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 47826D4E2A02A592009242FC /* rwetabbar.png */; };
 		47826D582A02DB50009242FC /* SEASRN__.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47826D572A02DB50009242FC /* SEASRN__.ttf */; };
 		47826D5C2A02DF08009242FC /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47826D5B2A02DF08009242FC /* ImageDetailView.swift */; };
@@ -88,8 +88,9 @@
 		47685F2F2A2E1A2D0039642A /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		47685F312A2F24150039642A /* SplashscreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashscreenViewController.swift; sourceTree = "<group>"; };
 		47685F332A2F243F0039642A /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
-		477AF7F92A04D744005891C9 /* TabelleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelleViewModel.swift; sourceTree = "<group>"; };
-		477AF7FB2A04D759005891C9 /* TabelleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelleModel.swift; sourceTree = "<group>"; };
+		47685F3A2A2FBAA40039642A /* TabelleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelleModel.swift; sourceTree = "<group>"; };
+		47685F3C2A2FBAF70039642A /* TabelleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelleViewModel.swift; sourceTree = "<group>"; };
+		47685F3E2A2FBB610039642A /* TabelleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelleView.swift; sourceTree = "<group>"; };
 		47826D252A0292BF009242FC /* RWE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RWE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47826D282A0292BF009242FC /* RWEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RWEApp.swift; sourceTree = "<group>"; };
 		47826D2C2A0292C0009242FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,7 +102,6 @@
 		47826D3F2A0293D3009242FC /* KaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaderView.swift; sourceTree = "<group>"; };
 		47826D402A0293D3009242FC /* RoundedTabBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTabBarStyle.swift; sourceTree = "<group>"; };
 		47826D412A0293D3009242FC /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		47826D422A0293D3009242FC /* TabelleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabelleView.swift; sourceTree = "<group>"; };
 		47826D4E2A02A592009242FC /* rwetabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rwetabbar.png; sourceTree = "<group>"; };
 		47826D572A02DB50009242FC /* SEASRN__.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SEASRN__.ttf; sourceTree = "<group>"; };
 		47826D5B2A02DF08009242FC /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
@@ -144,13 +144,13 @@
 		477AF7F22A03D44D005891C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				477AF7FB2A04D759005891C9 /* TabelleModel.swift */,
 				47440C202A093198006F5875 /* KaderModel.swift */,
 				47440C2C2A0D122E006F5875 /* GameModel.swift */,
 				47685F122A2625020039642A /* NewsModel.swift */,
 				47685F162A27297F0039642A /* SpielplanModel.swift */,
 				47685F1C2A286D160039642A /* WetterModel.swift */,
 				47685F252A286FDD0039642A /* Wetter.swift */,
+				47685F3A2A2FBAA40039642A /* TabelleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				47826D5B2A02DF08009242FC /* ImageDetailView.swift */,
-				477AF7F92A04D744005891C9 /* TabelleViewModel.swift */,
 				47440C1E2A092C68006F5875 /* KaderViewModel.swift */,
 				47440C2A2A0D113F006F5875 /* NextGame.swift */,
 				47440C222A0A743E006F5875 /* AbwehrViewModel.swift */,
@@ -217,6 +216,7 @@
 				47685F1E2A286D640039642A /* WetterViewModel.swift */,
 				47685F2F2A2E1A2D0039642A /* NetworkMonitor.swift */,
 				47685F312A2F24150039642A /* SplashscreenViewController.swift */,
+				47685F3C2A2FBAF70039642A /* TabelleViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -231,10 +231,10 @@
 				47826D3F2A0293D3009242FC /* KaderView.swift */,
 				47826D402A0293D3009242FC /* RoundedTabBarStyle.swift */,
 				47826D412A0293D3009242FC /* ContentView.swift */,
-				47826D422A0293D3009242FC /* TabelleView.swift */,
 				47685F232A286F690039642A /* WetterDetailView.swift */,
 				47685F2D2A2872D50039642A /* WetterSmallView.swift */,
 				47685F332A2F243F0039642A /* Splash.swift */,
+				47685F3E2A2FBB610039642A /* TabelleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -313,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47685F3F2A2FBB610039642A /* TabelleView.swift in Sources */,
 				47685F172A27297F0039642A /* SpielplanModel.swift in Sources */,
 				47685F262A286FDD0039642A /* Wetter.swift in Sources */,
 				47826D4A2A0293D3009242FC /* KaderView.swift in Sources */,
@@ -324,13 +325,14 @@
 				47826D4C2A0293D3009242FC /* ContentView.swift in Sources */,
 				47440C1F2A092C68006F5875 /* KaderViewModel.swift in Sources */,
 				47440C212A093198006F5875 /* KaderModel.swift in Sources */,
+				47685F3B2A2FBAA40039642A /* TabelleModel.swift in Sources */,
 				47440C2D2A0D122E006F5875 /* GameModel.swift in Sources */,
 				47685F132A2625020039642A /* NewsModel.swift in Sources */,
 				47826D4B2A0293D3009242FC /* RoundedTabBarStyle.swift in Sources */,
 				47826D5C2A02DF08009242FC /* ImageDetailView.swift in Sources */,
-				477AF7FC2A04D759005891C9 /* TabelleModel.swift in Sources */,
 				47826D492A0293D3009242FC /* HeaderView.swift in Sources */,
 				47440C232A0A743E006F5875 /* AbwehrViewModel.swift in Sources */,
+				47685F3D2A2FBAF70039642A /* TabelleViewModel.swift in Sources */,
 				47685F112A26060B0039642A /* LastGame.swift in Sources */,
 				47440C252A0A8229006F5875 /* MitteViewModel.swift in Sources */,
 				47826D482A0293D3009242FC /* SpielplanView.swift in Sources */,
@@ -345,8 +347,6 @@
 				47826D292A0292BF009242FC /* RWEApp.swift in Sources */,
 				47440C272A0A8244006F5875 /* SturmViewModel.swift in Sources */,
 				47685F1F2A286D640039642A /* WetterViewModel.swift in Sources */,
-				477AF7FA2A04D744005891C9 /* TabelleViewModel.swift in Sources */,
-				47826D4D2A0293D3009242FC /* TabelleView.swift in Sources */,
 				47440C292A0A8254006F5875 /* TrainerViewModel.swift in Sources */,
 				47826D462A0293D3009242FC /* TitelView.swift in Sources */,
 			);

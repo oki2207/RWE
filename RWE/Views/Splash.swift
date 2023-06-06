@@ -40,6 +40,7 @@ struct Splash: View {
         @State private var isShowingLowerTexts = false
         @State private var isShowingContent = false
         
+        
         var body: some View {
             VStack {
                 if isShowingUpperTexts {

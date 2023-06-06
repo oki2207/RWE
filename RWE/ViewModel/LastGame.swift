@@ -12,7 +12,7 @@ class LastGame: ObservableObject {
     
     init() {
         
-        let lastGame1 = GameModel(spieltag: "38. SPIELTAG ", league: "3. LIGA ", day: "SAMSTAG ", date: "27. MAI 2023 ", time: "14:00 UHR ", homeTeamLogo: "Logo_Rot-Weiss_Essen", awayTeamLogo: "VerlLogoB.svg", homeTeamName: "ROT-WEISS ESSEN ", awayTeamName: "SC VERL 1924 EV ")
+        let lastGame1 = GameModel(spieltag: "38. SPIELTAG ", league: "3. LIGA ", day: "SAMSTAG ", date: "27. MAI 2023 ", time: "14:00 UHR ", homeTeamLogo: "Logo_Rot-Weiss_Essen", awayTeamLogo: "VerlLogoB.svg", homeTeamName: "ROT-WEISS ESSEN ", awayTeamName: "SC VERL 1924 ")
         
         self.game = [lastGame1]
     }

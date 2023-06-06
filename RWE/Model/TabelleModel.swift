@@ -2,23 +2,23 @@
 //  TabelleModel.swift
 //  RWE
 //
-//  Created by Olli on 05.05.23.
+//  Created by Olli on 06.06.23.
 //
 
 import Foundation
 
-struct TabelleModel {
-    var id: UUID
+struct TabelleModel: Identifiable {
+    var id = UUID()
     let teamName: String
-    var punkte: Int
-    var tore: Int
-    var gegentore: Int
-    var spiele: Int
-    var platz: Int
-    var differenz: Int
+    var punkte: String
+    var tore: String
+    var gegentore: String
+    var spiele: String
+    var platz: String
+    var differenz: String
     var logo: String
     
-    init(teamName: String, punkte: Int, tore: Int, gegentore: Int, spiele: Int, platz: Int, differenz: Int, logo: String) {
+    init(teamName: String, punkte: String, tore: String, gegentore: String, spiele: String, platz: String, differenz: String, logo: String) {
         self.id = UUID()
         self.teamName = teamName
         self.punkte = punkte
@@ -30,4 +30,5 @@ struct TabelleModel {
         self.logo = logo
     }
 }
+
 

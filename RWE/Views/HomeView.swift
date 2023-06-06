@@ -314,7 +314,7 @@ struct HomeView: View {
                             
                         
                                 
-                                //----
+        
                                 
                                 
                                 
@@ -393,6 +393,7 @@ struct HomeView: View {
                                                             .frame(width: 60, alignment: .center)
                                                             .foregroundColor(.white)
                                                             .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                                            .cornerRadius(5)
                                                             .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                                         
                                                         
@@ -453,7 +454,7 @@ struct HomeView: View {
                                                 
                                                 
                                             )
-                                            .frame(width: 380, height: 133)
+                                            .frame(width: 370, height: 133)
                                             
                                             
                                             
@@ -462,9 +463,7 @@ struct HomeView: View {
                                             ForEach(gameViewModel2.game, id: \.id) { game in
                                                 
                                                 ZStack {
-                                                    Color.gray.opacity(0.2)
-                                                        .ignoresSafeArea()
-                                                    ScrollView {
+                                                    
                                                         VStack(spacing: 20) {
                                                             VStack {
                                                                 
@@ -510,7 +509,7 @@ struct HomeView: View {
                                                                         Text("\(game.homeTeamName)")
                                                                             .font(.custom("SignPainter", size: 12))
                                                                             .foregroundColor(.black)
-                                                                            .frame(width: 70, alignment: .trailing)
+                                                                            .frame(width: 72.5, alignment: .trailing)
                                                                             .padding(.leading, 10)
                                                                         
                                                                         
@@ -519,10 +518,12 @@ struct HomeView: View {
                                                                         
                                                                         
                                                                         Text(" 2 : 2 ")
+                                                                            
                                                                             .font(.custom("SignPainter", size: 25))
                                                                             .frame(width: 60, alignment: .center)
                                                                             .foregroundColor(.white)
                                                                             .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.red]), startPoint: .trailing, endPoint: .leading))
+                                                                            .cornerRadius(5)
                                                                             .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                                                         
                                                                         
@@ -534,13 +535,13 @@ struct HomeView: View {
                                                                         Text("\(game.awayTeamName)")
                                                                             .font(.custom("SignPainter", size: 12))
                                                                             .foregroundColor(.black)
-                                                                            .frame(width: 70, alignment: .leading)
+                                                                            .frame(width: 72.5, alignment: .leading)
                                                                             .padding(.trailing, 10)
                                                                         
                                                                         
                                                             Image("\(game.awayTeamLogo)")
                                                                             .resizable()
-                                                                            .frame(width: 50, height: 50)
+                                                                            .frame(width: 45, height: 50)
                                                                             .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
                                                                             .padding(.trailing,20)
                                                                         
@@ -586,7 +587,7 @@ struct HomeView: View {
                                                                 
                                                                 
                                                             )
-                                                            .frame(width: 380, height: 133)
+                                                            .frame(width: 370, height: 133)
                                                             
                                                 
                                                             
@@ -607,7 +608,7 @@ struct HomeView: View {
                     }
                 }
             }
-        }
+        
     
 
     

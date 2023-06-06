@@ -91,7 +91,8 @@ struct KaderView: View {
                                             .resizable()
                                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                                             .aspectRatio(contentMode: .fit)
-                                        Button("Schließen") {
+                                        Button("Schließen")
+                                        {
                                             self.isPresented = false
                                         }
                                     }
