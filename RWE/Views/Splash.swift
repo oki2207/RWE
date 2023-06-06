@@ -60,6 +60,7 @@ struct Splash: View {
                         .foregroundColor(.white)
                         .transition(.scale)
                         .animation(.easeInOut(duration: 1), value: isShowingContent)
+                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                         .onAppear {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                                 withAnimation {
@@ -76,7 +77,7 @@ struct Splash: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 200, height: 200)
                         .transition(.scale)
-                        .shadow(color: Color.red.opacity(1.0), radius: 10, x: 0, y: 2)
+                        .shadow(color: Color.white.opacity(1.0), radius: 10, x: 0, y: 2)
                         .animation(.linear(duration: 1), value: isShowingContent)
                         .scaleEffect(1.0) // Vergrößere das Bild um 20%
                         .animation(.easeInOut(duration: 1).repeatForever(), value: isShowingContent)
@@ -101,9 +102,10 @@ struct Splash: View {
                         
                         Text("RWE ")
                             .font(.custom("SignPainter", size: 40))
-                            .foregroundColor(.red)
+                            .foregroundColor(.white)
                             .transition(.scale)
                             .animation(.easeInOut(duration: 1), value: isShowingContent)
+                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                         
                         Text("ITER ")
                             .font(.custom("SignPainter", size: 30))

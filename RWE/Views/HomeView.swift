@@ -334,17 +334,18 @@ struct HomeView: View {
                                                 
                                                 ZStack {
                                                     HStack{
-                                                        Text("LETZTES SPIEL ")
+                                                        Text("LETZTES SPIEL - POKAL ")
                                                             .font(.custom("SignPainter", size: 30))
-                                                            .frame(maxWidth: 270, alignment: .trailing)
+                                                            .frame(maxWidth: 350, alignment: .trailing)
                                                             .foregroundColor(.white)
                                                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                                             .padding(.top, 15)
                                                             .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
-                                                        
+                                                        /*
                                                         Image("nr.svg")
                                                             .resizable()
                                                             .frame(width: 50, height: 50)
+                                                         */
                                                         
                                                     }
                                                 }
@@ -376,12 +377,11 @@ struct HomeView: View {
                                                         
                                                         
                                                         Text("\(game.homeTeamName)")
-                                                            .font(.custom("SignPainter", size: 14))
-                                                            .foregroundColor(.white)
-                                                            .frame(width: 60, alignment: .leading)
+                                                            .font(.custom("SignPainter", size: 12))
+                                                            .foregroundColor(.black)
+                                                            .frame(width: 70, alignment: .trailing)
                                                             .padding(.leading, 10)
-                                                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                                                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
+                                                            
                                                         
                                                         
                                                         
@@ -402,12 +402,10 @@ struct HomeView: View {
                                                         
                                                         
                                                         Text("\(game.awayTeamName)")
-                                                            .font(.custom("SignPainter", size: 14))
-                                                            .foregroundColor(.white)
-                                                            .frame(width: 65, alignment: .trailing)
+                                                            .font(.custom("SignPainter", size: 12))
+                                                            .foregroundColor(.black)
+                                                            .frame(width: 70, alignment: .leading)
                                                             .padding(.trailing, 10)
-                                                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                                         
                                                         
                                                         Image("\(game.awayTeamLogo)")
@@ -472,7 +470,7 @@ struct HomeView: View {
                                                                 
                                                                 ZStack {
                                                                     HStack{
-                                                                        Text("LETZTES SPIEL ")
+                                                                        Text("LETZTES SPIEL - 3. LIGA ")
                                                                             .font(.custom("SignPainter", size: 30))
                                                                             .frame(maxWidth: 350, alignment: .trailing)
                                                                             .foregroundColor(.white)
@@ -480,10 +478,12 @@ struct HomeView: View {
                                                                             .padding(.top, 15)
                                                                   .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                                                         
+                                                                        /*
                                                                         Image("liga3neu")
                                                                             .resizable()
                                                                             .frame(width: 80, height: 50)
                                                                             .padding(.top, 15)
+                                                                         */
                                                                         
                                                                     }
                                                                 }
@@ -508,12 +508,10 @@ struct HomeView: View {
                                                                         
                                                                         
                                                                         Text("\(game.homeTeamName)")
-                                                                            .font(.custom("SignPainter", size: 14))
-                                                                            .foregroundColor(.white)
-                                                                            .frame(width: 60, alignment: .leading)
+                                                                            .font(.custom("SignPainter", size: 12))
+                                                                            .foregroundColor(.black)
+                                                                            .frame(width: 70, alignment: .trailing)
                                                                             .padding(.leading, 10)
-                                                                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                                                                     .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                                                         
                                                                         
                                                                         
@@ -534,12 +532,10 @@ struct HomeView: View {
                                                                         
                                                                         
                                                                         Text("\(game.awayTeamName)")
-                                                                            .font(.custom("SignPainter", size: 14))
-                                                                            .foregroundColor(.white)
-                                                                            .frame(width: 65, alignment: .trailing)
+                                                                            .font(.custom("SignPainter", size: 12))
+                                                                            .foregroundColor(.black)
+                                                                            .frame(width: 70, alignment: .leading)
                                                                             .padding(.trailing, 10)
-                                                                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                                                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                                                         
                                                                         
                                                             Image("\(game.awayTeamLogo)")
