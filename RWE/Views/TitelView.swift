@@ -15,11 +15,7 @@ struct TitelView: View {
     
     var body: some View {
         ZStack {
-            Image("screen5")
-                .resizable()
-                .scaledToFill()
-                .edgesIgnoringSafeArea(.all)
-                .opacity(0.7)
+            LinearGradient(gradient: Gradient(colors: [Color.red, Color.white]), startPoint: .bottom, endPoint: .top)
             
             //KOPF SEITE-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             
@@ -31,7 +27,6 @@ struct TitelView: View {
                         .frame(maxWidth: 280, alignment: .trailing)
                         .foregroundColor(.red)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .leading, endPoint: .trailing))
-                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                     
                 }
                 .padding(.top, 20)
@@ -58,20 +53,20 @@ struct TitelView: View {
                                         .foregroundColor(.white)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                         .padding(.top, 15)
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
                                     
                                     Text("1 ")
                                         .font(.custom("SignPainter", size: 55))
                                         .foregroundColor(.red)
                                         .padding(.leading, -150)
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
                                     Text("X ")
                                         .font(.custom("SignPainter", size: 40))
                                         .foregroundColor(.red)
                                         .padding(.leading, -135)
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                 }
                                 
                                 
@@ -88,7 +83,7 @@ struct TitelView: View {
                                     .frame(maxWidth: .infinity, alignment: .center)
                                     .padding(.trailing, 10)
                                     .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                    .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                 
                                     .padding(.horizontal, 130)
                                 
@@ -130,7 +125,7 @@ struct TitelView: View {
                                         .foregroundColor(.white)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                         .padding(.top, 15)
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
                                     
                                     
@@ -138,13 +133,13 @@ struct TitelView: View {
                                         .font(.custom("SignPainter", size: 55))
                                         .foregroundColor(.red)
                                         .padding(.leading, -150)
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
                                     Text("X ")
                                         .font(.custom("SignPainter", size: 40))
                                         .foregroundColor(.red)
                                         .padding(.leading, -135)
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
                                     
                                 }
@@ -158,7 +153,7 @@ struct TitelView: View {
                                     .frame(maxWidth: .infinity, alignment: .center)
                                     .padding(.trailing, 10)
                                     .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                    .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                 
                                     .padding(.horizontal, 130)
                                 
@@ -198,19 +193,19 @@ struct TitelView: View {
                                         .foregroundColor(.white)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                         .padding(.top, 15)
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
-                                    Text("9 ")
+                                    Text("10 ")
                                         .font(.custom("SignPainter", size: 55))
                                         .foregroundColor(.red)
                                         .padding(.leading, -150)
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
                                     Text("X ")
                                         .font(.custom("SignPainter", size: 40))
                                         .foregroundColor(.red)
-                                        .padding(.leading, -125)
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .padding(.leading, -110)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
                                     
                                 }
@@ -226,7 +221,7 @@ struct TitelView: View {
                                         .frame(maxWidth: .infinity, alignment: .center)
                                         .padding(.trailing, 10)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
                                     
                                     
@@ -238,7 +233,7 @@ struct TitelView: View {
                                         .frame(maxWidth: .infinity, alignment: .center)
                                         .padding(.trailing, 10)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
                                     Text("2004 ")
                                         .font(.custom("SignPainter", size: 20))
@@ -246,7 +241,7 @@ struct TitelView: View {
                                         .frame(maxWidth: .infinity, alignment: .center)
                                         .padding(.trailing, 10)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
                                 }
                                 
@@ -260,7 +255,7 @@ struct TitelView: View {
                                         .frame(maxWidth: .infinity, alignment: .center)
                                         .padding(.trailing, 10)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
                                     Text("2011 ")
                                         .font(.custom("SignPainter", size: 20))
@@ -268,7 +263,7 @@ struct TitelView: View {
                                         .frame(maxWidth: .infinity, alignment: .center)
                                         .padding(.trailing, 10)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
                                     Text("2012 ")
                                         .font(.custom("SignPainter", size: 20))
@@ -276,7 +271,7 @@ struct TitelView: View {
                                         .frame(maxWidth: .infinity, alignment: .center)
                                         .padding(.trailing, 10)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                 }
                                 Spacer()
                                 
@@ -287,7 +282,7 @@ struct TitelView: View {
                                         .frame(maxWidth: .infinity, alignment: .center)
                                         .padding(.trailing, 10)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
                                     Text("2016 ")
                                         .font(.custom("SignPainter", size: 20))
@@ -295,7 +290,7 @@ struct TitelView: View {
                                         .frame(maxWidth: .infinity, alignment: .center)
                                         .padding(.trailing, 10)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
                                     Text("2020 ")
                                         .font(.custom("SignPainter", size: 20))
@@ -303,7 +298,7 @@ struct TitelView: View {
                                         .frame(maxWidth: .infinity, alignment: .center)
                                         .padding(.trailing, 10)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                 }
                                 Spacer()
                                 
@@ -314,7 +309,7 @@ struct TitelView: View {
                                         .frame(maxWidth: 110, alignment: .center)
                                         .padding(.trailing, 10)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
                                     
                                 }
@@ -354,19 +349,19 @@ struct TitelView: View {
                                             .foregroundColor(.white)
                                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                             .padding(.top, 15)
-                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                         
                                         Text("1 ")
                                             .font(.custom("SignPainter", size: 55))
                                             .foregroundColor(.red)
                                             .padding(.leading, -150)
-                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                         
                                         Text("X ")
                                             .font(.custom("SignPainter", size: 40))
                                             .foregroundColor(.red)
                                             .padding(.leading, -135)
-                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                         
                                     }
                                     Image("702")
@@ -379,7 +374,7 @@ struct TitelView: View {
                                         .frame(maxWidth: .infinity, alignment: .center)
                                         .padding(.trailing, 10)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
                                         .padding(.horizontal, 130)
                                     Spacer()

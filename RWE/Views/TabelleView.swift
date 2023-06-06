@@ -14,11 +14,7 @@ struct TabelleView: View {
     
     var body: some View {
         ZStack{
-            Image("screen3")
-                .resizable()
-                .scaledToFill()
-                .opacity(0.7)
-                .edgesIgnoringSafeArea(.all)
+            LinearGradient(gradient: Gradient(colors: [Color.red, Color.white]), startPoint: .bottom, endPoint: .top)
 
             
             //Obere Leiste der Tabelle
@@ -31,7 +27,6 @@ struct TabelleView: View {
                         .frame(maxWidth: 280, alignment: .trailing)
                         .foregroundColor(.red)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .leading, endPoint: .trailing))
-                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                     
                 }
                 .padding(.top, 20)
@@ -92,7 +87,7 @@ struct TabelleView: View {
                                                 ),
                                                 lineWidth: 1
                                             )
-                                            .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2)
+                                            .shadow(color: Color.white.opacity(0.0), radius: 0, x: 0, y: 0)
                                     )
                                 Spacer()
                                 Image("\(tabellenEintrag.logo)")
@@ -114,7 +109,9 @@ struct TabelleView: View {
                                                 ),
                                                 lineWidth: 1
                                             )
-                                            .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2))
+                                            .shadow(color: Color.black.opacity(0.0), radius: 0, x: 0, y: 0))
+                                   
+                                
                                 Spacer()
                                 Text("\(tabellenEintrag.spiele)")
                                     .font(.custom("SignPainter", size: 18))
@@ -131,7 +128,7 @@ struct TabelleView: View {
                                                 ),
                                                 lineWidth: 1
                                             )
-                                            .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2))
+                                            .shadow(color: Color.white.opacity(0.0), radius: 0, x: 0, y: 0))
                                 Text("\(tabellenEintrag.differenz)")
                                             .font(.custom("SignPainter", size: 18))
                                             .frame(maxWidth: .infinity, alignment: .center)
@@ -147,7 +144,7 @@ struct TabelleView: View {
                                                         ),
                                                         lineWidth: 1
                                                     )
-                                                    .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2))
+                                                    .shadow(color: Color.white.opacity(0.0), radius: 0, x: 0, y: 0))
                                 Text("\(tabellenEintrag.punkte)")
                                                     .font(.custom("SignPainter", size: 18))
                                                     .frame(maxWidth: .infinity, alignment: .center)
@@ -163,12 +160,12 @@ struct TabelleView: View {
                                                                 ),
                                                                 lineWidth: 1
                                                             )
-                                                            .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2))
+                                                            .shadow(color: Color.white.opacity(0.0), radius: 0, x: 0, y: 0))
                             }
                             .padding(.vertical, 10)
                             .cornerRadius(5)
                             .background(Color.clear)
-                            .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
+                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                         }
                         .frame(width: UIScreen.main.bounds.width * 0.9)
                     }

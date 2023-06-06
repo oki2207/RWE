@@ -26,12 +26,7 @@ struct HomeView: View {
         
         
         ZStack {
-            Image("screen2")
-                .resizable()
-                .scaledToFill()
-                .opacity(0.7)
-                .edgesIgnoringSafeArea(.all)
-            
+            LinearGradient(gradient: Gradient(colors: [Color.red, Color.white]), startPoint: .bottom, endPoint: .top)
             
             
             
@@ -43,13 +38,15 @@ struct HomeView: View {
                         .frame(maxWidth: 280, alignment: .trailing)
                         .foregroundColor(.red)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .leading, endPoint: .trailing))
-                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                    
+                        
                 }
                 .padding(.top, 20)
                 .overlay(
                     RoundedRectangle(cornerRadius: 0)
-                        .stroke(LinearGradient(gradient: Gradient(colors: [Color.clear, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
-                        .shadow(color: Color.red.opacity(0.3), radius: 0, x: 0, y: 2)
+                        .stroke(LinearGradient(gradient: Gradient(colors: [Color.clear, .red]), startPoint: .leading, endPoint: .trailing), lineWidth: 2)
+                        .shadow(color: Color.white.opacity(1.0), radius: 3, x: 0, y: 0)
+                        
                         .padding(.top, 20)
                 )
                 
@@ -68,7 +65,7 @@ struct HomeView: View {
                         .foregroundColor(.white)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                         .padding(.top, 15)
-                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                     
                     if showWetter {
                         
@@ -78,7 +75,7 @@ struct HomeView: View {
                             .foregroundColor(.white)
                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                             .padding(.top, 15)
-                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                         
                         Text("TEMPERATUR MAX.  \(wetterviewModel.wetterEssen.temperatur_max) ")
                             .font(.custom("SignPainter", size: 25))
@@ -86,7 +83,7 @@ struct HomeView: View {
                             .foregroundColor(.white)
                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                             .padding(.top, 15)
-                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                         
                         Text("WIND  \(wetterviewModel.wetterEssen.windgeschwindigkeit) KM/H ")
                             .font(.custom("SignPainter", size: 25))
@@ -94,7 +91,7 @@ struct HomeView: View {
                             .foregroundColor(.white)
                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                             .padding(.top, 15)
-                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                         
                         Text("FEUCHTIGKEIT  \(wetterviewModel.wetterEssen.feuchtigkeit) % ")
                             .font(.custom("SignPainter", size: 25))
@@ -102,7 +99,7 @@ struct HomeView: View {
                             .foregroundColor(.white)
                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                             .padding(.top, 15)
-                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                         
                     }
                 } else {
@@ -122,7 +119,7 @@ struct HomeView: View {
                         .foregroundColor(.white)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                         .padding(.top, 15)
-                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                     
                     if showWetter {
                         Text("TEMPERATUR MIN.  \(wetterviewModel.wetterDaten[0].temperatur_min ?? "ERROR ") ")
@@ -131,7 +128,7 @@ struct HomeView: View {
                             .foregroundColor(.white)
                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                             .padding(.top, 15)
-                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                         
                         Text("TEMPERATUR MAX.  \(wetterviewModel.wetterDaten[0].temperatur_max ?? "ERROR ") ")
                             .font(.custom("SignPainter", size: 25))
@@ -139,7 +136,7 @@ struct HomeView: View {
                             .foregroundColor(.white)
                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                             .padding(.top, 15)
-                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                         
                         Text("WIND  \(wetterviewModel.wetterDaten[0].windgeschwindigkeit ?? "ERROR ") KM/H ")
                             .font(.custom("SignPainter", size: 25))
@@ -147,7 +144,7 @@ struct HomeView: View {
                             .foregroundColor(.white)
                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                             .padding(.top, 15)
-                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                         
                         Text("FEUCHTIGKEIT  \(wetterviewModel.wetterDaten[0].feuchtigkeit ?? "ERROR ") % ")
                             .font(.custom("SignPainter", size: 25))
@@ -155,7 +152,7 @@ struct HomeView: View {
                             .foregroundColor(.white)
                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                             .padding(.top, 15)
-                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                     }
                 }
                 
@@ -281,7 +278,7 @@ struct HomeView: View {
                                         .foregroundColor(.white)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                         .padding(.top, 15)
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     Spacer()
                                     
                                     
@@ -330,21 +327,26 @@ struct HomeView: View {
                                 ForEach(gameViewModel.game, id: \.id) { game in
                                     
                                     ZStack {
-                                        Color.gray.opacity(0.2)
-                                            .ignoresSafeArea()
                                         
+                                    
                                         VStack {
                                             VStack {
                                                 
                                                 ZStack {
-                                                    Text("LETZTES SPIEL (NR-POKAL) ")
-                                                        .font(.custom("SignPainter", size: 30))
-                                                        .frame(maxWidth: 350, alignment: .trailing)
-                                                        .foregroundColor(.white)
-                                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                                                        .padding(.top, 15)
-                                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                                    
+                                                    HStack{
+                                                        Text("LETZTES SPIEL ")
+                                                            .font(.custom("SignPainter", size: 30))
+                                                            .frame(maxWidth: 270, alignment: .trailing)
+                                                            .foregroundColor(.white)
+                                                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                                                            .padding(.top, 15)
+                                                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
+                                                        
+                                                        Image("nr.svg")
+                                                            .resizable()
+                                                            .frame(width: 50, height: 50)
+                                                        
+                                                    }
                                                 }
                                                 
                                                 
@@ -355,7 +357,7 @@ struct HomeView: View {
                                                         .foregroundColor(.white)
                                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                                         .padding(.top, 1)
-                                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                                     
                                                     
                                                     
@@ -379,7 +381,7 @@ struct HomeView: View {
                                                             .frame(width: 60, alignment: .leading)
                                                             .padding(.leading, 10)
                                                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                                         
                                                         
                                                         
@@ -405,7 +407,7 @@ struct HomeView: View {
                                                             .frame(width: 65, alignment: .trailing)
                                                             .padding(.trailing, 10)
                                                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                                         
                                                         
                                                         Image("\(game.awayTeamLogo)")
@@ -427,6 +429,7 @@ struct HomeView: View {
                                                     Spacer()
                                                 }
                                             }
+                                        
                                             
                                             
                                             
@@ -468,14 +471,21 @@ struct HomeView: View {
                                                             VStack {
                                                                 
                                                                 ZStack {
-                                                                    Text("LETZTES SPIEL (3. LIGA) ")
-                                                                        .font(.custom("SignPainter", size: 30))
-                                                                        .frame(maxWidth: 350, alignment: .trailing)
-                                                                        .foregroundColor(.white)
-                                                                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                                                                        .padding(.top, 15)
-                                                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                                                    
+                                                                    HStack{
+                                                                        Text("LETZTES SPIEL ")
+                                                                            .font(.custom("SignPainter", size: 30))
+                                                                            .frame(maxWidth: 350, alignment: .trailing)
+                                                                            .foregroundColor(.white)
+                                                                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                                                                            .padding(.top, 15)
+                                                                  .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
+                                                                        
+                                                                        Image("liga3neu")
+                                                                            .resizable()
+                                                                            .frame(width: 80, height: 50)
+                                                                            .padding(.top, 15)
+                                                                        
+                                                                    }
                                                                 }
                                                                 
                                                                 VStack {
@@ -485,7 +495,7 @@ struct HomeView: View {
                                                                         .foregroundColor(.white)
                                                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                                                         .padding(.top, 1)
-                                                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                                    .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                                                     
                                                                     
                                                                     HStack {
@@ -503,7 +513,7 @@ struct HomeView: View {
                                                                             .frame(width: 60, alignment: .leading)
                                                                             .padding(.leading, 10)
                                                                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                                                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                                                     .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                                                         
                                                                         
                                                                         
@@ -529,10 +539,10 @@ struct HomeView: View {
                                                                             .frame(width: 65, alignment: .trailing)
                                                                             .padding(.trailing, 10)
                                                                             .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                                                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                                                         
                                                                         
-                                                                        Image("\(game.awayTeamLogo)")
+                                                            Image("\(game.awayTeamLogo)")
                                                                             .resizable()
                                                                             .frame(width: 50, height: 50)
                                                                             .shadow(color: Color.black.opacity(0.8), radius: 5, x: 0, y: 2)
@@ -559,6 +569,7 @@ struct HomeView: View {
                                                             
                                                             //BOX
                                                             .background(
+                                                                
                                                                 RoundedRectangle(cornerRadius: 0)
                                                                     .fill(Color.white.opacity(0.8))
                                                                     .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
@@ -581,7 +592,11 @@ struct HomeView: View {
                                                             )
                                                             .frame(width: 380, height: 133)
                                                             
+                                                
+                                                            
                                                         }
+                                                        Spacer()
+                                                        Spacer()
                                                     }
                                                 }
                                                 
@@ -612,7 +627,7 @@ struct HomeView: View {
             HomeView()
                 .environmentObject(NextGame())
                 .environmentObject(LastGame())
-               // .environmentObject(NewsViewModel())
+               .environmentObject(NewsViewModel())
                 .environmentObject(WetterViewModel())
         }
     }

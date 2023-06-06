@@ -17,11 +17,7 @@ struct SpielplanView: View {
     
     var body: some View {
         ZStack {
-            Image("screen4") // Hier musst du den Namen deines Bildes angeben
-                .resizable()
-                .scaledToFill()
-                .edgesIgnoringSafeArea(.all)
-                .opacity(0.7)
+            LinearGradient(gradient: Gradient(colors: [Color.red, Color.white]), startPoint: .bottom, endPoint: .top)
             
             //Obere Leiste der Tabelle
             
@@ -34,7 +30,6 @@ struct SpielplanView: View {
                         .frame(maxWidth: 280, alignment: .trailing)
                         .foregroundColor(.red)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .leading, endPoint: .trailing))
-                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                     
                 }
                 .padding(.top, 20)
@@ -63,7 +58,7 @@ struct SpielplanView: View {
                     .foregroundColor(.white)
                     .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                     .padding(.top, 15)
-                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                    .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                    
                 
                 //SPIELPLAN 3. LIGA_______________________________________________________________________________
@@ -82,7 +77,7 @@ struct SpielplanView: View {
                                         .foregroundColor(.white)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                         .padding(.top, 15)
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                 }
                                 // .padding(3)
                                 
@@ -99,7 +94,7 @@ struct SpielplanView: View {
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                         .padding(.leading, 10)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     Text("\(spiel.ergebnis)")
                                         .font(.custom("SignPainter", size: 24))
                                         .foregroundColor(.white)
@@ -112,7 +107,7 @@ struct SpielplanView: View {
                                         .frame(maxWidth: .infinity, alignment: .trailing)
                                         .padding(.trailing, 10)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     Image("\(spiel.teamLogoAway)")
                                         .frame(maxWidth: .infinity, alignment: .center)
                                         .font(.system(size: 14))
@@ -156,12 +151,12 @@ struct SpielplanView: View {
             
             
             
-                    .font(.custom("SignPainter", size: 30))
-                    .frame(maxWidth: 350, alignment: .trailing)
-                    .foregroundColor(.white)
-                    .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                    .padding(.top, 15)
-                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                .font(.custom("SignPainter", size: 30))
+                .frame(maxWidth: 350, alignment: .trailing)
+                .foregroundColor(.white)
+                .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                .padding(.top, 15)
+                .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                 
                 //SPIELPLAN 3. LIGA_______________________________________________________________________________
                 
@@ -177,7 +172,7 @@ struct SpielplanView: View {
                                         .foregroundColor(.white)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
                                         .padding(.top, 15)
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                 }
                                 // .padding(3)
                                 
@@ -194,7 +189,7 @@ struct SpielplanView: View {
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                         .padding(.leading, 10)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     Text("\(spiel.ergebnis)")
                                         .font(.custom("SignPainter", size: 22))
                                         .foregroundColor(.white)
@@ -207,7 +202,7 @@ struct SpielplanView: View {
                                         .frame(maxWidth: .infinity, alignment: .trailing)
                                         .padding(.trailing, 10)
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .trailing, endPoint: .leading))
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     Image("\(spiel.teamLogoAway)")
                                         .frame(maxWidth: .infinity, alignment: .center)
                                         .font(.system(size: 14))

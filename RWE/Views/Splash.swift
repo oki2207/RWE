@@ -11,92 +11,111 @@ struct Splash: View {
     @State private var isShowingContent = false
     
     var body: some View {
-        VStack {
-            if isShowingContent {
-                MainContent()
-                    .transition(.move(edge: .trailing))
-            } else {
-                Image("Logo_Rot-Weiss_Essen")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 200, height: 200)
-                    .offset(x: 0, y: -200)
-                    .animation(.easeInOut(duration: 1).delay(5))
-                    .onAppear {
-                        isShowingContent = true
-                    }
+        
+        ZStack{
+            LinearGradient(gradient: Gradient(colors: [Color.red, Color.white]), startPoint: .bottom, endPoint: .top)
+            
+            VStack {
+                if isShowingContent {
+                    MainContent()
+                        .transition(.move(edge: .trailing))
+                } else {
+                    Image("Logo_Rot-Weiss_Essen")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 200, height: 200)
+                        .offset(x: 0, y: -200)
+                        .animation(.easeInOut(duration: 1).delay(5))
+                        .onAppear {
+                            isShowingContent = true
+                        }
+                }
             }
         }
     }
-}
-
-struct MainContent: View {
-    @State private var isShowingText = false
     
-    var body: some View {
-        VStack {
-            if isShowingText {
-                
-                Text("WILLKOMMEN ")
-                    .font(.custom("SignPainter", size: 25))
-                    .foregroundColor(.black)
-                    .transition(.scale)
-                    .animation(.easeInOut(duration: 3))
-                
-                Text("AN DER ")
-                    .font(.custom("SignPainter", size: 20))
-                    .foregroundColor(.black)
-                    .transition(.scale)
-                    .animation(.easeInOut(duration: 3))
-                
-                Text("HAFENSTRASSE ")
-                    .font(.custom("SignPainter", size: 40))
-                    .foregroundColor(.red)
-                    .transition(.scale)
-                    .animation(.easeInOut(duration: 3))
-                
-                Image("Logo_Rot-Weiss_Essen")
-                    .resizable()
-                       .aspectRatio(contentMode: .fit) // Passt das Bild an den verfügbaren Raum an, während das Seitenverhältnis beibehalten wird
-                       .frame(width: 200, height: 200) // Passe die Werte hier entsprechend an
-                       .transition(.scale)
-                       .shadow(color: Color.red.opacity(1.0), radius: 10, x: 0, y: 2)
-                       .animation(.linear(duration: 10))
-                
-                
-                HStack(spacing: -7){
-                    Text("#IMME ")
-                        .font(.custom("SignPainter", size: 30))
+    struct MainContent: View {
+        @State private var isShowingLogo = false
+        @State private var isShowingUpperTexts = false
+        @State private var isShowingLowerTexts = false
+        @State private var isShowingContent = false
+        
+        var body: some View {
+            VStack {
+                if isShowingUpperTexts {
+                    Text("WILLKOMMEN ")
+                        .font(.custom("SignPainter", size: 25))
                         .foregroundColor(.black)
                         .transition(.scale)
-                        .animation(.easeInOut(duration: 3))
+                        .animation(.easeInOut(duration: 1), value: isShowingContent)
                     
-                    Text("RWE ")
+                    Text("AN DER ")
+                        .font(.custom("SignPainter", size: 20))
+                        .foregroundColor(.black)
+                        .transition(.scale)
+                        .animation(.easeInOut(duration: 1), value: isShowingContent)
+                    
+                    Text("HAFENSTRASSE ")
                         .font(.custom("SignPainter", size: 40))
-                        .foregroundColor(.red)
+                        .foregroundColor(.white)
                         .transition(.scale)
-                        .animation(.easeInOut(duration: 1))
-                    
-                    Text("ITER ")
-                        .font(.custom("SignPainter", size: 30))
-                        .foregroundColor(.black)
-                        .transition(.scale)
-                        .animation(.easeInOut(duration: 5))
+                        .animation(.easeInOut(duration: 1), value: isShowingContent)
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                withAnimation {
+                                    isShowingLowerTexts = true
+                                }
+                            }
+                        }
                 }
-
-            }
                 
-            
-        }
-            
-        
-    
-        
-        
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                if isShowingLogo {
+                    
+                    Image("Logo_Rot-Weiss_Essen")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 200, height: 200)
+                        .transition(.scale)
+                        .shadow(color: Color.red.opacity(1.0), radius: 10, x: 0, y: 2)
+                        .animation(.linear(duration: 1), value: isShowingContent)
+                        .scaleEffect(1.0) // Vergrößere das Bild um 20%
+                        .animation(.easeInOut(duration: 1).repeatForever(), value: isShowingContent)
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                withAnimation {
+                                    isShowingUpperTexts = true
+                                }
+                            }
+                        }
+                }
+                
+                
+                
+                if isShowingLowerTexts {
+                    HStack(spacing: -7) {
+                        Text("#IMME ")
+                            .font(.custom("SignPainter", size: 30))
+                            .foregroundColor(.black)
+                            .transition(.scale)
+                            .animation(.easeInOut(duration: 1), value: isShowingContent)
+                        
+                        Text("RWE ")
+                            .font(.custom("SignPainter", size: 40))
+                            .foregroundColor(.red)
+                            .transition(.scale)
+                            .animation(.easeInOut(duration: 1), value: isShowingContent)
+                        
+                        Text("ITER ")
+                            .font(.custom("SignPainter", size: 30))
+                            .foregroundColor(.black)
+                            .transition(.scale)
+                            .animation(.easeInOut(duration: 1), value: isShowingContent)
+                    }
+                }
+            }
+            .onAppear {
                 withAnimation {
-                    isShowingText = true
+                    isShowingLogo = true
                 }
             }
         }
