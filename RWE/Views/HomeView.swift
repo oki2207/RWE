@@ -38,17 +38,15 @@ struct HomeView: View {
                         .frame(maxWidth: 280, alignment: .trailing)
                         .foregroundColor(.red)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .leading, endPoint: .trailing))
-                    
-                        
                 }
                 .padding(.top, 20)
                 .overlay(
                     RoundedRectangle(cornerRadius: 0)
-                        .stroke(LinearGradient(gradient: Gradient(colors: [Color.clear, .red]), startPoint: .leading, endPoint: .trailing), lineWidth: 2)
-                        .shadow(color: Color.white.opacity(1.0), radius: 3, x: 0, y: 0)
-                        
+                        .stroke(LinearGradient(gradient: Gradient(colors: [Color.clear, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
+                        .shadow(color: Color.red.opacity(0.3), radius: 0, x: 0, y: 2)
                         .padding(.top, 20)
                 )
+                .padding(.vertical, 10)
                 
                 if networkMonitor.isConnected{
                     HStack{
@@ -68,6 +66,14 @@ struct HomeView: View {
                         .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                     
                     if showWetter {
+                        
+                        Text("\(wetterviewModel.wetterEssen.witterung.uppercased()) ")
+                            .font(.custom("SignPainter", size: 25))
+                            .frame(maxWidth: 350, alignment: .trailing)
+                            .foregroundColor(.white)
+                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                            .padding(.top, 15)
+                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                         
                         Text("TEMPERATUR MIN.  \(wetterviewModel.wetterEssen.temperatur_min) ")
                             .font(.custom("SignPainter", size: 25))
@@ -122,6 +128,15 @@ struct HomeView: View {
                         .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                     
                     if showWetter {
+                        
+                        Text("\(wetterviewModel.wetterDaten[0].witterung ?? "ERROR ") ")
+                            .font(.custom("SignPainter", size: 25))
+                            .frame(maxWidth: 350, alignment: .trailing)
+                            .foregroundColor(.white)
+                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                            .padding(.top, 15)
+                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
+                        
                         Text("TEMPERATUR MIN.  \(wetterviewModel.wetterDaten[0].temperatur_min ?? "ERROR ") ")
                             .font(.custom("SignPainter", size: 25))
                             .frame(maxWidth: 350, alignment: .trailing)

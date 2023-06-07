@@ -27,12 +27,13 @@ struct KaderView: View {
     
     var body: some View {
         
-        //HINTERGRUNDSCREEN
+        //HINTERGRUND_______________________________________________________________
+        
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.red, Color.white]), startPoint: .bottom, endPoint: .top)
             
             
-            //Obere Leiste der KaderView
+            //KOPFZEILE______________________________________________________________
             
             VStack(spacing: 5) {
                 HStack {
@@ -49,14 +50,14 @@ struct KaderView: View {
                         .shadow(color: Color.red.opacity(0.3), radius: 0, x: 0, y: 2)
                         .padding(.top, 20)
                 )
-                .padding(.horizontal, 20)
+                .padding(.vertical, 10)
                 
                 
                 
                 
                 ScrollView {
                     
-                    //TEAMFOTO
+                    //TEAMFOTO_____________________________________________________________
                     
                     
                     VStack{
@@ -79,7 +80,8 @@ struct KaderView: View {
                                         ))
                                 .sheet(isPresented: $isPresented) {
                                     
-                                    // Inhalt des Sheets
+                                    // Inhalt des Sheets________________________________________
+                                   
                                     VStack {
                                         Text("ROT-WEISSE JUNGS 22/23 ")
                                             .font(.custom("SignPainter", size: 30))
@@ -99,7 +101,6 @@ struct KaderView: View {
                                     .background(
                                         Image("rwesheet")
                                         
-                                            .opacity(1.0)
                                     )
                                 }
                         }
@@ -122,7 +123,105 @@ struct KaderView: View {
                         //SPIELER TOR_______________________________________________________________________________
                         
                         if showTorPlayers {
-                            ForEach(kaderViewModel.kader, id: \.id) { spieler in
+                            ScrollView {
+                                ForEach(kaderViewModel.kader, id: \.id) { spieler in
+                                    
+                                    ZStack{
+                                        VStack{
+                                            HStack {
+                                                Text("\(spieler.number)")
+                                                    .font(.custom("SignPainter", size: 30))
+                                                    .frame(maxWidth: 350, alignment: .trailing)
+                                                    .foregroundColor(.white)
+                                                    .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                                                    .padding(.top, 15)
+                                                    .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
+                                            }
+                                            HStack(alignment: .top, spacing: 50){
+                                                Image("\(spieler.photo)")
+                                                    .resizable()
+                                                    .frame(width: 130, height: 170)
+                                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                                    .background(
+                                                        Color.clear
+                                                            .padding(.horizontal)
+                                                    )
+                                                    .overlay(
+                                                        RoundedRectangle(cornerRadius: 0)
+                                                            .stroke(LinearGradient(gradient: Gradient(colors: [Color.clear, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
+                                                            .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2))
+                                                
+                                                
+                                                VStack(alignment: .leading, spacing: 23) {
+                                                    Text("\(spieler.name)")
+                                                        .font(.custom("SignPainter", size: 23))
+                                                        .foregroundColor(.red)
+                                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                                    
+                                                    Text("\(spieler.birthDate)")
+                                                        .font(.custom("SignPainter", size: 15))
+                                                        .foregroundColor(.black)
+                                                    Text("\(spieler.birthPlace)")
+                                                        .font(.custom("SignPainter", size: 15))
+                                                        .foregroundColor(.black)
+                                                    Text("\(spieler.previousClub)")
+                                                        .font(.custom("SignPainter", size: 15))
+                                                        .foregroundColor(.black)
+                                                    Text("\(spieler.since)")
+                                                        .font(.custom("SignPainter", size: 20))
+                                                        .foregroundColor(.red)
+                                                    Spacer()
+                                                }
+                                            }
+                                            .padding(.horizontal, 20)
+                                        }
+                                        .background(
+                                            RoundedRectangle(cornerRadius: 0)
+                                                .fill(Color.white.opacity(0.8))
+                                                .overlay(
+                                                    RoundedRectangle(cornerRadius: 0)
+                                                        .stroke(
+                                                            LinearGradient(
+                                                                gradient: Gradient(colors: [Color.clear, .red]),
+                                                                startPoint: .topLeading,
+                                                                endPoint: .bottomTrailing
+                                                            ),
+                                                            lineWidth: 2
+                                                        )
+                                                )
+                                                .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
+                                                .frame(width: 380)
+                                        )
+                                        
+                                        .padding(5)
+                                    }
+                                }
+                                
+                            }
+                            
+                        }
+                    }
+                    
+                    //ABW-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                    
+                    
+                    //KLICKLEISTE-------------------------------------------------------------------------------
+                    Text("ABWEHR \(showAbwPlayers ? "- " : "+ ") ")
+                        .onTapGesture {
+                            showAbwPlayers.toggle()
+                        }
+                        .font(.custom("SignPainter", size: 30))
+                        .frame(maxWidth: 350, alignment: .trailing)
+                        .foregroundColor(.white)
+                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
+                        .padding(.top, 15)
+                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
+                    
+                    //SPIELER ABW_______________________________________________________________________________
+                    
+                    if showAbwPlayers {
+                        ScrollView {
+                            ForEach(abwehrViewModel.kader, id: \.id) { spieler in
                                 
                                 ZStack{
                                     VStack{
@@ -154,7 +253,6 @@ struct KaderView: View {
                                                 Text("\(spieler.name)")
                                                     .font(.custom("SignPainter", size: 23))
                                                     .foregroundColor(.red)
-                                                    .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
                                                 
                                                 Text("\(spieler.birthDate)")
                                                     .font(.custom("SignPainter", size: 15))
@@ -196,99 +294,6 @@ struct KaderView: View {
                             }
                             
                         }
-                        
-                    }
-                    
-                    //ABW-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                    
-                    
-                    //KLICKLEISTE-------------------------------------------------------------------------------
-                    Text("ABWEHR \(showAbwPlayers ? "- " : "+ ") ")
-                        .onTapGesture {
-                            showAbwPlayers.toggle()
-                        }
-                        .font(.custom("SignPainter", size: 30))
-                        .frame(maxWidth: 350, alignment: .trailing)
-                        .foregroundColor(.white)
-                        .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                        .padding(.top, 15)
-                        .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
-                    
-                    //SPIELER ABW_______________________________________________________________________________
-                    
-                    if showAbwPlayers {
-                        ForEach(abwehrViewModel.kader, id: \.id) { spieler in
-                            
-                            ZStack{
-                                VStack{
-                                    HStack {
-                                        Text("\(spieler.number)")
-                                            .font(.custom("SignPainter", size: 30))
-                                            .frame(maxWidth: 350, alignment: .trailing)
-                                            .foregroundColor(.white)
-                                            .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red]), startPoint: .leading, endPoint: .trailing))
-                                            .padding(.top, 15)
-                                            .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
-                                    }
-                                    HStack(alignment: .top, spacing: 50){
-                                        Image("\(spieler.photo)")
-                                            .resizable()
-                                            .frame(width: 130, height: 170)
-                                            .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                            .background(
-                                                Color.clear
-                                                    .padding(.horizontal)
-                                            )
-                                            .overlay(
-                                                RoundedRectangle(cornerRadius: 0)
-                                                    .stroke(LinearGradient(gradient: Gradient(colors: [Color.clear, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
-                                                    .shadow(color: Color.white.opacity(1.0), radius: 5, x: 0, y: 2))
-                                        
-                                        
-                                        VStack(alignment: .leading, spacing: 23) {
-                                            Text("\(spieler.name)")
-                                                .font(.custom("SignPainter", size: 23))
-                                                .foregroundColor(.red)
-                                            
-                                            Text("\(spieler.birthDate)")
-                                                .font(.custom("SignPainter", size: 15))
-                                                .foregroundColor(.black)
-                                            Text("\(spieler.birthPlace)")
-                                                .font(.custom("SignPainter", size: 15))
-                                                .foregroundColor(.black)
-                                            Text("\(spieler.previousClub)")
-                                                .font(.custom("SignPainter", size: 15))
-                                                .foregroundColor(.black)
-                                            Text("\(spieler.since)")
-                                                .font(.custom("SignPainter", size: 20))
-                                                .foregroundColor(.red)
-                                            Spacer()
-                                        }
-                                    }
-                                    .padding(.horizontal, 20)
-                                }
-                                .background(
-                                    RoundedRectangle(cornerRadius: 0)
-                                        .fill(Color.white.opacity(0.8))
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 0)
-                                                .stroke(
-                                                    LinearGradient(
-                                                        gradient: Gradient(colors: [Color.clear, .red]),
-                                                        startPoint: .topLeading,
-                                                        endPoint: .bottomTrailing
-                                                    ),
-                                                    lineWidth: 2
-                                                )
-                                        )
-                                        .shadow(color: Color.black.opacity(0.4), radius: 2, x: 3, y: 5)
-                                        .frame(width: 380)
-                                )
-                                
-                                .padding(5)
-                            }
-                        }
-                        
                     }
                     
                     
@@ -574,6 +579,7 @@ struct KaderView: View {
         }
     }
 }
+
 
 
 struct KaderView_Previews: PreviewProvider {

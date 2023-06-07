@@ -20,14 +20,12 @@ struct TabelleView: View {
             //Obere Leiste der Tabelle
             
             VStack(spacing: 5) {
-                
                 HStack {
                     Text("TABELLE ")
                         .font(.custom("SignPainter", size: 30))
                         .frame(maxWidth: 280, alignment: .trailing)
                         .foregroundColor(.red)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .leading, endPoint: .trailing))
-                    
                 }
                 .padding(.top, 20)
                 .overlay(
@@ -35,8 +33,8 @@ struct TabelleView: View {
                         .stroke(LinearGradient(gradient: Gradient(colors: [Color.clear, .red]), startPoint: .center, endPoint: .trailing), lineWidth: 2)
                         .shadow(color: Color.red.opacity(0.3), radius: 0, x: 0, y: 2)
                         .padding(.top, 20)
-                    
                 )
+                .padding(.vertical, 10)
                 
                 //Farbkombination der Tabelle
                 

@@ -22,15 +22,13 @@ struct SpielplanView: View {
             //Obere Leiste der Tabelle
             
             
-            VStack(spacing: 5){
-                
+            VStack(spacing: 5) {
                 HStack {
                     Text("SPIELPLAN ")
                         .font(.custom("SignPainter", size: 30))
                         .frame(maxWidth: 280, alignment: .trailing)
                         .foregroundColor(.red)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .leading, endPoint: .trailing))
-                    
                 }
                 .padding(.top, 20)
                 .overlay(
@@ -39,7 +37,7 @@ struct SpielplanView: View {
                         .shadow(color: Color.red.opacity(0.3), radius: 0, x: 0, y: 2)
                         .padding(.top, 20)
                 )
-                .padding(.horizontal, 20)
+                .padding(.vertical, 10)
                 
                 
                 
@@ -79,7 +77,7 @@ struct SpielplanView: View {
                                         .padding(.top, 15)
                                         .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                 }
-                                // .padding(3)
+                               
                                 
                                 // Untere Zeile mit Heimlogo, Teamnamen, Ergebnis, Auswärtsteamnamen und Auswärtslogo
                                 HStack {

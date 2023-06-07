@@ -20,14 +20,12 @@ struct TitelView: View {
             //KOPF SEITE-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             
             VStack(spacing: 5) {
-                
                 HStack {
                     Text("ERFOLGE ")
                         .font(.custom("SignPainter", size: 30))
                         .frame(maxWidth: 280, alignment: .trailing)
                         .foregroundColor(.red)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .leading, endPoint: .trailing))
-                    
                 }
                 .padding(.top, 20)
                 .overlay(
@@ -36,12 +34,11 @@ struct TitelView: View {
                         .shadow(color: Color.red.opacity(0.3), radius: 0, x: 0, y: 2)
                         .padding(.top, 20)
                 )
-                .padding(.horizontal, 20)
+                .padding(.vertical, 10)
                 
                 //BOX DEUTSCHER MEISTER-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                 ZStack {
-                    Color.gray.opacity(0.2)
-                        .ignoresSafeArea()
+                    
                     ScrollView {
                         VStack(spacing: 20) {
                             VStack {
@@ -58,13 +55,13 @@ struct TitelView: View {
                                     
                                     Text("1 ")
                                         .font(.custom("SignPainter", size: 55))
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.white)
                                         .padding(.leading, -150)
                                         .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
                                     Text("X ")
                                         .font(.custom("SignPainter", size: 40))
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.white)
                                         .padding(.leading, -135)
                                         .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                 }
@@ -131,13 +128,13 @@ struct TitelView: View {
                                     
                                     Text("1 ")
                                         .font(.custom("SignPainter", size: 55))
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.white)
                                         .padding(.leading, -150)
                                         .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
                                     Text("X ")
                                         .font(.custom("SignPainter", size: 40))
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.white)
                                         .padding(.leading, -135)
                                         .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
@@ -197,13 +194,13 @@ struct TitelView: View {
                                     
                                     Text("10 ")
                                         .font(.custom("SignPainter", size: 55))
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.white)
                                         .padding(.leading, -150)
                                         .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
                                     Text("X ")
                                         .font(.custom("SignPainter", size: 40))
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.white)
                                         .padding(.leading, -110)
                                         .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                     
@@ -353,13 +350,13 @@ struct TitelView: View {
                                         
                                         Text("1 ")
                                             .font(.custom("SignPainter", size: 55))
-                                            .foregroundColor(.red)
+                                            .foregroundColor(.white)
                                             .padding(.leading, -150)
                                             .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                         
                                         Text("X ")
                                             .font(.custom("SignPainter", size: 40))
-                                            .foregroundColor(.red)
+                                            .foregroundColor(.white)
                                             .padding(.leading, -135)
                                             .shadow(color: Color.black.opacity(1.0), radius: 3, x: 0, y: 0)
                                         
@@ -399,7 +396,6 @@ struct TitelView: View {
                                     
                                 )
                                 .frame(maxWidth: 380)
-                                .padding(10)
                                 
                                 .onTapGesture {
                                     selectedImage = "1955"
